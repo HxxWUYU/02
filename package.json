@@ -1,0 +1,16 @@
+{
+  "name": "02",
+  "version": "1.0.0",
+  "description": "\"Hxx Ecommerce websote\"",
+  "main": "public/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Hxx\"",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^6.0.0-18"
+  }
+}
