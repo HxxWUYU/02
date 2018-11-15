@@ -2,7 +2,7 @@
 
 $router = new AltoRouter;
 echo $_SERVER['PHP_SELF']."<br>";
-$router->map('GET','/about','','about_us');
+$router->map('GET','/','','about_us');
 
 $match = $router->match();
 
