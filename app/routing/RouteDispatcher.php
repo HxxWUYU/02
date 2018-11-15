@@ -23,7 +23,7 @@ class RouteDispatcher{
 			$this->method = $method;
 
 			if(is_callable(array(new $this->controller,$this->method))){
-				call_user_func_array(array(new $this->controller,$this->method),array($this->match['params']));
+				
 			}else{
 				echo "The method {$this->method} is not definded in {$this->controller}";
 			}
