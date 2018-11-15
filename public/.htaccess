@@ -1,9 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  RewriteBase /
  
   RewriteCond %{REQUEST_FILENAME} !-f
  
-  RewriteRule . index.php [L]
+  RewriteRule . /02/public/index.php [L]
 </IfModule>
