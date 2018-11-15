@@ -1,6 +1,5 @@
 <?php
 
-require_once __DIR__ . '/../../vendor/autoload.php';
 use Philo\Blade\Blade;
 
 function view($path, array $data = [])
