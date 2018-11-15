@@ -1,7 +1,7 @@
 {
 
 	"autoload":{
-		"psn-4":{
+		"psr-4":{
 			"App\\":"app"
 		},
 
