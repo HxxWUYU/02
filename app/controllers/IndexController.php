@@ -1,7 +1,7 @@
 <?php 
 namespace App\Controllers;
 
-class IndexControlle extends BaseController{
+class IndexController extends BaseController{
 
 	public function show(){
 		echo "Inside Homepage from controller class";
