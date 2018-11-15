@@ -3,7 +3,6 @@
 $router = new AltoRouter;
 //echo $_SERVER['PHP_SELF']."<br>";
 
-echo realpath('..');
 $router->map('GET','/02/public/about','','about_us');
 
 $match = $router->match();
