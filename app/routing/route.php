@@ -1,8 +1,10 @@
 <?php 
 
 $router = new AltoRouter;
-echo $_SERVER['PHP_SELF']."<br>";
-$router->map('GET','/about','','about_us');
+//echo $_SERVER['PHP_SELF']."<br>";
+
+echo dirname(dirname(__FILE__));
+$router->map('GET','/02/public/about','','about_us');
 
 $match = $router->match();
 
