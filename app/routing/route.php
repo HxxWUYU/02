@@ -3,18 +3,10 @@
 $router = new AltoRouter;
 //echo $_SERVER['PHP_SELF']."<br>";
 
-$router->map('GET','/02/public/','','home');
+$router->map('GET','/02/public/','App\Controllers\IndexController@show','home'); //@sign can be custom 
+//$match = $router->match()  match is an array containing 3 elements:
+//traget, parmas, name // target is the App\..\ name is home
 
-$match = $router->match();
 
-if($match){
-	require_once __DIR__ . '/../controllers/BaseController.php';
-	require_once __DIR__ . '/../controllers/IndexController.php';
-	$index = new \App\Controllers\IndexController();
-	$index->show();
-}else{
-	header($_SERVER["SERVER_PROTOCOL"].'404 Not Found');
-	echo "This is Page not found";
-}
 
 ?>
