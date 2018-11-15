@@ -8,6 +8,7 @@ function view($path, array $data = [])
     $cache = __DIR__ . '/../../bootstrap/cache';
     
     $blade = new Blade($view, $cache);
-   echo $blade->view()->make($path, $data)->render();
+    echo $view;
+   //echo $blade->view()->make($path, $data)->render();
     //$blade->view();
 }
