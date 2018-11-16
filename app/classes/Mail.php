@@ -2,6 +2,8 @@
 namespace App\Classes;
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\OAuth;
+use League\OAuth2\Client\Provider\Google;
 
 class Mail{
 
@@ -19,6 +21,19 @@ class Mail{
 		$this->mail->Mailer='smtp';
 		$this->mail->SMTPAuth = true;
 		$this->mail->SMTPSecure = 'tls';
+
+		//For XXOAUTH2 
+		$this->mail->AuthType = "XOAUTH2";
+		$email = 'derrickhuang2333@gmail.com';
+		$clinetId = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleusercontent.com';
+		$clientSecret = 'TnxtmbwzsPcEOmaALsXPshhl';
+		$refreshToken = '1/QizyBNUvlvju8q_7L1SxlbFpj4vXQHIRwdt1I-aIigs';
+		$provider = new Google(
+    [
+        'clientId' => $clientId,
+        'clientSecret' => $clientSecret,
+    ]
+);
 
 		$this->mail->Host = getenv('SMTP_HOST');
 		$this->mail->Port = getenv('SMTP_PORT');
