@@ -29,13 +29,14 @@ class Mail{
 		$clientSecret = 'TnxtmbwzsPcEOmaALsXPshhl';
 		$refreshToken = '1/QizyBNUvlvju8q_7L1SxlbFpj4vXQHIRwdt1I-aIigs';
 		$provider = new Google(
-    [
+ 		   [
         'clientId' => $clientId,
         'clientSecret' => $clientSecret,
-    ]
-);
+    		]
+		);
+		
 		$this->$mail->setOAuth(
-    new OAuth(
+    	new OAuth(
         [
             'provider' => $provider,
             'clientId' => $clientId,
@@ -43,8 +44,8 @@ class Mail{
             'refreshToken' => $refreshToken,
             'userName' => $email,
         ]
-    )
-);
+    	)
+		);
 
 		$this->mail->Host = getenv('SMTP_HOST');
 		$this->mail->Port = getenv('SMTP_PORT');
