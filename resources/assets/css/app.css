@@ -5234,14 +5234,14 @@ a.thumbnail image {
   background-color: #2A3F54;
 }
 
-.nav .meun > li > a {
+.nav .menu > li > a {
   color: #ffffff;
   font-size: 1.2rem;
 }
 
-.nav .meun > li > a:hover, .nav .meun > li > a:focus, .nav .meun > li > a:active {
+.nav .menu > li > a:hover, .nav .menu > li > a:focus, .nav .menu > li > a:active {
   /* & will points to tag a*/
-  background-color: #080c10;
+  background-color: #1c2b39;
 }
 
 .slide-in-down.mui-enter {

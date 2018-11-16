@@ -1,12 +1,12 @@
 .nav{
 	background-color:#2A3F54;
 
-	.meun >li >a {
+	.menu >li >a {
 		color:#ffffff;
 		font-size:1.2rem;
 		&:hover,&:focus,&:active{
 			/* & will points to tag a*/
-			background-color:darken(#2A3F54,20%);
+			background-color:darken(#2A3F54,8%);
 
 		}
 		
