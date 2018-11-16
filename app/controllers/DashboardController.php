@@ -1,15 +1,14 @@
 <?php 
 namespace App\Controllers;
 
-//use App\Controllers\BaseController;
+use App\Classes\Mail;
 
 class DashboardController extends BaseController{
 
 	public function show(){
+		echo "admin";
+		
 
-		return view('/admin/dashboard');
 	}
 }
-
-
 ?>
