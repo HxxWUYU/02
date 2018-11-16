@@ -23,4 +23,3 @@ class Database{
 		$db->bootEloquent();
 	}
 }
-?>
