@@ -29,8 +29,9 @@ class ErrorHandler{
 
 	public function outputFriendlyError(){
 
-		ob_end_clean();
-
+		if(ob_get_contents()){
+			ob_end_clean();
+		}
 		view('errors/generic');
 	}
 
@@ -38,6 +39,7 @@ class ErrorHandler{
 
 		$mail = new Mail;
 		$mail->send($data);
+		sleep(4);
 		return new static; //return $this for not static
 	}
 }
