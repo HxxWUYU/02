@@ -5241,7 +5241,7 @@ a.thumbnail image {
 
 .nav .meun > li > a:hover, .nav .meun > li > a:focus, .nav .meun > li > a:active {
   /* & will points to tag a*/
-  background-color: #1c2b39;
+  background-color: #080c10;
 }
 
 .slide-in-down.mui-enter {
