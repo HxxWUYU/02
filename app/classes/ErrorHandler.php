@@ -30,14 +30,15 @@ class ErrorHandler{
 	public function outputFriendlyError(){
 
 		if(!ob_get_contents()|| ob_get_contents()===''){
-			exit;
+			
 		}else{
 			if(ob_end_clean()){
 				view('errors/generic');
-				exit;
+				
 			}
 			
 		}
+		exit;
 		
 	}
 
