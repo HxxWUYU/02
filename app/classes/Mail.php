@@ -9,7 +9,7 @@ class Mail{
 
 	public function __construct(){
 
-		$this->mail = new PHPMailer\PHPMailer\PHPMailer;
+		$this->mail = new PHPMailer;
 		$this->setUp();
 	}
 
