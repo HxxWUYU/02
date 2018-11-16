@@ -14,7 +14,7 @@
     </div>
     <!-- Side bar-->
     <ul class="vertical menu">
-      <li><a href="#"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>&nbsp; Dashboard</a></li>
+      <li><a href="/admin"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>&nbsp; Dashboard</a></li>
       <li><a href="#"><i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp; Add Product</a></li>
       <li><a href="#"><i class="fa fa-edit fa-fw" aria-hidden="true"></i>&nbsp; Manage Product</a></li>
       <li><a href="#"><i class="fa fa-compress" aria-hidden="true"></i>&nbsp; Categories</a></li>
