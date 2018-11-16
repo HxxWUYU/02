@@ -38,7 +38,7 @@ class Mail{
 
 		//sender info
 		//$this->mail->From = getenv("ADMIN_EMAIL");
-		$this->setFrom(getenv("ADMIN_EMAIL"),'Hxx E-commerce Store');
+		$this->mail->setFrom(getenv("ADMIN_EMAIL"),'Hxx E-commerce Store');
 		//$this->mail->FromName("Hxx E-commerce Store");
 	}
 
