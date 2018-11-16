@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Admin Panel - @yield('title')</title>
-	<link rel="stylesheet" href="/css/all.css">
+	<link rel="stylesheet" href="/02/public/css/all.css">
 </head>
 <body>
 
@@ -31,6 +31,6 @@
     <!-- Your page content lives here -->
     @yield('content')
   </div>
-	<script src="/js/all.js"></script>
+<script src="/02/public/js/all.js"></script>
 </body>
 </html>
