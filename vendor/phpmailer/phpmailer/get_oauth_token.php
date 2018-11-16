@@ -79,9 +79,9 @@ $clientId = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleuserconte
 $clientSecret = 'TnxtmbwzsPcEOmaALsXPshhl';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
-//$redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+$redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 //$redirectUri = 'http://localhost/PHPMailer/redirect';
-$redirectUri = 'https://www.laojuren.club/02/vendor/phpmailer/phpmailer/get_oauth_token.php';
+//$redirectUri = 'https://www.laojuren.club/02/vendor/phpmailer/phpmailer/get_oauth_token.php';
 $params = [
     'clientId' => $clientId,
     'clientSecret' => $clientSecret,
