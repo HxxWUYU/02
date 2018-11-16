@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AltoRouter' => $vendorDir . '/altorouter/altorouter/AltoRouter.php',
+    'App\\Classes\\Database' => $baseDir . '/app/classes/Database.php',
     'App\\Controllers\\BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'App\\Controllers\\IndexController' => $baseDir . '/app/controllers/IndexController.php',
     'App\\RouteDispatcher' => $baseDir . '/app/routing/RouteDispatcher.php',
