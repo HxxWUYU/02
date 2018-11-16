@@ -31,7 +31,7 @@ class ErrorHandler{
 
 		ob_end_clean();
 
-		views('errors/generic');
+		view('errors/generic');
 	}
 
 	public static function emailAdmin($data){
