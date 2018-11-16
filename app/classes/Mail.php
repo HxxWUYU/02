@@ -1,7 +1,7 @@
 <?php 
 namespace App\Classes;
 
-use PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class Mail{
 
@@ -9,7 +9,7 @@ class Mail{
 
 	public function __construct(){
 
-		$this->mail = new PHPMailer;
+		$this->mail = new PHPMailer\PHPMailer\PHPMailer;
 		$this->setUp();
 	}
 
