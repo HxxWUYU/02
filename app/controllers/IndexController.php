@@ -8,18 +8,18 @@ class IndexController extends BaseController{
 	public function show(){
 		echo "Inside Homepage from controller class";
 		$mail = new Mail();
-		$data = [
-'to' => 'derrickhuang2333@gmail.com',
-'subject'=> 'Welcome to Hxx Store',
-'view' => 'Welcome',
-'name' => 'Hxx',
-'body' => "Testing email template"
-];
-		// if($mail->send($data)){
-		// 	echo "Email sent!";
-		// }else{
-		// 	echo "Email sending failed!";
-		// }
+		$datas = [
+			'to' => 'derrickhuang2333@gmail.com',
+			'subject'=> 'Welcome to Hxx Store',
+			'view' => 'welcome',
+			'name' => 'Hxx',
+			'body' => "Testing email template"
+			];
+		if($mail->send($data)){
+			echo "Email sent!";
+		}else{
+			echo "Email sending failed!";
+		}
 	}
 }
 ?>
