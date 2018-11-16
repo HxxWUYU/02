@@ -10,7 +10,7 @@ class Database{
 		$db = new Capsule;
 		$db->addConnection([
 			'driver' => getenv('DB_DRIVER'),
-			'host' => getenv('HOST'),
+			'host' => getenv('DB_HOST'),
 			'database' => getenv('DB_NAME'),
 			'username' => getenv('DB_USERNAME'),
 			'password' => getenv('DB_PASSWORD'),
