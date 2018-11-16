@@ -9,6 +9,6 @@ $categories = Capsule::table('categories')->where('id',1)->first();
 
 //$categories = Capsule::table('categories')->get();
 
-var_dump($categories);
+var_dump($categories->toArray());
 
 ?>
