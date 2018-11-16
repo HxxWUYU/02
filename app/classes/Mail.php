@@ -34,8 +34,8 @@ class Mail{
         'clientSecret' => $clientSecret,
     		]
 		);
-		
-		$this->$mail->setOAuth(
+
+		$this->mail->setOAuth(
     	new OAuth(
         [
             'provider' => $provider,
