@@ -34,6 +34,7 @@ class ErrorHandler{
 		}else{
 			if(ob_end_clean()){
 				view('errors/generic');
+				exit;
 			}
 			
 		}
