@@ -16,7 +16,7 @@ class ErrorHandler{
 		}else{
 			$data = [
 				'to' => getenv("ADMIN_EMAIL"),
-				'subject'=> 'Welcome to Hxx Store',
+				'subject'=> 'An error occurred',
 				'view' => 'errors',
 				'name' => 'Admin',
 				'body' => $error

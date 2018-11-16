@@ -53,7 +53,7 @@ class Mail{
 		$environment = getenv('APP_ENV'); //local or production
 
 		if($environment === 'local'){
-			$this->mail->SMTPDebug = 2;
+			$this->mail->SMTPDebug = '';
 		}
 
 		//auth info
