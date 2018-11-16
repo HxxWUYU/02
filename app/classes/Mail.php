@@ -37,8 +37,9 @@ class Mail{
 		$this->mail->SingleTo = true;
 
 		//sender info
-		$this->mail->From = getenv("ADMIN_EMAIL");
-		$this->mail->FromName("Hxx E-commerce Store");
+		//$this->mail->From = getenv("ADMIN_EMAIL");
+		$this->setFrom(getenv("ADMIN_EMAIL"),'Hxx E-commerce Store');
+		//$this->mail->FromName("Hxx E-commerce Store");
 	}
 
 	public function send($data){
