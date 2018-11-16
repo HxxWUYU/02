@@ -15,11 +15,12 @@ class IndexController extends BaseController{
 			'name' => 'Hxx',
 			'body' => "Testing email template"
 			];
-		if($mail->send($data)){
-			echo "Email sent!";
-		}else{
-			echo "Email sending failed!";
-		}
+		// if($mail->send($data)){
+		// 	echo "Email sent!";
+		// }else{
+		// 	echo "Email sending failed!";
+		// }
+		echo $data;
 	}
 }
 ?>
