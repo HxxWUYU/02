@@ -59,9 +59,8 @@ exit;
 require __DIR__ . '/../../autoload.php';
 
 session_start();
-$redirect_uri = 'https://www.laojuren.club/02/vendor/phpmailer/phpmailer/get_oauth_token.php';
-$client_id = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleusercontent.com';
-$client_secret = 'TnxtmbwzsPcEOmaALsXPshhl';
+
+
 $providerName = '';
 
 if (array_key_exists('provider', $_GET)) {
@@ -76,13 +75,13 @@ if (!in_array($providerName, ['Google', 'Microsoft', 'Yahoo'])) {
 
 //These details are obtained by setting up an app in the Google developer console,
 //or whichever provider you're using.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
+$clientId = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleusercontent.com';
+$clientSecret = 'TnxtmbwzsPcEOmaALsXPshhl';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
-$redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+//$redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 //$redirectUri = 'http://localhost/PHPMailer/redirect';
-
+$redirectUri = 'https://www.laojuren.club/02/vendor/phpmailer/phpmailer/get_oauth_token.php';
 $params = [
     'clientId' => $clientId,
     'clientSecret' => $clientSecret,
