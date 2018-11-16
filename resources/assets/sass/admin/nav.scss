@@ -11,5 +11,26 @@
 		}
 		
 	}
+
+	h3{
+		color:#ffffff;
+		font-size:1.5rem;
+		text-align:center;
+		font-weight:500;
+	}
+
+	.image-holder{
+		padding:0.7rem;
+		background-color:#E93F49;
+
+		img{
+			border-radius:50%;
+			border:1px solid darken(#E93F49,15%);
+			padding:0.3rem;
+			margin:0 auto;
+			hegiht:200px;
+			width:200px;
+		}
+	}
 }
 

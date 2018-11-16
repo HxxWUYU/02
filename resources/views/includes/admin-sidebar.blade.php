@@ -7,7 +7,7 @@
     </button>
 
     <h3>Welcome Admin</h3>
-    <div>
+    <div class="image-holder">
       
       <img src='/02/public/images/Hxx.jpg' alt="Hxx" title="Admin">
       <p>Hxx</p>

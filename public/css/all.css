@@ -5244,6 +5244,27 @@ a.thumbnail image {
   background-color: #1c2b39;
 }
 
+.nav h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.nav .image-holder {
+  padding: 0.7rem;
+  background-color: #E93F49;
+}
+
+.nav .image-holder img {
+  border-radius: 50%;
+  border: 1px solid #c51721;
+  padding: 0.3rem;
+  margin: 0 auto;
+  hegiht: 200px;
+  width: 200px;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
