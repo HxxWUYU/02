@@ -29,7 +29,7 @@ class RouteDispatcher{
 			}
 		}else{
 			header($_SERVER["SERVER_PROTOCOL"].'404 Not Found');
-			view("404");
+			view("/errors/404");
 		}
 
 	}
