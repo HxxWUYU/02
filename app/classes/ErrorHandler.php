@@ -32,9 +32,12 @@ class ErrorHandler{
 		if(ob_get_contents()===FALSE || ob_get_contents()===''){
 			exit;
 		}else{
-			ob_end_clean();
+			if(ob_end_clean()){
+				view('errors/generic');
+			}
+			
 		}
-		view('errors/generic');
+		
 	}
 
 	public static function emailAdmin($data){
