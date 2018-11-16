@@ -25,7 +25,7 @@ class Mail{
 		//For XXOAUTH2 
 		$this->mail->AuthType = "XOAUTH2";
 		$email = 'derrickhuang2333@gmail.com';
-		$clinetId = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleusercontent.com';
+		$clientId = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleusercontent.com';
 		$clientSecret = 'TnxtmbwzsPcEOmaALsXPshhl';
 		$refreshToken = '1/QizyBNUvlvju8q_7L1SxlbFpj4vXQHIRwdt1I-aIigs';
 		$provider = new Google(
@@ -33,6 +33,17 @@ class Mail{
         'clientId' => $clientId,
         'clientSecret' => $clientSecret,
     ]
+);
+		$mail->setOAuth(
+    new OAuth(
+        [
+            'provider' => $provider,
+            'clientId' => $clientId,
+            'clientSecret' => $clientSecret,
+            'refreshToken' => $refreshToken,
+            'userName' => $email,
+        ]
+    )
 );
 
 		$this->mail->Host = getenv('SMTP_HOST');
