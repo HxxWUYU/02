@@ -9,7 +9,7 @@ class ErrorHandler{
 
 		$environment = getenv("APP_ENV");
 
-		if($environment==='local'){
+		if($environment=='local'){
 			$whoops = new \Whoops\Run;
 			$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 			$whoops->register();

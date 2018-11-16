@@ -15,7 +15,7 @@ class IndexController extends BaseController{
 			'name' => 'Hxx',
 			'body' => "Testing email template"
 			];
-		echo $da;
+		echo $datas;
 		// if($mail->send($data)){
 		// 	echo "Email sent!";
 		// }else{
