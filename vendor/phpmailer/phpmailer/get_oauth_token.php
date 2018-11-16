@@ -59,7 +59,9 @@ exit;
 require 'vendor/autoload.php';
 
 session_start();
-
+$redirectUri = 'https://www.laojuren.club/02/vendor/phpmailer/phpmailer/get_oauth_token.php';
+$clientId = '1092716039802-h7jccm8b261gptekdvnuthqt0c69k0br.apps.googleusercontent.com';
+$clientSecret = 'TnxtmbwzsPcEOmaALsXPshhl';
 $providerName = '';
 
 if (array_key_exists('provider', $_GET)) {
