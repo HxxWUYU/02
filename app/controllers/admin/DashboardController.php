@@ -1,5 +1,5 @@
 <?php 
-namespace App\Admin\Controllers;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 
