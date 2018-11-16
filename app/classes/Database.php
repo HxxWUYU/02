@@ -1,7 +1,7 @@
 <?php 
 namespace App\Classes;
 
-use illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class Database{
 
