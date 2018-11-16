@@ -1,5 +1,5 @@
 
-  <div class="off-canvas position-left reveal-for-large" id="offCanvas" data-off-canvas>
+  <div class="off-canvas position-left reveal-for-large nav" id="offCanvas" data-off-canvas>
 
     <!-- Close button -->
     <button class="close-button" aria-label="Close menu" type="button" data-close>

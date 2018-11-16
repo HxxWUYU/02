@@ -4,6 +4,8 @@
 
 @import '../bower/vendor/motion-ui/src/motion-ui';
 
+@import "admin/nav";
+
 @include motion-ui-transitions
 
 @include motion-ui-animations
