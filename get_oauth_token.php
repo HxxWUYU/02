@@ -62,7 +62,7 @@ require 'vendor/autoload.php';
 session_start();
 
 $redirectUri = 'https://www.laojuren.club/02/public/get_oauth_token.php';
-$clinetID = '1092716039802-92pt829aptb3qmj6j8n2o7m718ccp8i3.apps.googleusercontent.com';
+$clinetId = '1092716039802-92pt829aptb3qmj6j8n2o7m718ccp8i3.apps.googleusercontent.com';
 $clientSecret = '85CtMaDTnL3OVTPm1onXqwwP';
 $providerName = '';
 
