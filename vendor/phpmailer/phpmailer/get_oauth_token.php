@@ -56,7 +56,7 @@ if (!isset($_GET['code']) && !isset($_GET['provider'])) {
 exit;
 }
 
-require 'vendor/autoload.php';
+require __DIR__ . '/../../autoload.php';
 
 session_start();
 $redirectUri = 'https://www.laojuren.club/02/vendor/phpmailer/phpmailer/get_oauth_token.php';
