@@ -29,7 +29,7 @@ class ErrorHandler{
 
 	public function outputFriendlyError(){
 
-		if(ob_get_contents()===FALSE || ob_get_contents()===''){
+		if(!ob_get_contents()|| ob_get_contents()===''){
 			exit;
 		}else{
 			if(ob_end_clean()){
