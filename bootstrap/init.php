@@ -10,6 +10,6 @@ new \App\Classes\Database();
 
 require_once __DIR__ .'/../app/routing/route.php';
 
-new RouteDispatcher($router);
+new \App\RouteDispatcher($router);
 
 ?>
