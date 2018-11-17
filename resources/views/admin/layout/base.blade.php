@@ -13,7 +13,7 @@
     <!-- Your page content lives here -->
     <div class="title-bar">
   <div class="title-bar-left">
-    <button class="menu-icon hide-for-large" type="button" data-open></button>
+    <button class="menu-icon" type="button" id="toggle_canvas" data-toggle="offCanvas"></button>
     <span class="title-bar-title">{{getenv("APP_NAME")}}</span>
   </div>
  
@@ -21,5 +21,6 @@
     @yield('content')
   </div>
 <script src="/02/public/js/all.js"></script>
+
 </body>
 </html>

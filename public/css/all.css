@@ -5232,6 +5232,7 @@ a.thumbnail image {
 
 .nav {
   background-color: #2A3F54;
+  transform: translateX(10%);
 }
 
 .nav .menu > li > a {
