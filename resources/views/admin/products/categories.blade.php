@@ -34,6 +34,31 @@
  			</form>
  		</div>
  	</div>
+ 	<div class="row expanded">
+ 		<div class="small-12 medium-11 column">
+
+ 			@if(count($categories))
+ 				<table class='hove'>
+ 					<tbody>
+ 						@foreach($categories as $category)
+ 							<tr>
+ 								<td>{{$category->name}}</td>
+ 								<td>{{$category->slug}}</td>
+ 								<td>{{$category->created_at}}</td>
+ 								<td width="100" class="text-right">
+ 									<a href="#"><i class="fa fa-edit"></i></a>
+ 									<a href="#"><i class="fa fa-times"></i></a>
+ 								</td>
+ 							</tr>
+ 						@endforeach
+ 					</tbody>
+ 				</table>
+ 			@else
+ 				<h3>You have not created any category</h3>
+ 			@endif
+
+ 		</div>
+ 	</div>
  </div>
 
 @endsection
