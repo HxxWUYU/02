@@ -31,6 +31,7 @@ class ValidateRequest{
 	}
 
 	public static function email($column,$value,$policy){
+		
 		if($value!=null && !empty(trim($value))){
 			return filter_var($value,FILTER_VALIDATE_EMAIL);
 		}
