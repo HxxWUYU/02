@@ -18,7 +18,7 @@ class ProductCategoryController{
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
-			$data = ValidateRequest::mixed('name',$request->name,true);
+			$data = ValidateRequest::string('name',$request->name,true);
 			if($data){
 				echo "All good";exit;
 			}else{
