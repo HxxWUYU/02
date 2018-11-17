@@ -34,7 +34,7 @@ class ProductCategoryController{
 				$validate->abide($_POST,$rules);
 
 				if($validate->hasError()){
-					var_dump($validate->getErrorMessages());
+					var_dump($validate->getErrorMessages());exit;
 				}else{
 					echo "Correct";exit;
 				}
