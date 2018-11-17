@@ -12,7 +12,7 @@
   <div class="off-canvas-content admin_title_bar" data-off-canvas-content>
     <!-- Your page content lives here -->
     <div class="title-bar">
-  <div class="title-bar-left">
+  <div class="title-bar-left" >
     <button class="menu-icon" type="button" id="toggle_canvas" data-toggle="offCanvas"></button>
     <span class="title-bar-title">{{getenv("APP_NAME")}}</span>
   </div>

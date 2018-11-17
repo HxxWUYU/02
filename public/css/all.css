@@ -5231,8 +5231,8 @@ a.thumbnail image {
 }
 
 .nav {
+  transofrm: translate(250px);
   background-color: #2A3F54;
-  visibility: visible;
 }
 
 .nav .menu > li > a {
@@ -5268,6 +5268,10 @@ a.thumbnail image {
 .nav .image-holder p {
   color: #ffffff;
   font-size: 1rem;
+}
+
+.admin_title_bar {
+  transofrm: translate(250px);
 }
 
 .admin_title_bar .title-bar {
