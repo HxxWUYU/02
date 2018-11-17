@@ -21,6 +21,11 @@
     @yield('content')
   </div>
 <script src="/02/public/js/all.js"></script>
-
+<script type="text/javascript">
+  var options = {
+  data-close-on-click: false
+};
+var elem = new Foundation.OffCanvas('.off-canvas-content', options);
+</script>
 </body>
 </html>
