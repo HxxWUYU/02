@@ -22,7 +22,7 @@ class ProductCategoryController{
 			if(CSRFToken::verifyCSRFToken($request->token)){
 
 				$rules = [
-					$request['post']->name=>[
+					'name'=>[
 						'required'=>true,
 						'maxLength'=>5,
 						'string'=>true,
