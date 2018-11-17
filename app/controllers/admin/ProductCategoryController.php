@@ -28,6 +28,7 @@ class ProductCategoryController{
 						'unique'=>'categories'	
 					]
 				];
+				var_dump($_POST);exit;
 				$validate = new ValidateRequest;
 				$validate->abide($_POST,$rules);
 
