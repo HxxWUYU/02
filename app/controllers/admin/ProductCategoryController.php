@@ -17,11 +17,11 @@ class ProductCategoryController{
 
 	public function store(){
 		if(Request::has('post')){
-			$request = Request::get('post',true);//data in post
+			$request = Request::get('post');//data in post
 			
 			if(CSRFToken::verifyCSRFToken($request->token)){
 				$rules = [
-					'name'=>[
+					$request->name=>[
 						'required'=>true,
 						'maxLength'=>5,
 						'string'=>true,
