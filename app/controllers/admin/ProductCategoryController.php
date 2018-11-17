@@ -25,7 +25,7 @@ class ProductCategoryController{
 						'required'=>true,
 						'maxLength'=>5,
 						'string'=>true,
-						'uniques'=>'categories'	
+						'unique'=>'categories'	
 					];
 				];
 				$validate = new ValidateRequest;
@@ -34,7 +34,7 @@ class ProductCategoryController{
 				if($validate->hasError()){
 					var_dump($validate->getErrorMessages());
 				}else{
-					echo "Invalid";exit;
+					echo "Correct";exit;
 				}
 				//process form data
 				Category::create([
