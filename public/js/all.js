@@ -10,4 +10,5 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 (function(){
 	'use strict';
 	$(document).foundation();
+	new Foundation.OffCanvas($("#offCanvasLeft")).open();
 })();
