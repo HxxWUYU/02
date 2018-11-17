@@ -18,12 +18,11 @@ class ProductCategoryController{
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
-			$validator = new ValidateRequest;
-			$data = $validator->unique('name','Clothingsss','categories');
+			$data = ValidateRequest::required('name',$request->name,true);
 			if($data){
 				echo "All good";exit;
 			}else{
-				echo "Duplication";exit;
+				echo "Required";exit;
 			}
 			if(CSRFToken::verifyCSRFToken($request->token)){
 				//process form data
