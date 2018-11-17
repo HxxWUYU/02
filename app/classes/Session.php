@@ -6,9 +6,8 @@ class Session{
 	//create a session
 
 	public static function add($name,$value){
-		if($name!='' && !empty($name) && $value!='' &&!empty($value))｛
-			$_SESSION[$name] = $value;
-		｝
+
+		$_SESSION[$name] = $value;
 
 		throw new \Exception ('Name and value required');
 		//在一个命名空间中 调用其他类必须声明命名空间 否则会在当前
