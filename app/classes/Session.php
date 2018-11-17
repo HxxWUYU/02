@@ -8,7 +8,7 @@ class Session{
 	public static function add($name,$value){
 
 		if($name!='' && (!empty($name)) && $value!='' && (!empty($value))){
-			$_SESSION[$name] = $value;
+			return $_SESSION[$name] = $value;
 		}
 		
 
