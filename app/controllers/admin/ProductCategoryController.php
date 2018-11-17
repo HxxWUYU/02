@@ -18,7 +18,7 @@ class ProductCategoryController{
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
-			$data = ValidateRequest::mail('name','qwdqwdqw',3);
+			$data = ValidateRequest::email('name','qwdqwdqw',3);
 			if($data){
 				echo "All good";exit;
 			}else{
