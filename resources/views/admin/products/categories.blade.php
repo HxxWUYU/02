@@ -24,7 +24,12 @@
 
  		<div class="small-12 medium-5 coulmn">
  			<form action="/02/public/admin/product/categories" method="post">
- 				
+ 				<div class='input-group'>
+ 					<input type="text" class="input-group-filed" placeholder="Search by name">
+ 					<div class="input-group-button">
+ 						<input type="submit" class="button" value="Search">
+ 					</div>
+ 				</div>
  			</form>
  		</div>
  	</div>
