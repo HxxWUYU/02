@@ -6,11 +6,14 @@
  <div class="dashboard">
  	<div class="row expanded">
  		<h2>Dashboard </h2>
- 		{!!\App\Classes\CSRFToken::_token()!!}
- 		<br>
- 		{!!\App\Classes\Session::get('token')!!}
- 		<br>
+ 		<form action="/admin" method="post">
+ 			<input name = "product" value="testing">
+ 			<input type = "file" name ="image">
+ 			<input type = "submit" value="Go" name="submit">
 
+ 		</form>
+
+ 		
  	</div>
  </div>
 

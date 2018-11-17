@@ -6,6 +6,8 @@ $router = new AltoRouter;
 $router->map('GET','/02/public/','App\Controllers\IndexController@show','home'); //@sign can be custom 
 $router->map('GET','/02/public/admin','App\Controllers\Admin\DashboardController@show','admin_dashboard'); //@sign can be custom 
 
+$router->map('POST','/02/public/admin','App\Controllers\Admin\DashboardController@get','admin_dashboard'); //@sign can be custom 
+
 
 
 //for admin routes
