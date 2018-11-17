@@ -38,7 +38,7 @@
  		<div class="small-12 medium-11 column">
 
  			@if(count($categories))
- 				<table class='hove'>
+ 				<table class='hover'>
  					<tbody>
  						@foreach($categories as $category)
  							<tr>
