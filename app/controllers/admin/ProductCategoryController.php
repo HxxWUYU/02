@@ -34,7 +34,7 @@ class ProductCategoryController{
 				if($validate->hasError()){
 					var_dump($validate->getErrorMessages());
 				}else{
-					echo "Correct";exit;
+					echo "Correct";
 				}
 				//process form data
 				Category::create([
