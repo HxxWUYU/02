@@ -5270,7 +5270,6 @@ a.thumbnail image {
 }
 
 .admin_title_bar {
-  transform: translate(250px);
   transition: transform,0.5s,ease;
 }
 
@@ -5288,7 +5287,15 @@ a.thumbnail image {
 }
 
 .custom_open {
-  transform: translate(-250px);
+  transform: translateX(-250px);
+}
+
+.off-canvas.is-open {
+  transform: translate(0, 0);
+}
+
+.position-left.is-open ~ .off-canvas-content {
+  transform: translateX(250px);
 }
 
 .slide-in-down.mui-enter {

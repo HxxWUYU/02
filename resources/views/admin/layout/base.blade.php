@@ -29,7 +29,7 @@
       content.classList.toggle('custom_open');
     }
   const button = document.querySelector('#toggle_canvas');
-  button.addEventListener('click',toggleOpen);
+  //button.addEventListener('click',toggleOpen);
 </script>
 </body>
 </html>
