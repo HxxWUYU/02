@@ -19,7 +19,7 @@ class ProductCategoryController{
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
 			$validator = new ValidateRequest;
-			$data = $validator->unique('name','Clothings','categories');
+			$data = $validator->unique('name','Clothingss','categories');
 			if($data){
 				echo "All good";exit;
 			}else{
