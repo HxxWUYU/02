@@ -186,6 +186,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Classes\\Request' => __DIR__ . '/../..' . '/app/classes/Request.php',
         'App\\Classes\\Session' => __DIR__ . '/../..' . '/app/classes/Session.php',
         'App\\Classes\\UploadFile' => __DIR__ . '/../..' . '/app/classes/UploadFile.php',
+        'App\\Classes\\ValidateRequest' => __DIR__ . '/../..' . '/app/classes/ValidateRequest.php',
         'App\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/controllers/admin/DashboardController.php',
         'App\\Controllers\\Admin\\ProductCategoryController' => __DIR__ . '/../..' . '/app/controllers/admin/ProductCategoryController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
