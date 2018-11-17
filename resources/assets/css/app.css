@@ -5282,14 +5282,6 @@ a.thumbnail image {
   background-color: black;
 }
 
-.custom_open {
-  transform: translateX(-250px);
-}
-
-.position-left.is-open ~ .off-canvas-content {
-  transform: translateX(250px);
-}
-
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;

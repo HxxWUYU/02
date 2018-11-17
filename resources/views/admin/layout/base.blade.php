@@ -22,14 +22,5 @@
   </div>
 <script src="/02/public/js/all.js"></script>
 
-<script type="text/javascript">
-   function toggleOpen(){
-      const content = document.querySelector('.admin_title_bar');
-     
-      content.classList.toggle('custom_open');
-    }
-  const button = document.querySelector('#toggle_canvas');
-  //button.addEventListener('click',toggleOpen);
-</script>
 </body>
 </html>
