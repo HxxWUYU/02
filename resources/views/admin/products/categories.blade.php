@@ -14,7 +14,7 @@
  		<div class="small-12 medium-6 coulmn">
  			<form action="" method="post">
  				<div class='input-group'>
- 					<input type="text" class="input-group-filed" placeholder="Search by name">
+ 					<input type="text" class="input-group-field" placeholder="Search by name">
  					<div class="input-group-button">
  						<input type="submit" class="button" value="Search">
  					</div>
@@ -25,7 +25,7 @@
  		<div class="small-12 medium-5 end coulmn">
  			<form action="/02/public/admin/product/categories" method="post">
  				<div class='input-group'>
- 					<input type="text" class="input-group-filed" name="name" placeholder="Category name">
+ 					<input type="text" class="input-group-field" name="name" placeholder="Category name">
  					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
  					<div class="input-group-button">
  						<input type="submit" class="button" value="Create">
