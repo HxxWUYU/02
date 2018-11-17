@@ -9,7 +9,7 @@
 <body>
 
  @include('includes.admin-sidebar')
-  <div class="off-canvas-content admin_title_bar" data-off-canvas-content>
+  <div class="off-canvas-content admin_title_bar" data-close-on-click="false" data-off-canvas-content>
     <!-- Your page content lives here -->
     <div class="title-bar">
   <div class="title-bar-left" >
@@ -21,11 +21,6 @@
     @yield('content')
   </div>
 <script src="/02/public/js/all.js"></script>
-<script type="text/javascript">
-  var options = {
-  data-close-on-click: false
-};
-var elem = new Foundation.OffCanvas('.off-canvas-content', options);
-</script>
+
 </body>
 </html>
