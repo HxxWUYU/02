@@ -1,5 +1,5 @@
 
-  <div class="off-canvas position-left is-open nav" id="offCanvas"  data-off-canvas>
+  <div class="off-canvas position-left nav" reveal-for-large id="offCanvas"  data-off-canvas>
 
     <!-- Close button -->
     
@@ -24,8 +24,4 @@
 
   </div>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('#offCanvas').removeClass('is-open');
-    });
-  </script>
+
