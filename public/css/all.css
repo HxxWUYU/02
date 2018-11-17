@@ -5231,7 +5231,9 @@ a.thumbnail image {
 }
 
 .nav {
-  transofrm: translate(250px);
+  transform: translate(0px);
+  visibility: visible;
+  capacity: 1;
   background-color: #2A3F54;
 }
 
@@ -5271,7 +5273,7 @@ a.thumbnail image {
 }
 
 .admin_title_bar {
-  transofrm: translate(250px);
+  transform: translate(250px);
 }
 
 .admin_title_bar .title-bar {
