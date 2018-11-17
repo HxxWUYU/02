@@ -26,7 +26,7 @@
  			<form action="/02/public/admin/product/categories" method="post">
  				<div class='input-group'>
  					<input type="text" class="input-group-filed" name="name" placeholder="Category name">
- 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::token()}}">
+ 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
  					<div class="input-group-button">
  						<input type="submit" class="button" value="Create">
  					</div>
