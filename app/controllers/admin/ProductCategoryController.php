@@ -18,11 +18,11 @@ class ProductCategoryController{
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
-			$data = ValidateRequest::required('name',$request->name,true);
+			$data = ValidateRequest::minLength('name',$request->name,3);
 			if($data){
 				echo "All good";exit;
 			}else{
-				echo "Required";exit;
+				echo "Min length is 3";exit;
 			}
 			if(CSRFToken::verifyCSRFToken($request->token)){
 				//process form data
