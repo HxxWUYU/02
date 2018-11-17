@@ -43,6 +43,12 @@ class Request{
 	}
 	//refresh request
 
+	public static function refresh(){
+		$_POST = [];
+		$_GET = []
+		$_FILES = [];
+	}
+
 
 }
 ?>

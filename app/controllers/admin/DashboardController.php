@@ -22,9 +22,16 @@ class DashboardController extends BaseController{
 	}
 
 	public function get(){
-		
-		$data = Request::old("post","product");
+
+		Request::refresh();
+		$data = Request::old('post','product');
 		var_dump($data);
+		// if(Request::has('post')){
+		// 	$request = Request::get('post');
+		// 	var_dump($request->product);
+		// }else{
+		// 	var_dump("posting does not exist");
+		// }
 		
 	}
 }
