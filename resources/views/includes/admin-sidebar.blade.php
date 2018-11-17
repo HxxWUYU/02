@@ -2,9 +2,7 @@
   <div class="off-canvas position-left reveal-for-large nav" id="offCanvas" data-off-canvas>
 
     <!-- Close button -->
-    <button class="close-button" aria-label="Close menu" type="button" data-close>
-      <span aria-hidden="true">&times;</span>
-    </button>
+    
 
     <h3>Welcome Admin</h3>
     <div class="image-holder text-center">
