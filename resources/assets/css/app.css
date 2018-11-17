@@ -5269,10 +5269,6 @@ a.thumbnail image {
   font-size: 1rem;
 }
 
-.admin_title_bar {
-  transition: transform,0.5s,ease;
-}
-
 .admin_title_bar .title-bar {
   background-color: #EDEDED;
 }
@@ -5288,10 +5284,6 @@ a.thumbnail image {
 
 .custom_open {
   transform: translateX(-250px);
-}
-
-.off-canvas.is-open {
-  transform: translate(0, 0);
 }
 
 .position-left.is-open ~ .off-canvas-content {

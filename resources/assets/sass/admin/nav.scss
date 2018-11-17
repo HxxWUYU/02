@@ -43,7 +43,7 @@
 
 .admin_title_bar{
 	
-	transition:transform,0.5s,ease;
+	
 	.title-bar{
 		background-color:#EDEDED;
 		.title-bar-title{
@@ -61,10 +61,10 @@
 	transform:translateX(-250px);
 }
 
-.off-canvas.is-open {
-    transform: translate(0, 0);
-}
+
 
 .position-left.is-open ~ .off-canvas-content {
     transform: translateX(250px);
 }
+
+
