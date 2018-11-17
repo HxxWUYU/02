@@ -8,7 +8,7 @@
 </head>
 <body>
 
- @include('includes.admin-sidebar')
+ @include('includes.admin-sidebar');
  @include hamburger($blue);
   <div class="off-canvas-content admin_title_bar" data-off-canvas-content>
     <!-- Your page content lives here -->
