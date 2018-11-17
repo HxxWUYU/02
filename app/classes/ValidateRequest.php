@@ -34,14 +34,10 @@ class ValidateRequest{
 		foreach($data['policies'] as $rule => $policy){
 			$valid = call_user_func_array([self::class,$rule], [$column,$data['value'],$policy]);
 			if(!$valid){
-				self::setError(
+			
 
-					str_replace(
-						[':attribute',':policy','_'], 
-						[$column,$policy，' '],
-					 	self::$error_messages[$rule]
-					 ),$column);
-				
+			self::setErrors(str_replace([':attribute',':policy','_'],[$column,$policy,' '],self::$error_messages[$rule]),$column);
+
 			}
 		}
 	}
