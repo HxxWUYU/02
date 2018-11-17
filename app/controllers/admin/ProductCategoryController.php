@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 use App\Models\Category;
 use App\Classes\Request;
 use App\Classes\CSRFToken;
+use App\Classes\ValidateRequest;
 class ProductCategoryController{
 
 	public function show(){
@@ -17,7 +18,13 @@ class ProductCategoryController{
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
-
+			$validator = new ValidateRequest;
+			$data = $validator->unique('name','Clothings','categories');
+			if($data){
+				echo "All good";exit;
+			}else{
+				echo "Duplication";exit;
+			}
 			if(CSRFToken::verifyCSRFToken($request->token)){
 				//process form data
 				Category::create([
