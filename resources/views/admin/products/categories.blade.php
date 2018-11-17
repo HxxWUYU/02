@@ -11,7 +11,7 @@
  	</div>
  	<div class="row expanded">
 
- 		<div class="small-12 medium-6 coulmn">
+ 		<div class="small-12 medium-6 column">
  			<form action="" method="post">
  				<div class='input-group'>
  					<input type="text" class="input-group-field" placeholder="Search by name">
@@ -22,7 +22,7 @@
  			</form>
  		</div>
 
- 		<div class="small-12 medium-5 end coulmn">
+ 		<div class="small-12 medium-5 end column">
  			<form action="/02/public/admin/product/categories" method="post">
  				<div class='input-group'>
  					<input type="text" class="input-group-field" name="name" placeholder="Category name">
