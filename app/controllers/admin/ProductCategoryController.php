@@ -23,7 +23,7 @@ class ProductCategoryController{
 				Category::create([
 					'name' => $request->name,
 					'slug' => $request->slug($request->name)
-				])
+				]);
 				$categories = Category::all();
 				$message = "Category Created";
 				return view('admin/products/categories',compact('categories','message')); 
