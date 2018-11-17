@@ -9,11 +9,12 @@
 <body>
 
  @include('includes.admin-sidebar')
+ @include hamburger($blue);
   <div class="off-canvas-content admin_title_bar" data-off-canvas-content>
     <!-- Your page content lives here -->
     <div class="title-bar">
   <div class="title-bar-left">
-    <button class="menu-icon hide-for-large" type="button" data-open="offCanvas" style="color:black"></button>
+    <button class="menu-icon " type="button" data-toggle="offCanvas" ></button>
     <span class="title-bar-title">{{getenv("APP_NAME")}}</span>
   </div>
  
