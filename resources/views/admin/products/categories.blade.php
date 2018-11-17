@@ -9,6 +9,9 @@
 
  		
  	</div>
+ 	@if($message)
+ 		<p>{{$message}}</p>
+ 	@endif
  	<div class="row expanded">
 
  		<div class="small-12 medium-6 column">

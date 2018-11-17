@@ -37,4 +37,17 @@ function make($filename,$data){
 	return $content;
 }
 
+function slug($value){
+	//remove all characters not in this list: underscore | letters | numbers | whitespace
+	//pL letters ; pN numbers; s whitespace ; !u this should be treated as utf-8
+	$value = preg_replace('![^'.preg_quote('_').'\pL\pN\s]+!u', '', mb_strtolower($value));
+
+	//replace underscore and whitespace with a dash
+	$value = preg_replace('!['.preg_quote('-').'\s]+!u', '-', $value);
+
+	//remove whitespace
+	return trim($value,'-');
+
+}
+
 ?>
