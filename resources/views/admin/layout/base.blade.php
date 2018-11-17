@@ -5,6 +5,7 @@
 	<title>Admin Panel - @yield('title')</title>
 	<link rel="stylesheet" href="/02/public/css/all.css">
 	<script src="https://use.fontawesome.com/82337c0b5c.js"></script>
+  <script src="/02/public/js/all.js"></script>
 </head>
 <body>
 
@@ -20,7 +21,7 @@
 </div>
     @yield('content')
   </div>
-<script src="/02/public/js/all.js"></script>
+
 
 </body>
 </html>
