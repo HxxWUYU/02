@@ -7,7 +7,10 @@ class Session{
 
 	public static function add($name,$value){
 
-		$_SESSION[$name] = $value;
+		if($name!='' && (!empty($name)) && $value!='' && (!empty($value))){
+			$_SESSION[$name] = $value;
+		}
+		
 
 		throw new \Exception ('Name and value required');
 		//在一个命名空间中 调用其他类必须声明命名空间 否则会在当前
@@ -21,9 +24,11 @@ class Session{
 	//check if session exists
 
 	public static function has($name){
-		if($name!='' && !empty($name))｛
-			return (isset($_SESSION[$name])) ? true : false;
-		｝
+		
+
+		if($name!='' && (!empty($name))){
+			return ((isset($_SESSION[$name])) ? true : false);
+		}
 
 		throw new \Exception('name is required');
 	}
