@@ -1,7 +1,5 @@
 .nav{
-transform:translate(0px);
-visibility:visible;
-capacity:1;
+    transform: translate(0, 0);
 	background-color:#2A3F54;
 
 	.menu >li >a {
@@ -56,4 +54,8 @@ capacity:1;
 	.menu-icon{
 		background-color:black;
 	}
+}
+
+.custom_open{
+	transform:translate(-250px);
 }

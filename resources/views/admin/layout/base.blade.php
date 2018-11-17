@@ -22,5 +22,12 @@
   </div>
 <script src="/02/public/js/all.js"></script>
 
+<script type="text/javascript">
+   function toggleOpen(){
+      this.classList.toggle('custom_open');
+    }
+  const button = doument.querySelector('#toggle_canvas');
+  button.addEventListener('click',toggleOpen);
+</script>
 </body>
 </html>

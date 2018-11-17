@@ -5231,9 +5231,7 @@ a.thumbnail image {
 }
 
 .nav {
-  transform: translate(0px);
-  visibility: visible;
-  capacity: 1;
+  transform: translate(0, 0);
   background-color: #2A3F54;
 }
 
@@ -5287,6 +5285,10 @@ a.thumbnail image {
 
 .admin_title_bar .menu-icon {
   background-color: black;
+}
+
+.custom_open {
+  transform: translate(-250px);
 }
 
 .slide-in-down.mui-enter {
