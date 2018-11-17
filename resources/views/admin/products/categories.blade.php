@@ -22,12 +22,13 @@
  			</form>
  		</div>
 
- 		<div class="small-12 medium-5 coulmn">
+ 		<div class="small-12 medium-5 end coulmn">
  			<form action="/02/public/admin/product/categories" method="post">
  				<div class='input-group'>
- 					<input type="text" class="input-group-filed" placeholder="Search by name">
+ 					<input type="text" class="input-group-filed" name="name" placeholder="Category name">
+ 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::token()}}">
  					<div class="input-group-button">
- 						<input type="submit" class="button" value="Search">
+ 						<input type="submit" class="button" value="Create">
  					</div>
  				</div>
  			</form>
