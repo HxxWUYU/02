@@ -1,5 +1,5 @@
 
-  <div class="off-canvas position-left nav" id="offCanvas"  data-off-canvas>
+  <div class="off-canvas position-left reveal nav" id="offCanvas"  data-off-canvas>
 
     <!-- Close button -->
     
@@ -23,3 +23,5 @@
     <!-- End Side bar-->
 
   </div>
+
+  
