@@ -36,6 +36,6 @@ class ValidateRequest{
 		}
 		return true;
 	}		
-	}
+	
 }
 ?>
