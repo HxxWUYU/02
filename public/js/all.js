@@ -9,6 +9,10 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 (function(){
 	'use strict';
+	var options = {
+  data-close-on-click: false
+};
+var elem = new Foundation.OffCanvas(element, options);
 	$(document).foundation();
 	
 })();
