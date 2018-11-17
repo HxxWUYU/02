@@ -20,6 +20,7 @@ class ProductCategoryController{
 			$request = Request::get('post');//data in post
 			
 			if(CSRFToken::verifyCSRFToken($request->token)){
+				var_dump($request->name);
 				$rules = [
 					$request->name=>[
 						'required'=>true,
@@ -28,7 +29,7 @@ class ProductCategoryController{
 						'unique'=>'categories'	
 					]
 				];
-				var_dump($_POST);exit;
+
 				$validate = new ValidateRequest;
 				$validate->abide($_POST,$rules);
 
