@@ -17,14 +17,25 @@ class ProductCategoryController{
 
 	public function store(){
 		if(Request::has('post')){
-			$request = Request::get('post');//data in post
-			$data = ValidateRequest::string('name',$request->name,true);
-			if($data){
-				echo "All good";exit;
-			}else{
-				echo "Not Email";exit;
-			}
+			$request = Request::get('post',true);//data in post
+			
 			if(CSRFToken::verifyCSRFToken($request->token)){
+				$rules = [
+					'name'=>[
+						'required'=>true,
+						'maxLength'=>5,
+						'string'=>true,
+						'uniques'=>'categories'	
+					];
+				];
+				$validate = new ValidateRequest;
+				$validate->abide($_POST,$rules);
+
+				if($validate->hasError()){
+					var_dump($validate->getErrorMessages());
+				}else{
+					echo "Invalid";exit;
+				}
 				//process form data
 				Category::create([
 					'name' => $request->name,
