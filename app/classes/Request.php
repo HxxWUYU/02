@@ -45,7 +45,7 @@ class Request{
 
 	public static function refresh(){
 		$_POST = [];
-		$_GET = []
+		$_GET = [];
 		$_FILES = [];
 	}
 
