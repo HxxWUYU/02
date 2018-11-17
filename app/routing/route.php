@@ -8,6 +8,11 @@ $router->map('GET','/02/public/admin','App\Controllers\Admin\DashboardController
 
 $router->map('POST','/02/public/admin','App\Controllers\Admin\DashboardController@get','admin_form'); //@sign can be custom 
 
+//product management
+$router->map('GET','/02/public/admin/product/categories','App\Controllers\Admin\ProductCategoryController@show','product_category'); 
+
+$router->map('POST','/02/public/admin/product/categories','App\Controllers\Admin\ProductCategoryController@store','create_product_category'); 
+
 
 
 //for admin routes
