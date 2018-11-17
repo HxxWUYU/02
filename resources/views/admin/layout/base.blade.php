@@ -13,7 +13,7 @@
     <!-- Your page content lives here -->
     <div class="title-bar">
   <div class="title-bar-left">
-    <button class="menu-icon" hide-for-large aria-label="Toggle menu" type="button" data-open></button>
+    <button class="menu-icon" hide-for-large type="button" data-open></button>
     <span class="title-bar-title">{{getenv("APP_NAME")}}</span>
   </div>
  
