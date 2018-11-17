@@ -34,6 +34,13 @@ class Request{
 		return ((array_key_exists($key, self::all(true))) ? true:false);
 	}
 	//get request data
+
+	public static function old($key,$value){
+
+		$object = new static;
+		$data = $object->all();
+		return (isset($data->$key->$value)) ? $data->$key->$value : '';
+	}
 	//refresh request
 
 
