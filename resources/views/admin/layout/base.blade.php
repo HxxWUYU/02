@@ -13,7 +13,7 @@
     <!-- Your page content lives here -->
     <div class="title-bar">
   <div class="title-bar-left">
-    <button class="menu-icon show-for-small show-for-medium show-for-large" type="button" data-open="offCanvas"></button>
+    <button class="menu-icon show-for-small show-for-medium show-for-large" type="button" data-toggle="offCanvas"></button>
     <span class="title-bar-title">{{getenv("APP_NAME")}}</span>
   </div>
  
