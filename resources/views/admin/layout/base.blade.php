@@ -26,7 +26,7 @@
    function toggleOpen(){
       this.classList.toggle('custom_open');
     }
-  const button = doument.querySelector('#toggle_canvas');
+  const button = document.querySelector('#toggle_canvas');
   button.addEventListener('click',toggleOpen);
 </script>
 </body>
