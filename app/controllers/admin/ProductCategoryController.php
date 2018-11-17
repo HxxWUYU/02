@@ -26,7 +26,7 @@ class ProductCategoryController{
 						'maxLength'=>5,
 						'string'=>true,
 						'unique'=>'categories'	
-					];
+					]
 				];
 				$validate = new ValidateRequest;
 				$validate->abide($_POST,$rules);
