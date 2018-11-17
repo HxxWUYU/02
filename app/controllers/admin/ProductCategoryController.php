@@ -22,7 +22,7 @@ class ProductCategoryController{
 				//process form data
 				Category::create([
 					'name' => $request->name,
-					'slug' => $request->slug($request->name)
+					'slug' => slug($request->name)
 				]);
 				$categories = Category::all();
 				$message = "Category Created";
