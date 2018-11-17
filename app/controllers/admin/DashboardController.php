@@ -22,8 +22,8 @@ class DashboardController extends BaseController{
 	}
 
 	public function get(){
-		$request = Request::all();
-		var_dump($request->file);
+		$request = Request::all(true);
+		var_dump($request['file']);
 	}
 }
 ?>
