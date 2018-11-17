@@ -20,9 +20,9 @@ class ProductCategoryController{
 			$request = Request::get('post');//data in post
 			
 			if(CSRFToken::verifyCSRFToken($request->token)){
-				var_dump($request->name);
+
 				$rules = [
-					$request->name=>[
+					$request['post']->name=>[
 						'required'=>true,
 						'maxLength'=>5,
 						'string'=>true,
