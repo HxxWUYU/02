@@ -24,7 +24,7 @@
 
 <script type="text/javascript">
    function toggleOpen(){
-      const content = document.querySelector('#admin_title_bar');
+      const content = document.querySelector('.admin_title_bar');
      
       content.classList.toggle('custom_open');
     }
