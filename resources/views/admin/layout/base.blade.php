@@ -24,7 +24,9 @@
 
 <script type="text/javascript">
    function toggleOpen(){
-      this.classList.toggle('custom_open');
+      const content = document.querySelector('#admin_title_bar');
+     
+      content.classList.toggle('custom_open');
     }
   const button = document.querySelector('#toggle_canvas');
   button.addEventListener('click',toggleOpen);

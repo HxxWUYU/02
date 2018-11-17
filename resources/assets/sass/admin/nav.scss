@@ -1,5 +1,5 @@
 .nav{
-    transform: translate(0, 0);
+   
 	background-color:#2A3F54;
 
 	.menu >li >a {
@@ -43,6 +43,7 @@
 
 .admin_title_bar{
 	transform:translate(250px);
+	transition:transform,0.5s,ease;
 	.title-bar{
 		background-color:#EDEDED;
 		.title-bar-title{
