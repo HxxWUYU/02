@@ -22,13 +22,17 @@ class Request{
 	}
 	//get specific request type
 
-	public static function get($key){
+	public static function get($key,$is_array=false){
 		$object = new static;
-		$data = $object->all();
+		$data = $object->all($is_array);
 
 		return $data->$key;
 	}
 	//check requet availability
+
+	public static function has ($key){
+		return ((array_key_exists($key, self::all(true))) ? true:false);
+	}
 	//get request data
 	//refresh request
 

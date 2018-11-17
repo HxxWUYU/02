@@ -22,8 +22,13 @@ class DashboardController extends BaseController{
 	}
 
 	public function get(){
-		$request = Request::get('posting');
-		var_dump($request);
+		if(Request::has('posting')){
+			$request = Request::get('posting');
+			var_dump($request);
+		}else{
+			var_dump("posting does not exist");
+		}
+		
 	}
 }
 ?>
