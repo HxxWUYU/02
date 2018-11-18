@@ -52,6 +52,10 @@
 	 									<a href="#"><i class="fa fa-times"></i></a>
  									 <!--Edit Category Modal -->
  									<div class="reveal" id="item-{{$category['id']}}" data-reveal data-close-on-click="false" data-close-on-esc="false">
+ 										<div class="notification callout primary">
+ 											
+
+ 										</div>
 									  <h2>Edit Category</h2>
 									  <form>
 						 				<div class='input-group'>

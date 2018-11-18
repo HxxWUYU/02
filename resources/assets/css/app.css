@@ -5282,6 +5282,10 @@ a.thumbnail image {
   background-color: black;
 }
 
+.notification {
+  display: none;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
