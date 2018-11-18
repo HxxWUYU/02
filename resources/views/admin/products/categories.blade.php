@@ -55,7 +55,7 @@
 						 				<div class='input-group'>
 						 					<input type="text" value="{{$category['name']}}" name="name" placeholder="Category name">
 						 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
-						 					<div class="input-group-button">
+						 					<div>
 						 						<input type="submit" class="button update-category" value="Update" id="{{$category['id']}}">
 						 					</div>
 						 				</div>
