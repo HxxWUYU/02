@@ -37,7 +37,7 @@
  	</div>
  	<div class="row expanded">
  		<div class="small-12 medium-11 column">
-
+ 			{{$categories}}
  			@if(count($categories))
  				<table class='hover'>
  					<tbody>
