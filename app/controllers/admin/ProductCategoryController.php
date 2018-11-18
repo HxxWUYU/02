@@ -16,7 +16,7 @@ class ProductCategoryController{
 		$total = Category::all()->count();
 		$object = new Category;
 
-		list($this->categories,$this->links) = paginate(2,$total,$this->table_name,$object);
+		list($this->categories,$this->links) = paginate(3,$total,$this->table_name,$object);
 	}
 
 	public function show(){
