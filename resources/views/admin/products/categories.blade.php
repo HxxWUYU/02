@@ -54,14 +54,14 @@
 									  <h2>Edit Category</h2>
 									  <form>
 						 				<div class='input-group'>
-						 					<input type="text" class="input-group-field" value="{{$category['name']}}" name="name">
+						 					<input type="text" value="{{$category['name']}}" name="name">
 						 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
 						 					<div>
 						 						<input type="submit" class="button update-category" value="Update" id="{{$category['id']}}">
 						 					</div>
 						 				</div>
 						 			</form>
-									  <button class="close-button input-group-button" data-close aria-label="Close modal" type="button">
+									  <button class="close-button" data-close aria-label="Close modal" type="button">
 									    <span aria-hidden="true">&times;</span>
 									  </button>
 									</div>
