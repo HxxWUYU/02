@@ -37,7 +37,7 @@
  	</div>
  	<div class="row expanded">
  		<div class="small-12 medium-11 column">
- 			
+
  			@if(count($categories))
  				<table class='hover'>
  					<tbody>
@@ -47,8 +47,23 @@
  								<td>{{$category['slug']}}</td>
  								<td>{{$category['added']}}</td>
  								<td width="100" class="text-right">
- 									<a href="#"><i class="fa fa-edit"></i></a>
+ 									<a data-open="{{$category['id']}}"><i class="fa fa-edit"></i></a>
  									<a href="#"><i class="fa fa-times"></i></a>
+ 									<div class="reveal" id="item-{{$category['id']}}" data-reveal>
+									  <h1>Edit Category</h1>
+									  <form>
+						 				<div class='input-group'>
+						 					<input type="text" value="{{$category['name']}}" name="name" placeholder="Category name">
+						 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
+						 					<div class="input-group-button">
+						 						<input type="submit" class="button update-category" value="Update" id="{{$category['id']}}">
+						 					</div>
+						 				</div>
+						 			</form>
+									  <button class="close-button" data-close aria-label="Close modal" type="button">
+									    <span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
  								</td>
  							</tr>
  						@endforeach
