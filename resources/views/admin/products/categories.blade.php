@@ -65,7 +65,7 @@
 						 					</div>
 						 				</div>
 						 			</form>
-									  <a href="/02/public/admin/product/categories"  data-close aria-label="Close modal" type="button">
+									  <a class="close-button" href="/02/public/admin/product/categories" aria-label="Close modal" type="button">
 									    <span aria-hidden="true">&times;</span>
 									  </a>
 									</div>
