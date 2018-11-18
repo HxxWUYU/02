@@ -70,7 +70,7 @@ function paginate($num_of_records,$total_record,$table_name,$object){
 			'id'=>$item->id,
 			'name' => $item->name,
 			'slug' => $item->slug,
-			'added' => $item->created_at->toFormattedDateString()
+			'added' => $item->created_at
 
 		]);
 	}

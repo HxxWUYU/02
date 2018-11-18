@@ -1,17 +1,22 @@
 <?php 
 namespace App\Controllers\Admin;
 
-use App\Models\Category;
-use App\Classes\Request;
 use App\Classes\CSRFToken;
+use App\Classes\Request;
 use App\Classes\ValidateRequest;
+use App\Models\Category;
+
 class ProductCategoryController{
 
+	public $table_name = 'categories';
 	public function show(){
 
-		$categories = Category::all();
+		$total = Category::all()->count();
+		$object = new Category;
 
-		return view('admin/products/categories',compact('categories')); 
+		list($categories,$links) = paginate(2,$total,$this->table_name,$object);
+
+		return view('admin/products/categories',compact('categories','links')); 
 		//compact(var) create an array that contains whatever variables are passed into it 
 	}
 

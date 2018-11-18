@@ -3,6 +3,8 @@ namespace App\Classes;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+
+//This class would instantiated in init.php
 class Database{
 
 	public function __construct(){

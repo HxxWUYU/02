@@ -1,5 +1,8 @@
 <?php 
 
+// use App\Classes\Database;
+// use App\RouteDispatcher;
+
 if(!isset($_SESSION)) session_start();
 
 //load environment 
