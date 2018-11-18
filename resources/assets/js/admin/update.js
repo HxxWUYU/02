@@ -29,11 +29,12 @@
 								li.appendChild(document.createTextNode(v));
 								ul.appendChild(li);
 							});
-						}
-							
-						var li = document.createElement('li');
+						}else{
+							var li = document.createElement('li');
 							li.appendChild(document.createTextNode(value));
-							ul.appendChild(li);			
+							ul.appendChild(li);	
+						}
+								
 					});
 			$(".notification").css("display","block").removeClass('primary')
 			.addClass('alert').delay(6000).slideUp(300)
