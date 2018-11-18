@@ -22,7 +22,7 @@
 				error:function(request,error){
 					var errors = JQuery.parseJson(request.responseText);
 					var ul = document.createElement('ul');
-					$.each(errors,function(key.value){
+					$.each(errors,function(key,value){
 						var li = document.createElement('li');
 						li.appendChild(document.createTextNode(value));
 						ul.appendChild(li);
