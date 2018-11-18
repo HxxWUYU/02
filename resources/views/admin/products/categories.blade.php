@@ -9,7 +9,7 @@
 
  		
  	</div>
- 	@include('includes.message');
+ 	@include('includes.message')
  	<div class="row expanded">
 
  		<div class="small-12 medium-6 column">
