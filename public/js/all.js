@@ -28,7 +28,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 			var id = $(this).attr('id');
 			var name = $("#item-name"+id).val();
 
-			alert(token+ 'and id= '.id+" name= "+name);
+			alert(token+ ' and id= '+id+" name= "+name);
 			e.preventDefault();
 
 		});
