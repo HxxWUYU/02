@@ -14,7 +14,7 @@
 	@endif
 
 	@if(isset($message))
-		<div class="callout alert" data-closable>
+		<div class="callout success" data-closable>
 			{{$message}}
 
 			<button class="close-button" arial-label="Dismiss Message" type="button" data-close>
