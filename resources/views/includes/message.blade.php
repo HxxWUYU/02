@@ -2,7 +2,7 @@
 	@if(count($errors))
 		<div class="callout alert data-closable">
 			@foreach($errors as $error_array)
-				@foreach($error_array as @error_item)
+				@foreach($error_array as $error_item)
 					{{$error_item}} <br>
 				@endforeach
 			@endforeach
