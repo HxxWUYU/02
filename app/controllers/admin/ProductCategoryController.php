@@ -57,7 +57,7 @@ class ProductCategoryController{
 				]);
 				
 				$message = "Category Created";
-				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
+				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>"Hi"]); 
 			}
 			throw new \Exception ('Token mismatch');
 		}
