@@ -12,11 +12,11 @@
 
 			$.ajax({
 				type:'post',
-				url:'/02/public/admin/product/categories/'+id+'/edit',
+				url:'/02/public/admin/product/categories/'+id+'/eee',
 				data:{token:token,name:name},
 				success:function(data){
 					var response = $.parseJSON(data); //Convert json object to js object
-					$(".notification").css("display","block").delay(4000).slideUp(300)
+					$(".notification").css("display","block").addClass('primary').delay(4000).slideUp(300)
 					.html(response.success);
 				},
 				error:function(request,error){
