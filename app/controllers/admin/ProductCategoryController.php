@@ -46,7 +46,7 @@ class ProductCategoryController{
 				$validate->abide($_POST,$rules);
 
 				if($validate->hasError()){
-					$errors = $validate->getErrorMessages());
+					$errors = $validate->getErrorMessages();
 					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$this->errors]); 
 					
 				}
