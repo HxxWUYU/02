@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Philo\Blade\Blade;
 use voku\helper\Paginator;
@@ -56,7 +57,7 @@ function slug($value){
 
 function paginate($num_of_records,$total_record,$table_name,$object){
 
-	$categories=[];
+	
 
 	$pages = new Paginator($num_of_records,'p');
 
@@ -65,15 +66,9 @@ function paginate($num_of_records,$total_record,$table_name,$object){
 
 	$data = Capsule::select("SELECT * FROM $table_name ORDER BY created_at DESC".$pages->get_limit());
 
-	foreach ($data as $item) {
-		
-		array_push($categories,[
-			'id'=>$item->id,
-			'name' => $item->name,
-			'slug' => $item->slug,
-			'added' => $item->created_at
-		]);
-	}
+	$categories = $object->transform($data);
+
+
 
 	return [$categories,$pages->page_links()];
 
