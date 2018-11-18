@@ -53,7 +53,7 @@
 									  <h1>Edit Category</h1>
 									  <form>
 						 				<div class='input-group'>
-						 					<input type="text" value="{{$category['name']}}" name="name" placeholder="Category name">
+						 					<input type="text" value="{{$category['name']}}" name="name">
 						 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
 						 					<div>
 						 						<input type="submit" class="button update-category" value="Update" id="{{$category['id']}}">
