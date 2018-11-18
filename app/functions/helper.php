@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Philo\Blade\Blade;
-use voku\Helper\Paginator;
+use voku\helper\Paginator;
+
 
 
 function view($path, array $data = [])
