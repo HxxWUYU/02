@@ -8,7 +8,9 @@
 			
 			var token = $(this).data("token");
 			var id = $(this).attr('id');
-			alert(token + ' '+id);
+			var name = $("#item-name"+id).val();
+
+			alert(token+ 'and id= '.id+" name= "+name);
 			e.preventDefault();
 
 		});
