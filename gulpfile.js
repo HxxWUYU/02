@@ -31,7 +31,9 @@ elixir(function (mix){
 
 		bowerPath + '/slick-carousel/slick/slick.min.js',
 
-		'js/*.js'
+		'js/hxx.js',
+		'js/admin/*.js',
+		'js/init.js',
 
 		], 'public/js/all.js','resources/assets'
 	);

@@ -7,7 +7,7 @@
 	<script src="https://use.fontawesome.com/82337c0b5c.js"></script>
   
 </head>
-<body>
+<body data-page-id="@yiled('data-pade-id')">
 
  @include('includes.admin-sidebar')
   <div class="off-canvas-content admin_title_bar"  data-off-canvas-content>

@@ -9,7 +9,44 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 (function(){
 	'use strict';
+	window.HXXSTORE ={
+
+		global:{},
+		admin:{}
+
+	}
+})();
+(function(){
+	'use strict';
+
+	HXXSTORE.admin.update = function(){
+		//update product category
+		$(".update-category").on('click',function(e){
+
+			
+			var token = $(this).data("token");
+			var id = $(this).attr('id');
+			alert(token + ' '+id);
+			e.preventDefault();
+
+		})
+	};
+})();
+(function(){
+	'use strict';
 	
 	$(document).foundation();
 	
+	$(document).ready(function(){
+		//SWITCH PAGES
+		switch($('body').data('page-id')){
+			case 'home':
+				break;
+			case 'adminCategories':
+				HXXSTORE.admin.update();
+				break;
+			default:
+			//do nothing
+		}
+	});
 })();

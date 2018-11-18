@@ -58,8 +58,53 @@ class ProductCategoryController{
 				
 				$message = "Category Created";
 				$total = Category::all()->count();
-				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Category);
+				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Cat);
 				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
+			}
+			throw new \Exception ('Token mismatch');
+		}
+	}
+
+	public function edit($id){
+		if(Request::has('post')){
+			$request = Request::get('post');//data in post
+			
+			if(CSRFToken::verifyCSRFToken($request->token)){
+
+				$rules = [
+					'name'=>[
+						'required'=>true,
+						'minLength'=>3,
+						'string'=>true,
+						'unique'=>'categories'	
+					]
+				];
+
+				$validate = new ValidateRequest;
+				$validate->abide($_POST,$rules);
+
+				if($validate->hasError()){
+					 $errors = $validate->getErrorMessages();
+					 header("HTTP/1.1 422 Uprocessable Entity",true,422);
+					 echo json_encode($errors);
+					 exit;
+					// return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors]); 
+					
+				}
+
+				Category::where('id',$id)->update(['name'=>$request->name]);
+				echo json_encode(['success'=>'Record Updated']);
+				exit;
+				//process form data
+				// Category::create([
+				// 	'name' => $request->name,
+				// 	'slug' => slug($request->name)
+				// ]);
+				
+				// $message = "Category Created";
+				// $total = Category::all()->count();
+				// list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Cat);
+				// return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
 			}
 			throw new \Exception ('Token mismatch');
 		}

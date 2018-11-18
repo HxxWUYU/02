@@ -1,5 +1,6 @@
 @extends('admin.layout.base')
 @section('title','Product Categories')
+@section('data-page-id',"adminCateogries")
 
 @section('content')
 
@@ -55,9 +56,8 @@
 									  <form>
 						 				<div class='input-group'>
 						 					<input type="text" value="{{$category['name']}}" name="name">
-						 					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
 						 					<div>
-						 						<input type="submit" class="button update-category" value="Update" id="{{$category['id']}}">
+						 						<input type="submit" class="button update-category" data-token="{{\App\Classes\CSRFToken::_token()}}" value="Update" id="{{$category['id']}}">
 						 					</div>
 						 				</div>
 						 			</form>
