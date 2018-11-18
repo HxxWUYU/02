@@ -36,7 +36,7 @@ class ProductCategoryController{
 				$rules = [
 					'name'=>[
 						'required'=>true,
-						'maxLength'=>5,
+						'minLength'=>3,
 						'string'=>true,
 						'unique'=>'categories'	
 					]

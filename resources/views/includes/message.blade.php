@@ -1,6 +1,6 @@
 <div class="row expanded">
 	@if(isset($errors)&&count($errors))
-		<div class="callout alert data-closable">
+		<div class="callout alert" data-closable>
 			@foreach($errors as $error_array)
 				@foreach($error_array as $error_item)
 					{{$error_item}} <br>
@@ -14,7 +14,7 @@
 	@endif
 
 	@if(isset($message))
-		<div class="callout alert data-closable">
+		<div class="callout alert" data-closable>
 			{{$message}}
 
 			<button class="close-button" arial-label="Dismiss Message" type="button" data-close>
