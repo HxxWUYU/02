@@ -37,8 +37,8 @@
  	</div>
  	<div class="row expanded">
  		<div class="small-12 medium-11 column">
- 			{{"!!!!".$message}}
- 			@if(isset($message))
+
+ 			@if(count($categories))
  				<table class='hover'>
  					<tbody>
  						@foreach($categories as $category)
