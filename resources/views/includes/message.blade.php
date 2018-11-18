@@ -1,5 +1,5 @@
 <div class="row expanded">
-	@if(count($errors))
+	@if(isset($errors)&&count($errors))
 		<div class="callout alert data-closable">
 			@foreach($errors as $error_array)
 				@foreach($error_array as $error_item)
