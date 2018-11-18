@@ -11,6 +11,6 @@
 			alert(token + ' '+id);
 			e.preventDefault();
 
-		})
+		});
 	};
 })();
