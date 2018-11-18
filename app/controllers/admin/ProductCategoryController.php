@@ -47,7 +47,7 @@ class ProductCategoryController{
 
 				if($validate->hasError()){
 					$errors = $validate->getErrorMessages();
-					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors); 
+					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors]); 
 					
 				}
 				//process form data
