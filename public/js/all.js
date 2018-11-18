@@ -30,11 +30,11 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 			$.ajax({
 				type:'post',
-				url:'/02/public/admin/product/categories/'+id+'/eee',
+				url:'/02/public/admin/product/categories/'+id+'/edit',
 				data:{token:token,name:name},
 				success:function(data){
 					var response = $.parseJSON(data); //Convert json object to js object
-					$(".notification").css("display","block").addClass('primary').delay(4000).slideUp(300)
+					$(".notification").addClass('primary').css("display","block").delay(4000).slideUp(300)
 					.html(response.success);
 				},
 				error:function(request,error){
