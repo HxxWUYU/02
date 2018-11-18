@@ -9,6 +9,7 @@ use App\Models\Category;
 class ProductCategoryController{
 
 	public $table_name = 'categories';
+	
 	public function show(){
 
 		$total = Category::all()->count();

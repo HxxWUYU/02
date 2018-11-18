@@ -63,7 +63,7 @@ function paginate($num_of_records,$total_record,$table_name,$object){
 	$pages->set_total($total_record);
 
 
-	$data = Capsule::select("SELECT * FROM $table_name ORDER By created_at DESC".$pages->get_limit());
+	$data = Capsule::select("SELECT * FROM $table_name ORDER BY created_at DESC".$pages->get_limit());
 
 	foreach ($data as $item) {
 		
@@ -72,7 +72,6 @@ function paginate($num_of_records,$total_record,$table_name,$object){
 			'name' => $item->name,
 			'slug' => $item->slug,
 			'added' => $item->created_at
-
 		]);
 	}
 
