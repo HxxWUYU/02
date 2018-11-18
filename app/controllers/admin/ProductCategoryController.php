@@ -47,7 +47,7 @@ class ProductCategoryController{
 
 				if($validate->hasError()){
 					$errors = $validate->getErrorMessages();
-					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$this->errors]); 
+					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors); 
 					
 				}
 				//process form data
@@ -55,9 +55,9 @@ class ProductCategoryController{
 					'name' => $request->name,
 					'slug' => slug($request->name)
 				]);
-				$categories = Category::all();
+				
 				$message = "Category Created";
-				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$this->message]); 
+				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
 			}
 			throw new \Exception ('Token mismatch');
 		}
