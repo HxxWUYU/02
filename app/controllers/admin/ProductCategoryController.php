@@ -9,15 +9,21 @@ use App\Models\Category;
 class ProductCategoryController{
 
 	public $table_name = 'categories';
-	
-	public function show(){
+	public $categories;
+	public $links;
 
+	public function __construct(){
 		$total = Category::all()->count();
 		$object = new Category;
 
-		list($categories,$links) = paginate(2,$total,$this->table_name,$object);
+		list($this->categories,$this->links) = paginate(2,$total,$this->table_name,$object);
+	}
 
-		return view('admin/products/categories',compact('categories','links')); 
+	public function show(){
+
+		
+
+		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links]); 
 		//compact(var) create an array that contains whatever variables are passed into it 
 	}
 
@@ -40,7 +46,9 @@ class ProductCategoryController{
 				$validate->abide($_POST,$rules);
 
 				if($validate->hasError()){
-					var_dump($validate->getErrorMessages());exit;
+					$errors = $validate->getErrorMessages());
+					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$this->errors]); 
+					
 				}
 				//process form data
 				Category::create([
@@ -49,7 +57,7 @@ class ProductCategoryController{
 				]);
 				$categories = Category::all();
 				$message = "Category Created";
-				return view('admin/products/categories',compact('categories','message')); 
+				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$this->message]); 
 			}
 			throw new \Exception ('Token mismatch');
 		}

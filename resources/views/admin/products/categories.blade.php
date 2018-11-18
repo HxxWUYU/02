@@ -9,9 +9,7 @@
 
  		
  	</div>
- 	@if($message)
- 		<p>{{$message}}</p>
- 	@endif
+ 	@include('includes.message');
  	<div class="row expanded">
 
  		<div class="small-12 medium-6 column">
@@ -40,7 +38,7 @@
  	<div class="row expanded">
  		<div class="small-12 medium-11 column">
 
- 			@if(count($categories))
+ 			@if(isset($message))
  				<table class='hover'>
  					<tbody>
  						@foreach($categories as $category)
