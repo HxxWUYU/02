@@ -33,12 +33,12 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 				url:'/02/public/admin/product/categories/'+id+'/edit',
 				data:{token:token,name:name},
 				success:function(data){
-					var response = jQuery.parseJSON(data); //Convert json object to js object
+					var response = $.parseJSON(data); //Convert json object to js object
 					$(".notification").css("display","block").delay(4000).slideUp(300)
 					.html(response.success);
 				},
 				error:function(request,error){
-					var errors = jQuery.parseJson(request.responseText);
+					var errors = $.parseJSON(request.responseText);
 					var ul = document.createElement('ul');
 					$.each(errors,function(key,value){
 						var li = document.createElement('li');
