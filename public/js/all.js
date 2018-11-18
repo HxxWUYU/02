@@ -41,9 +41,17 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 					var errors = $.parseJSON(request.responseText);
 					var ul = document.createElement('ul');
 					$.each(errors,function(key,value){
+						if(value.length>1){
+							$.each(value,function(k,v){
+								var li = document.createElement('li');
+								li.appendChild(document.createTextNode(v));
+								ul.appendChild(li);
+							});
+						}
+							
 						var li = document.createElement('li');
-						li.appendChild(document.createTextNode(value));
-						ul.appendChild(li);
+							li.appendChild(document.createTextNode(value));
+							ul.appendChild(li);			
 					});
 			$(".notification").css("display","block").removeClass('primary')
 			.addClass('alert').delay(6000).slideUp(300)
