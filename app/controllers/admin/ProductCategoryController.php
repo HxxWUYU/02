@@ -2,6 +2,7 @@
 namespace App\Controllers\Admin;
 
 use App\Classes\CSRFToken;
+use App\Classes\Redirect;
 use App\Classes\Request;
 use App\Classes\Session;
 use App\Classes\ValidateRequest;
