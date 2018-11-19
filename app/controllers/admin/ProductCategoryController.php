@@ -25,7 +25,7 @@ class ProductCategoryController extends BaseController{
 
 		list($this->categories,$this->links) = paginate(3,$total,$this->table_name,$object);
 
-		list($this->subcategories,$this->subcategories_links) = paginate(3,$subtotal,"sub_categories",new SubCategory);
+		list($this->subcategories,$this->subcategories_links) = paginate(3,$subTotal,"sub_categories",new SubCategory);
 	}
 
 	public function show(){
