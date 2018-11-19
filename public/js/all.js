@@ -21,6 +21,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 	HXXSTORE.admin.create = function(){
 		//create sub category
+		e.preventDefault();
 		$(".add-subcategory").on('click',function(e){
 			
 			
@@ -65,7 +66,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 			
 
 		});
-		
+
 	};
 })();
 (function(){

@@ -3,6 +3,7 @@
 
 	HXXSTORE.admin.create = function(){
 		//create sub category
+		e.preventDefault();
 		$(".add-subcategory").on('click',function(e){
 			
 			
@@ -47,6 +48,6 @@
 			
 
 		});
-		
+
 	};
 })();
