@@ -166,8 +166,9 @@
 						 							@foreach(\App\Models\Category::all() as $category)
 						 								@if($category->id==$subcategory['category_id'])
 						 									<option selected="selected" value="{{$category->id}}">{{$category->name}}</option>
-						 								@endif
+						 								@else
 						 								<option value="{{$category->id}}">{{$category->name}}</option>
+						 								@endif
 						 							@endforeach
 						 						</select>
 
