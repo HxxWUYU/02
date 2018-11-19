@@ -129,8 +129,8 @@ class SubCategoryController extends BaseController{
 
 				
 				
-				Category::destroy($id);
-				Session::add('success','Category Deleted');
+				SubCategory::destroy($id);
+				Session::add('success','Subcategory Deleted');
 				Redirect::to('/02/public/admin/product/categories');
 				
 			}

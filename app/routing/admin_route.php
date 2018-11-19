@@ -20,6 +20,8 @@ $router->map('POST','/02/public/admin/product/subcategory/create','App\Controlle
 
 $router->map('POST','/02/public/admin/product/subcategory/[i:id]/edit','App\Controllers\Admin\SubCategoryController@edit','edit_subcategory');
 
+$router->map('POST','/02/public/admin/product/subcategory/[i:id]/delete','App\Controllers\Admin\SubCategoryController@delete','delete_subcategory');
+
 //for admin routes
 //$match = $router->match()  match is an array containing 3 elements:
 //traget, parmas, name // target is the App\..\ name is home

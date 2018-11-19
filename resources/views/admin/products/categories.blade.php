@@ -124,7 +124,7 @@
 
  		
  	</div>
- 	@include('includes.message')
+ 	
  	
  	<div class="row expanded">
  		<div class="small-12 medium-11 column">
@@ -144,7 +144,7 @@
  									</span>
 	 									<!-- Delete Category-->
 	 									<span class="has-tip top" data-tooltip tabindex="1" title="Delete Subcategory" style="display:inline-block">
-	 										<form method="POST" action="/02/public/admin/product/categories/{{$subcategory['id']}}/delete"  class="delete-item">
+	 										<form method="POST" action="/02/public/admin/product/subcategory/{{$subcategory['id']}}/delete"  class="delete-item">
 	 											<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
 	 											<button type="submit"><i class="fa fa-times delete"></i></button>
 	 										</form>
