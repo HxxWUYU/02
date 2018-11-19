@@ -32,7 +32,7 @@ class ProductCategoryController extends BaseController{
 
 		
 
-		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->$subcategories_links]); 
+		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->subcategories_links]); 
 		//compact(var) create an array that contains whatever variables are passed into it 
 	}
 
