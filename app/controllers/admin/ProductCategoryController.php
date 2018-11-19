@@ -57,7 +57,7 @@ class ProductCategoryController extends BaseController{
 
 				if($validate->hasError()){
 					$errors = $validate->getErrorMessages();
-					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->$subcategories_links]); 
+					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->subcategories_links]); 
 					
 				}
 				//process form data
