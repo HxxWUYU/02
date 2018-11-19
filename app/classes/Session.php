@@ -1,6 +1,5 @@
 <?php 
 namespace App\Classes;
-session_start();
 
 class Session{
 
@@ -10,6 +9,7 @@ class Session{
 
 		if($name!='' && (!empty($name)) && $value!='' && (!empty($value))){
 			$_SESSION[$name] = $value;
+			return;
 		}
 		
 
