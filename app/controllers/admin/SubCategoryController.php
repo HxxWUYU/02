@@ -27,7 +27,7 @@ class SubCategoryController extends BaseController{
 						'required'=>true,
 						'minLength'=>3,
 						'string'=>true,
-						'unique'=>'subcategories'	
+						'unique'=>'sub_categories'	
 					],
 					'category_id' => ['required'=>true]
 				];
@@ -49,7 +49,7 @@ class SubCategoryController extends BaseController{
 
 				if($validate->hasError()||$duplicate_subcategory||!$category){
 					$errors = $validate->getErrorMessages();
-					count($extra_errors) ? $response = array_merge($errors,$extra_errors) : $response = $errors;
+					count($extra_errors) ? ($response = array_merge($errors,$extra_errors)) : ($response = $errors);
 					header("HTTP/1.1 422 Uprocessable Entity",true,422);
 					 echo json_encode($response);
 					 exit;
