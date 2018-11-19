@@ -52,7 +52,7 @@
 	 									<a href="#"><i class="fa fa-times"></i></a>
  									 <!--Edit Category Modal -->
  									<div class="reveal" id="item-{{$category['id']}}" data-reveal data-close-on-click="false" data-close-on-esc="false" data-animation-in="scale-in-up">
- 										<div class="notification callout primary">
+ 										<div class="notification callout">
  											
 
  										</div>

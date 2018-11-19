@@ -16,7 +16,7 @@
 				data:{token:token,name:name},
 				success:function(data){
 					var response = $.parseJSON(data); //Convert json object to js object
-					$(".notification").addClass('primary').css("display","block").delay(4000).slideUp(300)
+					$(".notification").addClass('primary').removeClass('alert').css("display","block").delay(4000).slideUp(300)
 					.html(response.success);
 				},
 				error:function(request,error){
@@ -36,7 +36,7 @@
 						}
 								
 					});
-			$(".notification").css("display","block").removeClass('primary')
+				$(".notification").css("display","block").removeClass('primary')
 			.addClass('alert').delay(6000).slideUp(300)
 					.html(ul);
 
