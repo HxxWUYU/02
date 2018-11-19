@@ -8,6 +8,7 @@ class Category extends Model{
 
 	use SoftDeletes;
 	public $timestamps = true;
+	protected $include_trashed = true;
 	protected $fillable = ['name','slug'];//allow mass assignment
 	protected $data = ['deleted_at'];
 
