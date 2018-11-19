@@ -59,7 +59,7 @@ class ProductCategoryController{
 				$message = "Category Created";
 				$total = Category::all()->count();
 				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Cat);
-				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
+				return view('/admin/product/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
 			}
 			throw new \Exception ('Token mismatch');
 		}
@@ -88,27 +88,37 @@ class ProductCategoryController{
 					 header("HTTP/1.1 422 Uprocessable Entity",true,422);
 					 echo json_encode($errors);
 					 exit;
-					// return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors]); 
+					
 					
 				}
 
 				Category::where('id',$id)->update(['name'=>$request->name]);
 				echo json_encode(['success'=>'Record Updated']);
 				exit;
-				//process form data
-				// Category::create([
-				// 	'name' => $request->name,
-				// 	'slug' => slug($request->name)
-				// ]);
 				
-				// $message = "Category Created";
-				// $total = Category::all()->count();
-				// list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Cat);
-				// return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
 			}
 			throw new \Exception ('Token mismatch');
 		}
 	}
+
+	public function delete($id){
+		if(Request::has('post')){
+			$request = Request::get('post');//data in post
+			
+			if(CSRFToken::verifyCSRFToken($request->token,true)){
+
+				
+				
+				Category::destroy($id);
+				Session::add('successs','Category Deleted');
+				Redirect::to('admin/products/categories');
+				
+			}
+			throw new \Exception ('Token mismatch');
+		}
+	}
+
+
 }
 
 ?>

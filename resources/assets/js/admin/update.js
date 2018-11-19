@@ -37,7 +37,7 @@
 								
 					});
 				$(".notification").css("display","block").removeClass('primary')
-			.addClass('alert').delay(6000).slideUp(300)
+			.addClass('alert').delay(4000).slideUp(300)
 					.html(ul);
 
 				}

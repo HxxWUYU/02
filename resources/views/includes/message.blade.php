@@ -13,9 +13,13 @@
 		</div>
 	@endif
 
-	@if(isset($message))
+	@if(isset($message) ||\App\Classes\Session::has('success'))
 		<div class="callout success" data-closable>
+			@if(isset($message))
 			{{$message}}
+			@elseif(\App\Classes\Session::has('success'))
+			{{\App\Classes\Session::flash('success')}}
+			@endif
 
 			<button class="close-button" arial-label="Dismiss Message" type="button" data-close>
 				<span arial-hidden="true">&times;</span>

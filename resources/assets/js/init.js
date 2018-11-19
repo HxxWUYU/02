@@ -10,6 +10,8 @@
 				break;
 			case 'adminCategories':
 				HXXSTORE.admin.update();
+				HXXSTORE.admin.delete();
+
 				break;
 			default:
 			//do nothing

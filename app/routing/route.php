@@ -16,6 +16,9 @@ $router->map('POST','/02/public/admin/product/categories','App\Controllers\Admin
 $router->map('POST','/02/public/admin/product/categories/[i:id]/edit','App\Controllers\Admin\ProductCategoryController@edit','edit_product_category'); 
 
 
+$router->map('POST','/02/public/admin/product/categories/[i:id]/delete','App\Controllers\Admin\ProductCategoryController@delete','delete_product_category');
+
+
 
 //for admin routes
 //$match = $router->match()  match is an array containing 3 elements:

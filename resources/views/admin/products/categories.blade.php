@@ -40,7 +40,7 @@
  		<div class="small-12 medium-11 column">
 
  			@if(count($categories))
- 				<table class='hover'>
+ 				<table class='hover' data-form="deleteForm">
  					<tbody>
  						@foreach($categories as $category)
  							<tr>
@@ -48,8 +48,17 @@
  								<td>{{$category['slug']}}</td>
  								<td>{{$category['added']}}</td>
  								<td width="100" class="text-right">
-	 									<a data-open="item-{{$category['id']}}"><i class="fa fa-edit"></i></a>
-	 									<a href="#"><i class="fa fa-times"></i></a>
+ 									<span>
+ 											<a data-open="item-{{$category['id']}}"><i class="fa fa-edit"></i></a>
+ 									</span>
+	 								
+	 									<span style="display:inline-block">
+	 										<form method="POST" action="/02/public/admin/product/categories/{{$category['id']}}/delete"  class="delete-item">
+	 											<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
+	 											<button type="submit"><i class="fa fa-times delete"></i></button>
+	 										</form>
+	 										
+	 									</span>
  									 <!--Edit Category Modal -->
  									<div class="reveal" id="item-{{$category['id']}}" data-reveal data-close-on-click="false" data-close-on-esc="false" data-animation-in="scale-in-up">
  										<div class="notification callout">
@@ -82,5 +91,5 @@
  		</div>
  	</div>
  </div>
-
+@include('includes.delete-modal')
 @endsection

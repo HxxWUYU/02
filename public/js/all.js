@@ -19,6 +19,20 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 (function(){
 	'use strict';
 
+	HXXSTORE.admin.delete=function(){
+		$('table[data-form="deleteForm"]').on('click','.delete-item',function(){
+			e.preventDefault();
+			var form=$(this);
+
+			$("#confirm").foundation('open').on('click',"#delete-btn",function(){
+				form.submit();
+			});
+		});
+	};
+})()
+(function(){
+	'use strict';
+
 	HXXSTORE.admin.update = function(){
 		//update product category
 		$(".update-category").on('click',function(e){
@@ -55,7 +69,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 								
 					});
 				$(".notification").css("display","block").removeClass('primary')
-			.addClass('alert').delay(6000).slideUp(300)
+			.addClass('alert').delay(4000).slideUp(300)
 					.html(ul);
 
 				}
@@ -78,6 +92,8 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 				break;
 			case 'adminCategories':
 				HXXSTORE.admin.update();
+				HXXSTORE.admin.delete();
+
 				break;
 			default:
 			//do nothing

@@ -43,6 +43,18 @@ class Session{
 		}
 
 	}
+
+	public static function flash($name,$value='null'){
+		if(self::has($name)){
+			$old_value  = self::get($name);
+			self::remove($name);
+			return $old_value;
+		}else{
+			self::add($name,$value);
+		}
+
+		return null;
+	}
 }
 
 ?>
