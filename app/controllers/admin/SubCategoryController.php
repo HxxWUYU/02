@@ -35,7 +35,7 @@ class SubCategoryController extends BaseController{
 				$validate->abide($_POST,$rules);
 
 
-				$duplicate_subcategory = SubCategory::where([['name',$request->name],['category_id',$category_id]])->exists();
+				$duplicate_subcategory = SubCategory::where([['name',$request->name],['category_id',$request->category_id]])->exists();
 
 				if($duplicate_subcategory){
 					$extra_errors['extra'] = array('Subcategory already exist');
