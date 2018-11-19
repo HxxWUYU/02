@@ -5317,8 +5317,12 @@ h2 {
   color: #8a6d3b;
 }
 
-table[data-form='deleteForm'] .fa-times {
+.fa-times {
   color: #ff0000;
+}
+
+table[data-form='deleteForm'] .fa-edit {
+  color: #8a6d3b;
 }
 
 .slide-in-down.mui-enter {
