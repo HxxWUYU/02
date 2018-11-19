@@ -59,7 +59,7 @@
 			$.ajax({
 				type:'post',
 				url:'/02/public/admin/product/subcategory/'+id+'/edit',
-				data:{token:token,name:name,category_id:selected_category_id},
+				data:{token:token,name:name,category_id:selected_category_id}
 				success:function(data){
 					var response = $.parseJSON(data); //Convert json object to js object
 					$(".notification").addClass('primary').removeClass('alert').css("display","block").delay(4000).slideUp(300)
