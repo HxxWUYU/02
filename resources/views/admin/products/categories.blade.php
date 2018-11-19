@@ -52,8 +52,8 @@
  											<a data-open="item-{{$category['id']}}"><i class="fa fa-edit"></i></a>
  									</span>
 	 									<!-- Delete Category-->
-	 									<span id = 'delete-span' style="display:inline-block">
-	 										<form method="POST" action="/02/public/admin/product/categories/{{$category['id']}}/delete"  class="delete-item">
+	 									<span class ='delete-span' style="display:inline-block">
+	 										<form class='delete-span' method="POST" action="/02/public/admin/product/categories/{{$category['id']}}/delete"  class="delete-item">
 	 											<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
 	 											<button type="submit"><i class="fa fa-times delete"></i></button>
 	 										</form>

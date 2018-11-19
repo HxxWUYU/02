@@ -5315,13 +5315,14 @@ h2 {
 
 .fa-times {
   color: #ff0000;
+  cursor: pointer;
 }
 
 table[data-form='deleteForm'] .fa-edit {
   color: #8a6d3b;
 }
 
-#delete-span {
+.delete-span {
   cursor: pointer;
 }
 
