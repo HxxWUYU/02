@@ -163,8 +163,11 @@
 
 						 					<label>Change Category
 						 						<select id="item-category-{{$subcategory['category_id']}}">
-						 							@foreach($categories as $category)
-						 								<option value="{{$category['id']}}">{{$category['name']}}</option>
+						 							@foreach(\App\Models\Category::all() as $category)
+						 								@if($category->id==$subcategory['category_id'])
+						 									<option selected="selected" value="{{$category->id}}">{{$category->name}}</option>
+						 								@endif
+						 								<option value="{{$category->id}}">{{$category->name}}</option>
 						 							@endforeach
 						 						</select>
 
