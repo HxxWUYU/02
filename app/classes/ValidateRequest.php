@@ -45,7 +45,7 @@ class ValidateRequest{
 	protected static function unique($column,$value,$policy){
 
 		if($value!=null && !empty(trim($value))){
-			return !(Capsule::table($policy)->where($column,'=',$value)->exists());
+			return !(Capsule::table($policy)->where([$column,'=',$value],['deleted_at',null])->exists());
 		}
 		return true;
 	}
