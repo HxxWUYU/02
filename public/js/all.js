@@ -65,7 +65,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 			
 
 		});
-		e.preventDefault();
+		
 	};
 })();
 (function(){
