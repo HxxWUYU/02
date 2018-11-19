@@ -18,7 +18,7 @@ class SubCategory extends Model{
 		//convert string to Carbon object then can call obj->toFormattedDateString()
 		//$added = new Carbon($item->created_at); 
 
-		array_push($categories,[
+		array_push($subcategories,[
 			'id'=>$item->id,
 			'category_id'=>$item->category_id,
 			'name' => $item->name,
