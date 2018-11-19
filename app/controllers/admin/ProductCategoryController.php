@@ -113,7 +113,7 @@ class ProductCategoryController{
 				
 				Category::destroy($id);
 				Session::add('successs','Category Deleted');
-				Redirect::to('admin/products/categories');
+				Redirect::to('/admin/product/categories');
 				
 			}
 			throw new \Exception ('Token mismatch');
