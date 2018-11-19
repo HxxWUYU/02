@@ -10,6 +10,7 @@
 			var token = $(this).data("token");
 			var category_id = $(this).attr('id');
 			var name = $("#subcategory-name-"+category_id).val();
+			alert(token);
 
 			$.ajax({
 				type:'post',
@@ -21,7 +22,7 @@
 					.html(response.success);
 				},
 				error:function(request,error){
-					alert(request.responseText);
+					
 					var errors = $.parseJSON(request.responseText);
 					var ul = document.createElement('ul');
 					$.each(errors,function(key,value){
