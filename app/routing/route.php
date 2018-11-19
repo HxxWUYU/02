@@ -4,19 +4,8 @@ $router = new AltoRouter;
 //echo $_SERVER['PHP_SELF']."<br>";
 
 $router->map('GET','/02/public/','App\Controllers\IndexController@show','home'); //@sign can be custom 
-$router->map('GET','/02/public/admin','App\Controllers\Admin\DashboardController@show','admin_dashboard'); //@sign can be custom 
 
-$router->map('POST','/02/public/admin','App\Controllers\Admin\DashboardController@get','admin_form'); //@sign can be custom 
-
-//product management
-$router->map('GET','/02/public/admin/product/categories','App\Controllers\Admin\ProductCategoryController@show','product_category'); 
-
-$router->map('POST','/02/public/admin/product/categories','App\Controllers\Admin\ProductCategoryController@store','create_product_category'); 
-
-$router->map('POST','/02/public/admin/product/categories/[i:id]/edit','App\Controllers\Admin\ProductCategoryController@edit','edit_product_category'); 
-
-
-$router->map('POST','/02/public/admin/product/categories/[i:id]/delete','App\Controllers\Admin\ProductCategoryController@delete','delete_product_category');
+require_once __DIR__ . '/admin_route.php';
 
 
 

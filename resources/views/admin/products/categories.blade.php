@@ -95,7 +95,7 @@
 						 				<div class='input-group'>
 						 					<input type="text" id="subcategory-name-{{$category['id']}}">
 						 					<div>
-						 						<input type="submit" class="button add-subcategory-category" data-token="{{\App\Classes\CSRFToken::_token()}}" value="Create" id="{{$category['id']}}">
+						 						<input type="submit" class="button add-subcategory" data-token="{{\App\Classes\CSRFToken::_token()}}" value="Create" id="{{$category['id']}}">
 						 					</div>
 						 				</div>
 						 			  </form>

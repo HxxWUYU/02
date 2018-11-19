@@ -11,7 +11,7 @@
 			case 'adminCategories':
 				HXXSTORE.admin.update();
 				HXXSTORE.admin.delete();
-
+				HXXSTORE.admin.create();
 				break;
 			default:
 			//do nothing

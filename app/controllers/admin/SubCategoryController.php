@@ -8,31 +8,17 @@ use App\Classes\Session;
 use App\Classes\ValidateRequest;
 use App\Controllers\BaseController;
 use App\Models\Category;
+use App\Models\SubCategory;
 
-class ProductCategoryController extends BaseController{
+class SubCategoryController extends BaseController{
 
-	public $table_name = 'categories';
-	public $categories;
-	public $links;
-
-	public function __construct(){
-		$total = Category::all()->count();
-		$object = new Category;
-
-		list($this->categories,$this->links) = paginate(3,$total,$this->table_name,$object);
-	}
-
-	public function show(){
-
-		
-
-		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links]); 
-		//compact(var) create an array that contains whatever variables are passed into it 
-	}
+	
 
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
+
+			$extra_errors=[];
 			
 			if(CSRFToken::verifyCSRFToken($request->token)){
 
@@ -42,27 +28,43 @@ class ProductCategoryController extends BaseController{
 						'minLength'=>3,
 						'string'=>true,
 						'unique'=>'categories'	
-					]
+					],
+					'category_id' => ['required'=>true]
 				];
 
 				$validate = new ValidateRequest;
 				$validate->abide($_POST,$rules);
 
-				if($validate->hasError()){
+
+				$duplicate_subcategory = SubCategory::where('name',$request->name)->where('category_id',$request->category_id)->exists();
+
+				if($duplicate_subcategory){
+					$extra_errors['name'] = array('Subcategory already exist');
+				}
+
+				$category = Category::where('id',$request->category_id)->exists();
+				if(!$category){
+					$extra_errors['name'] = array("Invalid product category");
+				}
+
+				if($validate->hasError()||$duplicate_subcategory||!$category){
 					$errors = $validate->getErrorMessages();
-					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors]); 
+					count($extra_errors) ? $response = array_merge($errors,$extra_errors) : $response = $errors;
+					header("HTTP/1.1 422 Uprocessable Entity",true,422);
+					 echo json_encode($response);
+					 exit;
 					
 				}
 				//process form data
-				Category::create([
+				SubCategory::create([
 					'name' => $request->name,
-					'slug' => slug($request->name)
+					'slug' => slug($request->name),
+					'category_id'=>$request->category_id
 				]);
+
+				echo json_encode(["success"=>"Subcategory create successfully"]);
 				
-				$message = "Category Created";
-				$total = Category::all()->count();
-				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Category);
-				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
+				exit;
 				
 			}
 			throw new \Exception ('Token mismatch');
@@ -109,7 +111,7 @@ class ProductCategoryController extends BaseController{
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
 			
-			if(CSRFToken::verifyCSRFToken($request->token,true)){
+			if(CSRFToken::verifyCSRFToken($request->token,false)){
 
 				
 				
