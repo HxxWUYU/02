@@ -5291,6 +5291,13 @@ a.thumbnail image {
   list-style-type: none;
 }
 
+h2 {
+  margin-top: 1.0rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .reveal {
   border: 0;
   border-radius: 0.5rem;
