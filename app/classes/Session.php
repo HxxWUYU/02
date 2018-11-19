@@ -1,5 +1,6 @@
 <?php 
 namespace App\Classes;
+session_start();
 
 class Session{
 
@@ -8,7 +9,7 @@ class Session{
 	public static function add($name,$value){
 
 		if($name!='' && (!empty($name)) && $value!='' && (!empty($value))){
-			return $_SESSION[$name] = $value;
+			$_SESSION[$name] = $value;
 		}
 		
 

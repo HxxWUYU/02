@@ -56,8 +56,8 @@ class SubCategoryController extends BaseController{
 					}
 					
 					header("HTTP/1.1 422 Uprocessable Entity",true,422);
-					 echo json_encode($response);
-					 exit;
+					echo json_encode($response);
+					exit;
 					
 				}
 				//process form data
@@ -71,8 +71,10 @@ class SubCategoryController extends BaseController{
 				
 				exit;
 				
+			}else{
+				throw new \Exception ('Token mismatch');
 			}
-			throw new \Exception ('Token mismatch');
+			
 		}
 	}
 
