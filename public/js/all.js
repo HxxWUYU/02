@@ -21,10 +21,10 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 	HXXSTORE.admin.create = function(){
 		//create sub category
-		e.preventDefault();
+
 		$(".add-subcategory").on('click',function(e){
 			
-			
+				e.preventDefault();
 			var token = $(this).data("token");
 			var category_id = $(this).attr('id');
 			var name = $("#subcategory-name-"+category_id).val();
