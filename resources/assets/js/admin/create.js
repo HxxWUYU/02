@@ -4,7 +4,7 @@
 	HXXSTORE.admin.create = function(){
 		//create sub category
 		$(".add-subcategory").on('click',function(e){
-
+			e.preventDefault();
 			
 			var token = $(this).data("token");
 			var category_id = $(this).attr('id');
@@ -12,7 +12,7 @@
 
 			$.ajax({
 				type:'post',
-				url:'/02/public/admin/product/subcategory/create',
+				url:'/02/public/admin/subcategory/create',
 				data:{token:token,name:name,category_id:category_id},
 				success:function(data){
 					var response = $.parseJSON(data); //Convert json object to js object
@@ -43,7 +43,7 @@
 				}
 
 			});
-			e.preventDefault();
+			
 
 		});
 	};
