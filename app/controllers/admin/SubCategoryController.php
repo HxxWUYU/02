@@ -27,7 +27,6 @@ class SubCategoryController extends BaseController{
 						'required'=>true,
 						'minLength'=>3,
 						'string'=>true,
-						'unique'=>'sub_categories'	
 					],
 					'category_id' => ['required'=>true]
 				];
