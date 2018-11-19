@@ -30,7 +30,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 			$.ajax({
 				type:'post',
-				url:'/02/public/admin/subcategory/create',
+				url:'/02/public/admin/product/subcategory/create',
 				data:{token:token,name:name,category_id:category_id},
 				success:function(data){
 					var response = $.parseJSON(data); //Convert json object to js object

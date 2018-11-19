@@ -8,25 +8,31 @@ use App\Classes\Session;
 use App\Classes\ValidateRequest;
 use App\Controllers\BaseController;
 use App\Models\Category;
+use App\Models\SubCategory;
 
 class ProductCategoryController extends BaseController{
 
 	public $table_name = 'categories';
 	public $categories;
+	public $subcategories;
+	public $subcategories_links;
 	public $links;
 
 	public function __construct(){
 		$total = Category::all()->count();
+		$subTotal = SubCategory::all()->count();
 		$object = new Category;
 
 		list($this->categories,$this->links) = paginate(3,$total,$this->table_name,$object);
+
+		list($this->subcategories,$this->subcategories_links) = paginate(3,$subtotal,"sub_categories",new SubCategory);
 	}
 
 	public function show(){
 
 		
 
-		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links]); 
+		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'subcategories'=$this->subcategories,'subcategories_links'=$this->$subcategories_links]); 
 		//compact(var) create an array that contains whatever variables are passed into it 
 	}
 
@@ -50,7 +56,7 @@ class ProductCategoryController extends BaseController{
 
 				if($validate->hasError()){
 					$errors = $validate->getErrorMessages();
-					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors]); 
+					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors,'subcategories'=$this->subcategories,'subcategories_links'=$this->$subcategories_links]); 
 					
 				}
 				//process form data
@@ -61,8 +67,10 @@ class ProductCategoryController extends BaseController{
 				
 				$message = "Category Created";
 				$total = Category::all()->count();
+				$subTotal = SubCategory::all()->count();
 				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Category);
-				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
+				list($this->subcategories,$this->subcategories_links) = paginate(3,$subtotal,"sub_categories",new SubCategory);
+				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message,'subcategories'=$this->subcategories,'subcategories_links'=$this->$subcategories_links]); 
 				
 			}
 			throw new \Exception ('Token mismatch');
