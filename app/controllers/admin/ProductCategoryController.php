@@ -32,7 +32,7 @@ class ProductCategoryController extends BaseController{
 
 		
 
-		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'subcategories'=$this->subcategories,'subcategories_links'=$this->$subcategories_links]); 
+		return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->$subcategories_links]); 
 		//compact(var) create an array that contains whatever variables are passed into it 
 	}
 
@@ -56,7 +56,7 @@ class ProductCategoryController extends BaseController{
 
 				if($validate->hasError()){
 					$errors = $validate->getErrorMessages();
-					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors,'subcategories'=$this->subcategories,'subcategories_links'=$this->$subcategories_links]); 
+					return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->$subcategories_links]); 
 					
 				}
 				//process form data
@@ -70,7 +70,7 @@ class ProductCategoryController extends BaseController{
 				$subTotal = SubCategory::all()->count();
 				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Category);
 				list($this->subcategories,$this->subcategories_links) = paginate(3,$subtotal,"sub_categories",new SubCategory);
-				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message,'subcategories'=$this->subcategories,'subcategories_links'=$this->$subcategories_links]); 
+				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->$subcategories_links]); 
 				
 			}
 			throw new \Exception ('Token mismatch');
