@@ -72,7 +72,7 @@ class SubCategoryController extends BaseController{
 				exit;
 				
 			}else{
-				throw new \Exception ('Token mismatch');
+				throw new \Exception ('Token mismatch: '.$request->token);
 			}
 			
 		}
