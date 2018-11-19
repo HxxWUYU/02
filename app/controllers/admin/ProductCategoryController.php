@@ -71,7 +71,7 @@ class ProductCategoryController extends BaseController{
 				$total = Category::all()->count();
 				$subTotal = SubCategory::all()->count();
 				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Category);
-				list($this->subcategories,$this->subcategories_links) = paginate(3,$subtotal,"sub_categories",new SubCategory);
+				list($this->subcategories,$this->subcategories_links) = paginate(3,$subTotal,"sub_categories",new SubCategory);
 				return view('admin/products/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message,'subcategories'=>$this->subcategories,'subcategories_links'=>$this->subcategories_links]); 
 				exit;
 				
