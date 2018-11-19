@@ -123,8 +123,10 @@ class SubCategoryController extends BaseController{
 				echo json_encode(['success'=>'Subcategory Updated']);
 				exit;
 				
+			}else{
+				throw new \Exception ('Token mismatch');
 			}
-			throw new \Exception ('Token mismatch');
+			
 		}
 	}
 
@@ -140,8 +142,10 @@ class SubCategoryController extends BaseController{
 				Session::add('success','Subcategory Deleted');
 				Redirect::to('/02/public/admin/product/categories');
 				
+			}else{
+				throw new \Exception ('Token mismatch');
 			}
-			throw new \Exception ('Token mismatch');
+			
 		}
 	}
 
