@@ -113,7 +113,7 @@ class ProductCategoryController{
 				
 				
 				Category::destroy($id);
-				Session::add('successs','Category Deleted');
+				Session::add('success','Category Deleted');
 				Redirect::to('/02/public/admin/product/categories');
 				
 			}
