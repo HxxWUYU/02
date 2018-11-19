@@ -120,7 +120,7 @@
 
  <div class="subcategory">
  	<div class="row expanded">
- 		<h2>SubCategories</h2>
+ 		<h2>Sub Categories</h2>
 
  		
  	</div>
@@ -159,7 +159,16 @@
 									  <h2>Edit Subcategory</h2>
 									  <form>
 						 				<div class='input-group'>
-						 					<input type="text" id="item-subcategory-name-{{$subcategory['id']}}" value="{{$category['name']}}">
+						 					<input type="text" id="item-subcategory-name-{{$subcategory['id']}}" value="{{$subcategory['name']}}">
+
+						 					<label>Change Category
+						 						<select id="item-category-{{$subcategory['category_id']}}">
+						 							@foreach($categories as $category)
+						 								<option value="{{$category['id']}}">{{$category['name']}}</option>
+						 							@endforeach
+						 						</select>
+
+						 					</label>
 						 					<div>
 						 						<input type="submit" class="button update-subcategory" data-token="{{\App\Classes\CSRFToken::_token()}}" value="Update" id="{{$subcategory['id']}}">
 						 					</div>
@@ -179,7 +188,7 @@
  				</table>
  				{!!$subcategories_links!!}
  			@else
- 				<h3>You have not created any category</h3>
+ 				<h3>You have not created any subcategory</h3>
  			@endif
 
  		</div>
