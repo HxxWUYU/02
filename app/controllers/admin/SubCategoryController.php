@@ -35,21 +35,26 @@ class SubCategoryController extends BaseController{
 				$validate->abide($_POST,$rules);
 
 
-				$duplicate_subcategory = SubCategory::where('name',$request->name)->where('category_id',$request->category_id)->exists();
+				$duplicate_subcategory = SubCategory::where([['name',$request->name],['category_id',$category_id]])->exists();
 
 				if($duplicate_subcategory){
-					$extra_errors['name'] = array('Subcategory already exist');
+					$extra_errors['extra'] = array('Subcategory already exist');
 				}
 
 				$category = Category::where('id',$request->category_id)->exists();
 				if(!$category){
-					$extra_errors['name'] = array("Invalid product category");
+					$extra_errors['extra'] = array("Invalid product category");
 				}
 
 				if($validate->hasError()||$duplicate_subcategory||!$category){
 					$response = [];
 					$errors = $validate->getErrorMessages();
-					count($extra_errors) ? ($response = array_merge($errors,$extra_errors)) : ($response = $errors);
+					if(count($extra_errors)>0){
+						$response = array_merge($errors,$extra_errors);
+					}else{
+						$response = $errors;
+					}
+					
 					header("HTTP/1.1 422 Uprocessable Entity",true,422);
 					 echo json_encode($response);
 					 exit;
