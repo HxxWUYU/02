@@ -20,7 +20,7 @@ class SubCategoryController extends BaseController{
 
 			$extra_errors=[];
 			
-			if(CSRFToken::verifyCSRFToken($request->token)){
+			if(CSRFToken::verifyCSRFToken($request->token,true)){
 
 				$rules = [
 					'name'=>[
@@ -48,6 +48,7 @@ class SubCategoryController extends BaseController{
 				}
 
 				if($validate->hasError()||$duplicate_subcategory||!$category){
+					$response = [];
 					$errors = $validate->getErrorMessages();
 					count($extra_errors) ? ($response = array_merge($errors,$extra_errors)) : ($response = $errors);
 					header("HTTP/1.1 422 Uprocessable Entity",true,422);
