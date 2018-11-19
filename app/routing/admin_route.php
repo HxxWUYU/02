@@ -16,7 +16,7 @@ $router->map('POST','/02/public/admin/product/categories/[i:id]/edit','App\Contr
 $router->map('POST','/02/public/admin/product/categories/[i:id]/delete','App\Controllers\Admin\ProductCategoryController@delete','delete_product_category');
 
 
-$router->map('POST','/02/public/admin/subcategory/create','App\Controllers\Admin\SubCategoryController@store','create_subcategory');
+$router->map('POST','/02/public/admin/product/subcategory/create','App\Controllers\Admin\SubCategoryController@store','create_subcategory');
 
 //for admin routes
 //$match = $router->match()  match is an array containing 3 elements:
