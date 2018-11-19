@@ -22,6 +22,7 @@ class CSRFToken{
 				Session::remove('token');
 			}
 			
+			
 			return true;
 		}
 		return false;

@@ -20,7 +20,7 @@ class SubCategoryController extends BaseController{
 
 			$extra_errors=[];
 			
-			if(CSRFToken::verifyCSRFToken($request->token,true)){
+			if(CSRFToken::verifyCSRFToken($request->token)){
 
 				$rules = [
 					'name'=>[
