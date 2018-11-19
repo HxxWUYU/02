@@ -159,7 +159,7 @@
 									  <h2>Edit Subcategory</h2>
 									  <form>
 						 				<div class='input-group'>
-						 					<input type="text" id="item-subcategory-name-{{$subcategory['id']}}" value="{{$subcategory['name']}}">
+						 					<input type="text" name='name' id="item-subcategory-name-{{$subcategory['id']}}" value="{{$subcategory['name']}}">
 
 						 					<label>Change Category
 						 						<select id="item-category-{{$subcategory['category_id']}}">
@@ -174,7 +174,8 @@
 
 						 					</label>
 						 					<div>
-						 						<input type="submit" class="button update-subcategory" data-token="{{\App\Classes\CSRFToken::_token()}}" value="Update" id="{{$subcategory['id']}}">
+						 						<input type="submit" class="button update-subcategory" data-token="{{\App\Classes\CSRFToken::_token()}}" value="Update" id="{{$subcategory['id']}}"
+						 						 data-category-id="{{$subcategory['category_id']}}">
 						 					</div>
 						 				</div>
 						 			  </form>
