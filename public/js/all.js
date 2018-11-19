@@ -149,7 +149,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 					.html(response.success);
 				},
 				error:function(request,error){
-					alert(request.responseText);
+					
 					var errors = $.parseJSON(request.responseText);
 					var ul = document.createElement('ul');
 					$.each(errors,function(key,value){

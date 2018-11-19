@@ -66,7 +66,7 @@
 					.html(response.success);
 				},
 				error:function(request,error){
-					alert(request.responseText);
+					
 					var errors = $.parseJSON(request.responseText);
 					var ul = document.createElement('ul');
 					$.each(errors,function(key,value){
