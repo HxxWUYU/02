@@ -60,7 +60,7 @@ class ProductCategoryController{
 				
 				$message = "Category Created";
 				$total = Category::all()->count();
-				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Cat);
+				list($this->categories,$this->links) = paginate(3,$total,$this->table_name,new Category);
 				return view('/admin/product/categories',['categories'=>$this->categories,'links'=>$this->links,'message'=>$message]); 
 			}
 			throw new \Exception ('Token mismatch');
