@@ -100,12 +100,12 @@ class SubCategoryController extends BaseController{
 
 				$category = Category::where('id',$request->category_id)->exists();
 				if(!$category){
-					$extra_errors['name'] = array("Invalid product category");
+					$extra_errors['name'] = array('Invalid product category');
 				}
 
 				if($validate->hasError()||$duplicate_subcategory||!$category){
 					$errors = $validate->getErrorMessages();
-					count($extra_errors) ? $response = array_merge($errors,$extra_errors) : $response = $errors;
+					count($extra_errors) ? ($response = array_merge($errors,$extra_errors)) : ($response = $errors);
 					header("HTTP/1.1 422 Uprocessable Entity",true,422);
 					 echo json_encode($response);
 					 exit;
