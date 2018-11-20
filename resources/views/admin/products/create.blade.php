@@ -31,11 +31,9 @@
  				</div>
 
  				<div class="small-12 medium-6 column">
- 					<label>
- 						
- 						Product Category:
+ 					<label>Product Category:
  						<select name="category" id="product-category">
- 							<option value="{{\App\Classes\Request::old('post','category')?:''}}"></option>
+ 							<option value="{{\App\Classes\Request::old('post','category')?:''}}">{{\App\Classes\Request::old('post','category')?:'Select Category'}}</option>
  							@foreach($categories as $category)
  							<option value="{{$category->id}}">{{$category->name}}</option>
  							@endforeach
