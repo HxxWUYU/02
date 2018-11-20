@@ -72,7 +72,6 @@ class ProductController extends BaseController{
 				$validate->abide($_POST,$rules);
 
 				$file = Request::get('file');
-
 				if(isset($file->productImage->name)){
 					$filename = $file->productImage->name;
 				}else{
