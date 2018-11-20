@@ -43,7 +43,7 @@
  								<td>{{$product['price']}}</td>
  								<td>{{$product['quantity']}}</td>
  								<td>{{$product['category_name']}}</td>
- 								<td>{{$product['subcategory_name']}}</td>
+ 								<td>{{$product['sub_category_name']}}</td>
  								<td>{{$product['added']}}</td>
  								<td width="70" class="text-right">
  									
