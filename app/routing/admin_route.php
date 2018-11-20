@@ -28,6 +28,9 @@ $router->map('POST','/02/public/admin/category/[i:id]/selected','App\Controllers
 
 $router->map('POST','/02/public/admin/product/create','App\Controllers\Admin\ProductController@store','create_product');
 
+
+$router->map('GET','/02/public/admin/product/','App\Controllers\Admin\ProductController@show','show_product');
+
 //for admin routes
 //$match = $router->match()  match is an array containing 3 elements:
 //traget, parmas, name // target is the App\..\ name is home
