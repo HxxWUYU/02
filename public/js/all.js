@@ -88,9 +88,11 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 (function(){
 	'use strict';
 
-	HXXSTORE.admin.changeEvnet = function(){
+	HXXSTORE.admin.changeEvent = function(){
+
 		$("#product-category").on('change',function(){
 			var category_id = $('#product-category'+" option:selected").val();
+			
 			$.ajax({
 				type:"post",
 				url:'/02/public/admin/category/'+category_id+'/selected',
@@ -109,7 +111,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 				}
 			});
 		});
-	}
+	};
 })();
 (function(){
 	'use strict';
