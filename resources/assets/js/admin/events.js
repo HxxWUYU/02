@@ -2,6 +2,7 @@
 	'use strict';
 
 	HXXSTORE.admin.changeEvnet = function(){
+		alert('this');
 		$("#product-category").on('change',function(){
 			var category_id = $('#product-category'+" option:selected").val();
 			$.ajax({
