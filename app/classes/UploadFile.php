@@ -43,7 +43,7 @@ class UploadFile{
 	public static function isImage($file){
 
 		$fileobj = new static;
-		$ext = $fileobj->fileExtension();
+		$ext = $fileobj->fileExtension($file);
 		$validExt = array('jpg','jpeg','png','bmp','gif');
 		if(!in_array(strtolower($ext), $validExt)){
 			return false;
