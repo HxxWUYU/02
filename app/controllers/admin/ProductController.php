@@ -92,7 +92,7 @@ class ProductController extends BaseController{
 					}else{
 						$errors = $response;
 					}
-					return view('admin/products/create',['categories'=>$this->categories,'links'=>$this->links,'errors'=>$errors]); 
+					return view('admin/products/create',['categories'=>$this->categories,'errors'=>$errors]); 
 					
 				}
 
