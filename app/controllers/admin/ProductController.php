@@ -32,10 +32,17 @@ class ProductController extends BaseController{
 		// list($this->subcategories,$this->subcategories_links) = paginate(3,$subTotal,"sub_categories",new SubCategory);
 	}
 
+	public function showEditProductForm($id){
+
+		$categories = $this->categories;
+		Product::where('id',$id)->with(['category','subCategory'])->first();
+		return view("admin/products/edit",compact('product','categories'));
+	}
+
 	public function show(){
-		$product = Product::where('id',3)->with(['category','subCategory'])->first();
-		var_dump($product);
-		exit;
+		//$product = Product::where('id',3)->with(['category','subCategory'])->first();
+		//var_dump($product);
+		
 		$products = $this->products;
 		$links =$this->links;
 		return view('admin/products/inventory',compact('products','links'));
