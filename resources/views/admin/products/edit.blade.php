@@ -78,7 +78,7 @@
  					<textarea name="description" placeholder="Description">{{$product->description}}</textarea>
  					</label>
  					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
- 					<input type="hidden" name="product-id" value="{{$product->id}}">
+ 					<input type="hidden" name="product_id" value="{{$product->id}}">
  					<button class="button alert" type="reset">Reset</button>
  					<input class="button warning float-right" type="submit" value="Submit">
  				</div>
