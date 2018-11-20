@@ -79,7 +79,7 @@
  					</label>
  					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
  					<button class="button alert" type="reset">Reset</button>
- 					<input class="button success float-right" type="submit">Submit</button>
+ 					<input class="button success float-right" type="submit" value="Submit">
  				</div>
  			</div>
 
