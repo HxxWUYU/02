@@ -24,7 +24,7 @@ class SubCategory extends Model{
 		array_push($subcategories,[
 			'id'=>$item->id,
 			'category_id'=>$item->category_id,
-			'category_name'=>$category[0],
+			'category_name'=>$category[0]->name,
 			'name' => $item->name,
 			'slug' => $item->slug,
 			'added' => $item->created_at
