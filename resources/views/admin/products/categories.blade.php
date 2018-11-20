@@ -144,8 +144,9 @@
  						<tr>
  						<th>Name</th>
  						<th>Slug</th>
- 						<th>Date Created</th>
+ 						
  						<th>Category</th>
+ 						<th>Date Created</th>
  						<th width="50">Action</th>
  						</tr>
  						
@@ -155,8 +156,9 @@
  							<tr>
  								<td>{{$subcategory['name']}}</td>
  								<td>{{$subcategory['slug']}}</td>
- 								<td>{{$subcategory['added']}}</td>
+ 								
  								<td>{{$subcategory['category_name']}}</td>
+ 								<td>{{$subcategory['added']}}</td>
 
  								<td width="50" class="text-right">
  									
