@@ -7,8 +7,9 @@
  <div class="category">
  	<div class="row expanded">
  		<div class="column medium-11">
- 			<h2>Sub Categories</h2><hr>
+ 			<h2>Product Categories</h2><hr>
  		</div>
+
 
  		
  	</div>
