@@ -144,34 +144,83 @@ class ProductController extends BaseController{
 	public function edit($id){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
+			$file_error=[];
 			
-			if(CSRFToken::verifyCSRFToken($request->token,false)){
+			if(CSRFToken::verifyCSRFToken($request->token)){
 
 				$rules = [
 					'name'=>[
 						'required'=>true,
 						'minLength'=>3,
+						'maxLength'=>70,
 						'string'=>true,
-						'unique'=>'categories'	
-					]
+						'mixed'=>true
+			
+					],
+					'price'=>['required'=>true,'minLength'=>2,'number'=>true],
+					'quantity'=>['required'=>true],
+					'category'=>['required'=>true],
+					'subcategory'=>['required'=>true],
+					'description'=>['required'=>true,'mixed'=>true,'minLength'=>4,'maxLength'=>500]
 				];
 
 				$validate = new ValidateRequest;
 				$validate->abide($_POST,$rules);
 
+				$file = Request::get('file');
+				if(isset($file->productImage->name)){
+					$filename = $file->productImage->name;
+				}else{
+					$filename='';
+				}
+				
+
+				 if(isset($file->productImage->name)&& !UploadFile::isImage($file)){
+					$file_error['productImage']=['The image is invalid,please try again'];
+				}
+
 				if($validate->hasError()){
-					 $errors = $validate->getErrorMessages();
-					 header("HTTP/1.1 422 Uprocessable Entity",true,422);
-					 echo json_encode($errors);
-					 exit;
-					
+					$response = $validate->getErrorMessages();
+					if(count($file_error)>0){
+						$errors = array_merge($response,$file_error);
+					}else{
+						$errors = $response;
+					}
+					return view('admin/products/create',['categories'=>$this->categories,'errors'=>$errors]); 
 					
 				}
 
-				Category::where('id',$id)->update(['name'=>$request->name,'slug'=>slug($request->name)]);
-				echo json_encode(['success'=>'Record Updated']);
-				exit;
+				//$product = Product::where('id',$request->product_id)->first();
+				$product=Product::findOrFail($request->product_id);
+				//If not found, throw an excepetion
+
+				$product->name = $request->name;
+				$product->description = $request->description;
+				$product->price = $request->price;
+				$product->category_id = $request->category;
+				$product->sub_category_id = $request->subcategory;
+	
+
+				// if(!$product){
+				// 	throw new \Exception("Invalid product ID");
+				// }
+				if($filename){
+					$ds = DIRECTORY_SEPARATOR;
+					//old_image_path
+					$old = BASE_PATH."{{$ds}}public{$ds}$product->image_path";
+				$temp_file = $file->productImage->tmp_name;
+				$image_path = UploadFile::move($temp_file,"images{$ds}uploads{$ds}products",$filename)->path();
+				unlink($old);
+				$product->image_path=$image_path;
+				}
+
+				$product->save();
 				
+
+				//process form data
+				
+				Session::add('success','Record Updated');
+				Redirect::to("/02/public/admin/product/inventory");
 			}
 			throw new \Exception ('Token mismatch');
 		}
