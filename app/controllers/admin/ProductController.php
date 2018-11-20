@@ -221,8 +221,10 @@ class ProductController extends BaseController{
 				
 				Session::add('success','Record Updated');
 				Redirect::to("/02/public/admin/product/inventory");
+			}else{
+				throw new \Exception ('Token mismatch');
 			}
-			throw new \Exception ('Token mismatch');
+			
 		}
 	}
 
