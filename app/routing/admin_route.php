@@ -24,6 +24,8 @@ $router->map('POST','/02/public/admin/product/subcategory/[i:id]/delete','App\Co
 
 $router->map('GET','/02/public/admin/product/create','App\Controllers\Admin\ProductController@showCreateProductForm','create_product_form');
 
+$router->map('POST','/02/public/admin/category/[i:id]/selected','App\Controllers\Admin\ProductController@getSubcategories','selected_category');
+
 $router->map('POST','/02/public/admin/product/create','App\Controllers\Admin\ProductController@store','create_product');
 
 //for admin routes

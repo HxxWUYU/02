@@ -44,8 +44,9 @@
  				<div class="small-12 medium-6 column">
  					<label>
  						Product Subcategory:
- 						<select name="category" id="product-category">
- 							<option value="{{\App\Classes\Request::old('post','category')?:''}}"></option>
+ 						<select name="subcategory" id="product-subcategory">
+ 							<option value="{{\App\Classes\Request::old('post','subcategory')?:''}}">{{\App\Classes\Request::old('post','subcategory')?:'Select Subcategory'}}</option>
+ 							
  						</select>
  					</label>
  				</div>

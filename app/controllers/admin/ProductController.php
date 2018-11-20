@@ -37,6 +37,12 @@ class ProductController extends BaseController{
 		
 	}
 
+	public function getSubcategories($id){
+		$subcategories = SubCategory::where('category_id',$id)->get();
+		echo json_encode($subcategories);
+		exit;
+	}
+
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post

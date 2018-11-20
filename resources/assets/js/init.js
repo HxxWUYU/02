@@ -8,6 +8,9 @@
 		switch($('body').data('page-id')){
 			case 'home':
 				break;
+			case 'adminProduct':
+				HXXSTORE.admin.changeEvent();
+				break;
 			case 'adminCategories':
 				HXXSTORE.admin.update();
 				HXXSTORE.admin.delete();
