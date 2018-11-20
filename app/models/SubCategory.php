@@ -19,12 +19,12 @@ class SubCategory extends Model{
 		//convert string to Carbon object then can call obj->toFormattedDateString()
 		//$added = new Carbon($item->created_at); 
 		$category = Category::where('id',$item->category_id)->
-				get(['name'])->get('name');
+				get(['name']);
 
 		array_push($subcategories,[
 			'id'=>$item->id,
 			'category_id'=>$item->category_id,
-			'category_name'=>$category,
+			'category_name'=>$category[0],
 			'name' => $item->name,
 			'slug' => $item->slug,
 			'added' => $item->created_at
