@@ -31,7 +31,7 @@ class ProductController extends BaseController{
 
 	public function showCreateProductForm(){
 
-		return view('admin/product/create');
+		return view('admin/products/create');
 
 		
 	}
