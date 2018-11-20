@@ -13,6 +13,14 @@ class Product extends Model{
 	protected $fillable = ['name','price','description','category_id','sub_category_id','image_path','quantity'];//allow mass assignment
 	protected $data = ['deleted_at'];
 
+	public function category(){
+		retunr $this->belongsTo(Category::class);
+	}
+
+	public function subCategory(){
+		return $this->belongsTo(SubCategory::class);
+	}
+
 	public function transform($data){
 		$products=[];
 		foreach ($data as $item) {
