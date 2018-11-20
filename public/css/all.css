@@ -5335,6 +5335,10 @@ table[data-form='deleteForm'] .fa-edit {
   color: #8a6d3b;
 }
 
+select {
+  border: solid 1px #000;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
