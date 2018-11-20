@@ -6,7 +6,9 @@
 
  <div class="category">
  	<div class="row expanded">
- 		<h2>Product Categories</h2>
+ 		<div class="column medium-11">
+ 			<h2>Sub Categories</h2><hr>
+ 		</div>
 
  		
  	</div>
@@ -119,7 +121,7 @@
  				</table>
  				{!!$links!!}
  			@else
- 				<h3>You have not created any category</h3>
+ 				<h2>You have not created any category</h2>
  			@endif
 
  		</div>
@@ -129,7 +131,10 @@
 
  <div class="subcategory">
  	<div class="row expanded">
- 		<h2>Sub Categories</h2>
+ 		<div class="column medium-11">
+ 			<h2>Sub Categories</h2><hr>
+ 		</div>
+ 		
 
  		
  	</div>
