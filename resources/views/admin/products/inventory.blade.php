@@ -43,8 +43,8 @@
  								<td>{{$product['price']}}</td>
  								<td>{{$product['quantity']}}</td>
  								<td>{{$product['category_name']}}</td>
- 								<td>{{$category['subcategory_name']}}</td>
- 								<td>{{$category['added']}}</td>
+ 								<td>{{$product['subcategory_name']}}</td>
+ 								<td>{{$product['added']}}</td>
  								<td width="70" class="text-right">
  									
  									<span class="has-tip top" aria-haspopup="true" data-disable-hover="false" data-tooltip tabindex="1" title="Edit Product">
