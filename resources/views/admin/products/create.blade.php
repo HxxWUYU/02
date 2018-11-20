@@ -50,6 +50,26 @@
  						</select>
  					</label>
  				</div>
+
+ 				<div class="small-12 medium-6 column">
+ 					<label>Product Quantity:
+ 						<select name="quantity">
+ 							<option value="{{\App\Classes\Request::old('post','quantity')?:''}}">{{\App\Classes\Request::old('post','quantity')?:'Select quantity'}}</option>
+
+ 							@for($i=1;$i<=50;$i++)
+ 								<option value="{{$i}}">{{$i}}</option>
+ 							@endfor
+ 							
+ 						</select>
+ 						
+ 					</label>
+ 				</div>
+ 				<div class="small-12 medium-6 column">
+ 					<div class="input-group">
+ 						<span class="input-group-label">Product Image:</span>
+ 						<input type="file" name="productImage" class="input-group-field">
+ 					</div>
+ 				</div>
  			</div>
 
 
