@@ -15,7 +15,7 @@ class UploadFile{
 	protected function setName($file,$name=''){
 
 		if($name===''){
-			$name = pathinfo($file,8);
+			$name = pathinfo($file,PATHINFO_FILENAME);
 			//PATHINFO_FILENAME is 8
 			//PATHINFO_BASENAME is 2
 			//PATHINFO_DIRNAME is 1
@@ -65,7 +65,7 @@ class UploadFile{
 			mkdir($folder,0777,true);
 		}
 
-		$fileobj->path = "{$folder}{$ds}{file_name}";
+		$fileobj->path = "{$folder}{$ds}{$file_name}";
 		$absolute_path = BASE_PATH."{$ds}public{$ds}$fileobj->path";
 		if(move_uploaded_file($temp_path, $absolute_path)){
 			return $fileobj;

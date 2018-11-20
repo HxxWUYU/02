@@ -98,7 +98,7 @@ class ProductController extends BaseController{
 
 				$ds = DIRECTORY_SEPARATOR;
 				$temp_file = $file->productImage->tmp_name;
-				$image_path = UploadFile::move($temp_file,"images{$ds}uploads{$ds}products",$filename)->path();
+				$image_path = UploadFile::move($temp_file,"images{$ds}uploads{$ds}products",$file)->path();
 
 				//process form data
 				Product::create([
