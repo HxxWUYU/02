@@ -142,7 +142,7 @@
  				<table class='hover unstriped' data-form="deleteForm">
  					<thead>
  						<tr>
- 							<th>Name</th>
+ 						<th>Name</th>
  						<th>Slug</th>
  						<th>Date Created</th>
  						<th>Action</th>
