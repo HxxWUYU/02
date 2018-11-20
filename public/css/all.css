@@ -5336,7 +5336,8 @@ table[data-form='deleteForm'] .fa-edit {
 }
 
 select {
-  border: solid 1px #000;
+  -webkit-appearance: none;
+  border: solid 1px black;
 }
 
 .slide-in-down.mui-enter {
