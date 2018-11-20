@@ -40,7 +40,16 @@
  		<div class="small-12 medium-11 column">
 
  			@if(count($categories))
- 				<table class='hover' data-form="deleteForm">
+ 				<table class='hover unstriped' data-form="deleteForm">
+ 					<thead>
+ 						<tr>
+ 							<th>Name</th>
+ 						<th>Slug</th>
+ 						<th>Date Created</th>
+ 						<th>Action</th>
+ 						</tr>
+ 						
+ 					</thead>
  					<tbody>
  						@foreach($categories as $category)
  							<tr>
@@ -130,7 +139,16 @@
  		<div class="small-12 medium-11 column">
 
  			@if(count($subcategories))
- 				<table class='hover' data-form="deleteForm">
+ 				<table class='hover unstriped' data-form="deleteForm">
+ 					<thead>
+ 						<tr>
+ 							<th>Name</th>
+ 						<th>Slug</th>
+ 						<th>Date Created</th>
+ 						<th>Action</th>
+ 						</tr>
+ 						
+ 					</thead>
  					<tbody>
  						@foreach($subcategories as $subcategory)
  							<tr>

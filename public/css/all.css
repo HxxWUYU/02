@@ -5282,6 +5282,16 @@ a.thumbnail image {
   background-color: black;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table th, table tr, table td {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  border: 1px solid #c0c0;
+}
+
 .notification {
   margin-top: 1.5rem;
   display: none;
