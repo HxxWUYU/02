@@ -75,7 +75,7 @@
 
  				<div class="small-12 column">
  					<label>Descritption:
- 					<textarea name="decription" placeholder="Description">{{\App\Classes\Request::old('post','description')}}</textarea>
+ 					<textarea name="description" placeholder="Description">{{\App\Classes\Request::old('post','description')}}</textarea>
  					</label>
  					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
  					<button class="button alert" type="reset">Reset</button>
