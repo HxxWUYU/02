@@ -13,6 +13,7 @@ class Product extends Model{
 	
 	protected $fillable = ['name','price','description','category_id','sub_category_id','image_path','quantity'];//allow mass assignment
 	protected $data = ['deleted_at'];
+	
 
 	public function category(){
 		return $this->belongsTo(Category::class);
