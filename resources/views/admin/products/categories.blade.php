@@ -46,7 +46,7 @@
  							<th>Name</th>
  						<th>Slug</th>
  						<th>Date Created</th>
- 						<th>Action</th>
+ 						<th width="70">Action</th>
  						</tr>
  						
  					</thead>
@@ -56,7 +56,7 @@
  								<td>{{$category['name']}}</td>
  								<td>{{$category['slug']}}</td>
  								<td>{{$category['added']}}</td>
- 								<td width="100" class="text-right">
+ 								<td width="70" class="text-right">
  									<span class="has-tip top" data-tooltip tabindex="1" title="Add SubCategory" >
  											<a data-open="add-subcategory-{{$category['id']}}"><i class="fa fa-plus"></i></a>
  									</span>
@@ -146,7 +146,7 @@
  						<th>Slug</th>
  						<th>Date Created</th>
  						<th>Category</th>
- 						<th>Action</th>
+ 						<th width="50">Action</th>
  						</tr>
  						
  					</thead>
@@ -158,7 +158,7 @@
  								<td>{{$subcategory['added']}}</td>
  								<td>{{$subcategory['category_name']}}</td>
 
- 								<td width="100" class="text-right">
+ 								<td width="50" class="text-right">
  									
  									<span class="has-tip top" data-tooltip tabindex="1" title="Edit Subategory">
  											<a data-open="item-subcategory-{{$subcategory['id']}}"><i class="fa fa-edit"></i></a>
