@@ -35,7 +35,7 @@ class ProductController extends BaseController{
 	public function show(){
 		$products = $this->products;
 		$links =$this->links;
-		return view('admin/product/inventory',compact('products','links'));
+		return view('admin/products/inventory',compact('products','links'));
 	}
 
 	public function showCreateProductForm(){
