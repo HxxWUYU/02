@@ -145,6 +145,7 @@
  						<th>Name</th>
  						<th>Slug</th>
  						<th>Date Created</th>
+ 						<th>Category</th>
  						<th>Action</th>
  						</tr>
  						
@@ -155,6 +156,8 @@
  								<td>{{$subcategory['name']}}</td>
  								<td>{{$subcategory['slug']}}</td>
  								<td>{{$subcategory['added']}}</td>
+ 								<td>{{$subcategory['category_name']}}</td>
+
  								<td width="100" class="text-right">
  									
  									<span class="has-tip top" data-tooltip tabindex="1" title="Edit Subategory">
