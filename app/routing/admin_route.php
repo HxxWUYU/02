@@ -33,7 +33,7 @@ $router->map('GET','/02/public/admin/product/inventory','App\Controllers\Admin\P
 
 $router->map('GET','/02/public/admin/product/[i:id]/edit','App\Controllers\Admin\ProductController@showEditProductForm','edit_product_form');
 
-$router->map('POST','/02/public/admin/product/edit','App\Controllers\Admin\ProductController@edit','create_product');
+$router->map('POST','/02/public/admin/product/edit','App\Controllers\Admin\ProductController@edit','edit_product');
 
 //for admin routes
 //$match = $router->match()  match is an array containing 3 elements:
