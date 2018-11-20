@@ -29,7 +29,31 @@
  						<input type="text" name="price" placeholder="Product price" value="{{\App\Classes\Request::old('post','price')}}">
  					</label>
  				</div>
+
+ 				<div class="small-12 medium-6 column">
+ 					<label>
+ 						
+ 						Product Category:
+ 						<select name="category" id="product-category">
+ 							<option value="{{\App\Classes\Request::old('post','category')?:''}}"></option>
+ 							@foreach($categories as $category)
+ 							<option value="{{$category->id}}">{{$category->name}}</option>
+ 							@endforeach
+ 						</select>
+ 						
+ 					</label>
+ 				</div>
+ 				<div class="small-12 medium-6 column">
+ 					<label>
+ 						Product Subcategory:
+ 						<select name="category" id="product-category">
+ 							<option value="{{\App\Classes\Request::old('post','category')?:''}}"></option>
+ 						</select>
+ 					</label>
+ 				</div>
  			</div>
+
+
  		</div>
  	</form>
  

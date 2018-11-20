@@ -20,18 +20,19 @@ class ProductController extends BaseController{
 
 	public function __construct(){
 	
-		$subTotal = SubCategory::all()->count();
-		$object = new Category;
-		$total = Category::all()->count();
+		
+		$this->categories = Category::all();
 
-		list($this->categories,$this->links) = paginate(3,$total,$this->table_name,$object);
+		// list($this->categories,$this->links) = paginate(3,$total,$this->table_name,$object);
 
-		list($this->subcategories,$this->subcategories_links) = paginate(3,$subTotal,"sub_categories",new SubCategory);
+		// list($this->subcategories,$this->subcategories_links) = paginate(3,$subTotal,"sub_categories",new SubCategory);
 	}
 
 	public function showCreateProductForm(){
 
-		return view('admin/products/create');
+
+		$categories = $this->categories;
+		return view('admin/products/create',compact('categories'));
 
 		
 	}
