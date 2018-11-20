@@ -4,7 +4,7 @@ namespace App\Classes;
 class UploadFile{
 
 	protected $filename;
-	protected $max_filesize = 2097152;
+	protected $max_filesize = 4096;
 	protected $extension;
 	protected $path;
 
@@ -37,7 +37,7 @@ class UploadFile{
 
 	public static function fileSize($file){
 		$fileobj = new static;
-		return ($file > $fileobj->max_filesize ? true:false);
+		return ($file['file']['size']/1024 > $fileobj->max_filesize ? true:false);
 	}
 
 	public static function isImage($file){
@@ -55,7 +55,7 @@ class UploadFile{
 		return $this->path;
 	}
 
-	public static function move($temp_path,$folder,$file,$new_filename){
+	public static function move($temp_path,$folder,$file,$new_filename=''){
 		$fileobj = new static;
 		$ds = DIRECTORY_SEPARATOR; //slash
 
