@@ -58,6 +58,7 @@ table[data-form='deleteForm']{
 }
 
 select{
-	border: solid 1px #000;
+	 -webkit-appearance:none;
+	border: solid 1px black;
 }
 
