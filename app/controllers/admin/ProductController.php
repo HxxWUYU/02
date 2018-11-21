@@ -217,7 +217,7 @@ class ProductController extends BaseController{
 				
 				Session::add('success','Record Updated');
 				Request::refresh();
-				Redirect::to("/02/public/admin/product/inventory");
+				Redirect::to("/02/public/admin/product/{$product->id}/inventory");
 			}else{
 				throw new \Exception ('Token mismatch');
 			}
