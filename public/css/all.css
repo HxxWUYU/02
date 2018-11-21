@@ -5352,6 +5352,24 @@ select {
   border: solid 2px black;
 }
 
+.navigation {
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  font-family: "Open Sans",san-serif;
+}
+
+.navigation .logo {
+  background-image: url("/images/logo.png");
+  width: 8rem;
+  height: 2.6rem;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
