@@ -25,6 +25,10 @@
 								$('#product-subcategory').append('<option value="'
 									+value.id+'">'+value.name+'</option>');
 							});
+							var subcategoryname = document.querySelector("input[name='subcategoryname']");
+ 			
+			var subcategory_name = $('#product-subcategory'+" option:selected").text();
+			subcategoryname.setAttribute('value', subcategory_name);
 						}else{
 							$('#product-subcategory').append('<option value="">No record found</option>');
 						}
