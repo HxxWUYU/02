@@ -9,7 +9,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 </div>
 
 <div class="top-bar" id="main-menu">
- 	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false" data-close-on-click="true">
+ 	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu  data-close-on-click="true">
  		<div class="top-bar-title show-fow-medium">
  			<a href="/" class="logo"></a>
  		</div>
