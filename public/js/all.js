@@ -97,6 +97,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 			var category_id = $('#product-category'+" option:selected").val();
 			var category_name = $('#product-category'+" option:selected").text();
 			categoryname.setAttribute('value',category_name);
+			alert(categoryname.getAttribute('value'));
 
 			$('#product-subcategory').html('Select Subcategory');
 			if(category_id.length>0){
