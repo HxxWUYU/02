@@ -1,5 +1,5 @@
 <?php
-$categories = \App\Models\Category::width('subCategories')->get()
+$categories = \App\Models\Category::with('subCategories')->get();
 ?>
 <header class="navigation">
 	<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
