@@ -9,7 +9,7 @@ $logo-img-folder:'images';
 	font-family:"Open Sans",san-serif;
 
 	.logo{
-		background-image:url('/#{$logo-img-folder}/logo.png');
+		background-image:url('/02/public/#{$logo-img-folder}/logo.png');
 		width:8rem;
 		height:2.6rem;
 		display: block;
