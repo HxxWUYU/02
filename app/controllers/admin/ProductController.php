@@ -209,7 +209,7 @@ class ProductController extends BaseController{
 				if($filename){
 					$ds = DIRECTORY_SEPARATOR;
 					//old_image_path
-					$old = BASE_PATH."{{$ds}}public{$ds}$product->image_path";
+					$old = BASE_PATH."{$ds}public{$ds}$product->image_path";
 				$temp_file = $file->productImage->tmp_name;
 				$image_path = UploadFile::move($temp_file,"images{$ds}uploads{$ds}products",$filename)->path();
 				unlink($old);
