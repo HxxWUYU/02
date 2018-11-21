@@ -8,7 +8,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 </div>
 
 <div class="top-bar" id="main-menu">
- 	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-close-on-click-inside="false">
+ 	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false">
  		<div class="top-bar-title show-fow-medium">
  			<a href="/" class="logo">Hxx Store</a>
  		</div>
@@ -23,7 +23,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
       				<li>
       				<a href="#">{{$category->name}}</a>
       				@if(count($category->subCategories))
-      					<ul class="menu sub dropdown">
+      					<ul class="menu sub vertical dropdown">
       						@foreach($category->subCategories as $subCategory)
       							<li>
       								<a href="#">{{$subCategory->name}}
