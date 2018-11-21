@@ -95,7 +95,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
  			
 			var category_name = $('#product-category'+" option:selected").text();
 			categoryname.setAttribute('value', category_name);
-			alert(categoryname.getAttribute('value'));
+
 
 			var category_id = $('#product-category'+" option:selected").val();
 
@@ -123,8 +123,9 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 
 		$("#product-subcategory").on('change',function(){
 			var subcategoryname = document.querySelector("input[name='subcategoryname']");
-			var subcategory_name = $('#product-subcategory'+" option:selected").text();
-			subcategoryname.setAttribute('value',subcategory_name);
+ 			
+			var subcategory_name = $('#product-category'+" option:selected").text();
+			subcategoryname.setAttribute('value', subcategory_name);
 		});
 	};
 })();
