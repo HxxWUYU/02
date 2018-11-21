@@ -6,7 +6,7 @@ use App\Classes\Mail;
 class IndexController extends BaseController{
 
 	public function show(){
-		echo "Inside Homepage from controller class";
+		return view('home');
 		// $mail = new Mail();
 		// $data = [
 		// 	'to' => 'derrickhuang2333@gmail.com',

@@ -21,7 +21,7 @@
 </div>
     @yield('content')
   </div>
-  <script src="/02/public/js/all.js"></script>
+  <script async src="/02/public/js/all.js"></script>
 
 
 </body>
