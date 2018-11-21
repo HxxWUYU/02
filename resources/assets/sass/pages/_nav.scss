@@ -17,4 +17,23 @@ $logo-img-folder:'images';
 		background-size: cover;
 		background-position: center center
 	}
+
+	.top-bar{
+		background-color: $menu-background;
+
+		.menu{
+			background-color: $menu-background;
+			li{
+				color:#def0fc;
+
+				a{
+					color:#def0fc;
+					text-decoration: none;
+					@include breakpoint(medium only){
+						font-size: 0.6rem;
+					}
+				}
+			}
+		}
+	}
 }

@@ -5370,6 +5370,29 @@ select {
   background-position: center center;
 }
 
+.navigation .top-bar {
+  background-color: #1B1920;
+}
+
+.navigation .top-bar .menu {
+  background-color: #1B1920;
+}
+
+.navigation .top-bar .menu li {
+  color: #def0fc;
+}
+
+.navigation .top-bar .menu li a {
+  color: #def0fc;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .navigation .top-bar .menu li a {
+    font-size: 0.6rem;
+  }
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
