@@ -91,6 +91,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 	HXXSTORE.admin.changeEvent = function(){
 
 		$("#product-category").on('change',function(){
+
 			var categoryname = document.querySelector("input[name='categoryname']");
  			
 			var category_name = $('#product-category'+" option:selected").text();
@@ -112,13 +113,14 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 								$('#product-subcategory').append('<option value="'
 									+value.id+'">'+value.name+'</option>');
 							});
-							var subcategoryname = document.querySelector("input[name='subcategoryname']");
- 			
-			var subcategory_name = $('#product-subcategory'+" option:selected").text();
-			subcategoryname.setAttribute('value', subcategory_name);
+							
 						}else{
 							$('#product-subcategory').append('<option value="">No record found</option>');
 						}
+						var subcategoryname = document.querySelector("input[name='subcategoryname']");
+ 			
+			var subcategory_name = $('#product-subcategory'+" option:selected").text();
+			subcategoryname.setAttribute('value', subcategory_name);
 					}
 				});
 			}
