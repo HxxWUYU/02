@@ -4,7 +4,12 @@
 	HXXSTORE.admin.changeEvent = function(){
 
 		$("#product-category").on('change',function(){
-			alert(1);
+			var categoryname = document.querySelector("input[name='categoryname']");
+ 			
+			var category_name = $('#product-category'+" option:selected").text();
+			alert(categoryname);
+			alert(category_name);
+
 			var category_id = $('#product-category'+" option:selected").val();
 
 			$('#product-subcategory').html('Select Subcategory');
