@@ -17,7 +17,24 @@ $categories = \App\Models\Category::with('subCategories')->get();
       <li>Hxx Products</li>
       @if(count($categories))
       	<li>
-      		
+      		<a href="#">Categories</a>
+      		<ul class="menu vertical sub dropdown">
+      			@foreach($categories as $category)
+      				<li>
+      				<a href="#">{{$category->name}}</a>
+      				@if(count($category->subCategories))
+      					<ul class="menu sub dropdown">
+      						@foreach($category->subCategories as $subCategory)
+      							<li>
+      								<a href="#">{{$subCategory->name}}
+      								</a>
+      							</li>
+      						@endforeach
+      					</ul>
+      				@endif
+      				</li>
+      			@endoreach
+      		</ul>
       	</li>
       @endif
       
