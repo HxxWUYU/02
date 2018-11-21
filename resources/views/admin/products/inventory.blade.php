@@ -48,7 +48,7 @@
  								<td width="70" class="text-right">
  									
  									<span class="has-tip top" aria-haspopup="true" data-disable-hover="false" data-tooltip tabindex="1" title="Edit Product">
- 											<a href="/02/public/admin/product/{{$product['id']}}/edit"><i class="fa fa-edit"></i></a>
+ 											<a href="/02/public/admin/product/{{$product['id']}}/edit">Edit<i class="fa fa-edit"></i></a>
  									</span>
  																					
 

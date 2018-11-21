@@ -244,6 +244,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 				break;
 			case 'adminProduct':
 				HXXSTORE.admin.changeEvent();
+				HXXSTORE.admin.delete();
 				break;
 			case 'adminCategories':
 				HXXSTORE.admin.update();

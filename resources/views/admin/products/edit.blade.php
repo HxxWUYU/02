@@ -87,6 +87,23 @@
 
  		</div>
  	</form>
+
+ 	<!--Delete Button -->
+ 	<div class="row expanded">
+ 		<div class="small-12 medium-11">
+ 			<table data-form="deleteForm">
+ 				<tr>
+ 					<td>
+ 						<form method="POST" action="/02/public/admin/product/{{$product->id}}}/delete"  class="delete-item">
+	 											<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
+	 											<button type="submit" class="button alert">Delete Product</button>
+	 					</form>
+ 					</td>
+ 				</tr>
+ 			</table>
+ 		</div>
+
+ 	</div>
  
  </div>
 @include('includes.delete-modal')

@@ -10,6 +10,7 @@
 				break;
 			case 'adminProduct':
 				HXXSTORE.admin.changeEvent();
+				HXXSTORE.admin.delete();
 				break;
 			case 'adminCategories':
 				HXXSTORE.admin.update();
