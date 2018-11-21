@@ -175,10 +175,6 @@ class ProductController extends BaseController{
 				}
 				
 
-				 if(isset($file->productImage->name)&& !UploadFile::isImage($file)){
-					$file_error['productImage']=['The image is invalid,please try again'];
-				}
-
 				if($validate->hasError()){
 					$response = $validate->getErrorMessages();
 					if(count($file_error)>0){
