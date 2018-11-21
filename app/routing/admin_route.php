@@ -35,6 +35,8 @@ $router->map('GET','/02/public/admin/product/[i:id]/edit','App\Controllers\Admin
 
 $router->map('POST','/02/public/admin/product/edit','App\Controllers\Admin\ProductController@edit','edit_product');
 
+$router->map('POST','/02/public/admin/product/[i:id]/delete','App\Controllers\Admin\ProductController@delete','delete_product');
+
 //for admin routes
 //$match = $router->match()  match is an array containing 3 elements:
 //traget, parmas, name // target is the App\..\ name is home

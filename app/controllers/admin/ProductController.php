@@ -239,20 +239,14 @@ class ProductController extends BaseController{
 
 				
 				
-				Category::destroy($id);
+				Product::destroy($id);
 
-				$subcategories = SubCategory::where('category_id',$id)->
-				get();
-
-				if(count($subcategories)>0){
-					foreach ($subcategories as $subcategory) {
-						$subcategory->delete();
-					}
-				}
-				Session::add('success','Category Deleted');
-				Redirect::to('/02/public/admin/product/categories');
+				Session::add('success','Product Deleted');
+				Redirect::to('/02/public/admin/product/inventory');
 				
 			}
+			
+		}else{
 			throw new \Exception ('Token mismatch');
 		}
 	}
