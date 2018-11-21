@@ -31,7 +31,7 @@ class UploadFile{
 
 	}
 
-	protected function fileExtension($file){
+	public function fileExtension($file){
 		return $this->extension = pathinfo($file,PATHINFO_EXTENSION);
 	}
 
