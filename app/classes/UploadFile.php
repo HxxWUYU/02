@@ -31,7 +31,7 @@ class UploadFile{
 
 	}
 
-	public function fileExtension($file){
+	protected function fileExtension($file){
 		return $this->extension = pathinfo($file,PATHINFO_EXTENSION);
 	}
 
@@ -44,8 +44,6 @@ class UploadFile{
 
 		$fileobj = new static;
 		$ext = $fileobj->fileExtension($file);
-		var_dump($ext);
-		exit;
 		$validExt = array('jpg','jpeg','png','bmp','gif');
 		if(!in_array(strtolower($ext), $validExt)){
 			return false;
