@@ -5,11 +5,11 @@ $categories = \App\Models\Category::with('subCategories')->get();
 	<div class="hide-for-medium">
 	<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
   <button class="menu-icon" type="button" data-toggle="examainmple-menu"></button>
-  <div class="title-bar-title">Menu</div>
+  
 </div>
 <div class="top-bar" id="main-menu">
  	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false">
- 		<div class="top-bar-title show-fow-medium">
+ 		<div class="top-bar-title show-for-medium">
  			<a href="/" class="logo"></a>
  		</div>
 		 <div class="top-bar-left">
@@ -58,7 +58,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 	
 	<div class="top-bar" id="main-menu">
  	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false">
- 		<div class="top-bar-title show-fow-medium">
+ 		<div class="top-bar-title show-for-medium">
  			<a href="/" class="logo"></a>
  		</div>
 		 <div class="top-bar-left">
