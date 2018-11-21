@@ -110,6 +110,8 @@ class ProductController extends BaseController{
 					}else{
 						$errors = $response;
 					}
+
+
 					return view('admin/products/create',['categories'=>$this->categories,'errors'=>$errors]); 
 					
 				}
@@ -182,7 +184,11 @@ class ProductController extends BaseController{
 					}else{
 						$errors = $response;
 					}
-					return view('admin/products/create',['categories'=>$this->categories,'errors'=>$errors]); 
+					// $categories = $this->categories;
+					// $product = Product::where('id',$id)->with(['category','subCategory'])->first();
+					// return view("admin/products/edit",compact('product','categories'));
+					// return view('admin/products/edit',['categories'=>$this->categories,'errors'=>$errors]); 
+					$this->showEditProductForm($id);
 					
 				}
 
@@ -217,7 +223,7 @@ class ProductController extends BaseController{
 				
 				Session::add('success','Record Updated');
 				Request::refresh();
-				Redirect::to("/02/public/admin/product/".$request->product_id."/inventory");
+				Redirect::to("/02/public/admin/product/inventory");
 			}else{
 				throw new \Exception ('Token mismatch');
 			}
