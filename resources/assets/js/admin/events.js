@@ -37,7 +37,7 @@
 		$("#product-subcategory").on('change',function(){
 			var subcategoryname = document.querySelector("input[name='subcategoryname']");
  			
-			var subcategory_name = $('#product-category'+" option:selected").text();
+			var subcategory_name = $('#product-subcategory'+" option:selected").text();
 			subcategoryname.setAttribute('value', subcategory_name);
 		});
 	};
