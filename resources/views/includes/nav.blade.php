@@ -12,42 +12,42 @@ $categories = \App\Models\Category::with('subCategories')->get();
  		<div class="top-bar-title show-fow-medium">
  			<a href="/" class="logo">Hxx Store</a>
  		</div>
- <div class="top-bar-left">
-    <ul class="dropdown menu vertical medium-horizontal">
-      <li>Hxx Products</li>
-      @if(count($categories))
-      	<li>
-      		<a href="#">Categories</a>
-      		<ul class="menu vertical sub dropdown">
-      			@foreach($categories as $category)
-      				<li>
-      				<a href="#">{{$category->name}}</a>
-      				@if(count($category->subCategories))
-      					<ul class="menu sub vertical dropdown">
-      						@foreach($category->subCategories as $subCategory)
-      							<li>
-      								<a href="#">{{$subCategory->name}}
-      								</a>
-      							</li>
-      						@endforeach
-      					</ul>
-      				@endif
-      				</li>
-      			@endforeach
-      		</ul>
-      	</li>
-      @endif
-      
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="dropdown menu vertical medium-horizontal">
-    	<li>Username</li>
-    	<li><a href="#">Sign In</a></li>
-    	<li><a href="#">Register</a></li>
-    	<li><a href="#">Cart</a></li>  
-    </ul>
-  </div>
+		 <div class="top-bar-left">
+		    <ul class="dropdown menu vertical medium-horizontal">
+		      <li>Hxx Products</li>
+		      @if(count($categories))
+		      	<li>
+		      		<a href="#">Categories</a>
+		      		<ul class="menu vertical sub dropdown">
+		      			@foreach($categories as $category)
+		      				<li>
+		      				<a href="#">{{$category->name}}</a>
+		      				@if(count($category->subCategories))
+		      					<ul class="menu sub vertical dropdown">
+		      						@foreach($category->subCategories as $subCategory)
+		      							<li>
+		      								<a href="#">{{$subCategory->name}}
+		      								</a>
+		      							</li>
+		      						@endforeach
+		      					</ul>
+		      				@endif
+		      				</li>
+		      			@endforeach
+		      		</ul>
+		      	</li>
+		      @endif
+		      
+		    </ul>
+		  </div>
+		  <div class="top-bar-right">
+		    <ul class="dropdown menu vertical medium-horizontal">
+		    	<li>Username</li>
+		    	<li><a href="#">Sign In</a></li>
+		    	<li><a href="#">Register</a></li>
+		    	<li><a href="#">Cart</a></li>  
+		    </ul>
+		  </div>
  	</div>
 </div>
 </header>
