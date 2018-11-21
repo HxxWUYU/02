@@ -5361,7 +5361,7 @@ select {
 }
 
 .navigation .logo {
-  background-image: url("/02/public/images/logo.png");
+  background-image: url("/02/public/images/uploads/logo.png");
   width: 8rem;
   height: 2.6rem;
   display: block;
