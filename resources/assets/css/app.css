@@ -5282,6 +5282,19 @@ a.thumbnail image {
   background-color: black;
 }
 
+html, body {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.site_wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
 table {
   border-collapse: collapse;
 }
