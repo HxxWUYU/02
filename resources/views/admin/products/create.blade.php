@@ -33,7 +33,7 @@
  				<div class="small-12 medium-6 column">
  					<label>Product Category:
  						<select name="category" id="product-category">
- 							<option value="{{\App\Classes\Request::old('post','category')?:''}}">{{\App\Classes\Request::old('post','category')?:'Select Category'}}</option>
+ 							<option value="{{\App\Classes\Request::old('post','category')?:''}}">{{\App\Classes\Request::old('post','categoryname')?:'Select Category'}}</option>
  							@foreach($categories as $category)
  							<option value="{{$category->id}}">{{$category->name}}</option>
  							@endforeach
@@ -46,7 +46,7 @@
  					<label>
  						Product Subcategory:
  						<select name="subcategory" id="product-subcategory">
- 							<option value="{{\App\Classes\Request::old('post','subcategory')?:''}}">{{\App\Classes\Request::old('post','subcategory')?:'Select Subcategory'}}</option>
+ 							<option value="{{\App\Classes\Request::old('post','subcategory')?:''}}">{{\App\Classes\Request::old('post','subcategoryname')?:'Select Subcategory'}}</option>
  							
  						</select>
  					</label>
@@ -78,6 +78,8 @@
  					<textarea name="description" placeholder="Description">{{\App\Classes\Request::old('post','description')}}</textarea>
  					</label>
  					<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
+ 					<input type="hidden" name="categoryname" value="">
+ 					<input type="hidden" name="subcategoryname" value="">
  					<button class="button alert" type="reset">Reset</button>
  					<input class="button success float-right" type="submit" value="Submit">
  				</div>
@@ -88,5 +90,6 @@
  	</form>
  
  </div>
+
 @include('includes.delete-modal')
 @endsection
