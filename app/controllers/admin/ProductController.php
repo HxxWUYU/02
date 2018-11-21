@@ -100,6 +100,8 @@ class ProductController extends BaseController{
 				if($filename==''){
 					$file_error['productImage']=['The product image is required'];
 				}else if(!UploadFile::isImage($file)){
+					var_dump($file);
+					exit;
 					$file_error['productImage']=['The image is invalid,please try again'];
 				}
 
