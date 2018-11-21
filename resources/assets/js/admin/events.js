@@ -7,8 +7,8 @@
 			var categoryname = document.querySelector("input[name='categoryname']");
  			
 			var category_name = $('#product-category'+" option:selected").text();
-			alert(categoryname);
-			alert(category_name);
+			categoryname.setAttribute('value', category_name);
+			alert(categoryname.getAttribute('value'));
 
 			var category_id = $('#product-category'+" option:selected").val();
 
