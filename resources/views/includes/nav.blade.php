@@ -3,8 +3,8 @@ $categories = \App\Models\Category::with('subCategories')->get();
 ?>
 <header class="navigation">
 	<div class="hide-for-medium">
-	<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+	<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="examainmple-menu"></button>
   <div class="title-bar-title">Menu</div>
 </div>
 <div class="top-bar" id="main-menu">
