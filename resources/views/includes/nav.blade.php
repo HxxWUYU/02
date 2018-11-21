@@ -15,7 +15,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
  <div class="top-bar-left">
     <ul class="dropdown menu vertical medium-horizontal">
       <li>Hxx Products</li>
-      @if(count($categories)>0)
+      @if(count($categories))
       	<li>
       		<a href="#">Categories</a>
       		<ul class="menu vertical sub dropdown">
