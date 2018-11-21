@@ -32,6 +32,31 @@ $logo-img-folder:'images';
 					@include breakpoint(medium only){
 						font-size: 0.6rem;
 					}
+
+					&:hover{
+						color:#ffffff;
+					}
+
+					&:focus{
+						outline-style:none;
+					}
+				}
+			}
+		}
+
+		ul.menu.vertical{
+
+			&.sub{
+				padding-right:0.5rem;
+				padding-left:0.5rem;
+				margin-top:0.7rem;
+
+				li{
+					border-bottom: 1px dotted #ffffff;
+
+					&:last-of-type{
+						border-bottom:none;
+					}
 				}
 			}
 		}
