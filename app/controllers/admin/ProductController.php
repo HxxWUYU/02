@@ -97,13 +97,13 @@ class ProductController extends BaseController{
 				}
 				
 
-				if(empty($filename)){
+				if($filename==''){
 					$file_error['productImage']=['The product image is required'];
 				}else if(!UploadFile::isImage($file)){
 					$file_error['productImage']=['The image is invalid,please try again'];
 				}
 
-				if($validate->hasError()){
+				if($validate->hasError()||count($file_error)>0){
 					$response = $validate->getErrorMessages();
 					if(count($file_error)>0){
 						$errors = array_merge($response,$file_error);
