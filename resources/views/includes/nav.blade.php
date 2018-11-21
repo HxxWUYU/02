@@ -20,16 +20,19 @@ $categories = \App\Models\Category::width('subCategories')->get()
       		<a href="#">Categories</a>
       		<ul class="menu vertical sub dropdown">
       			@foreach($categories as $category)
+      				<li>
       				<a href="#">{{$category->name}}</a>
       				@if(count($category->subCategories)>0)
       					<ul class="menu sub dropdown">
       						@foreach($category->subCategories as $subCategory)
       							<li>
-      								<a href="#">{{$subCategory->name}}</a>
+      								<a href="#">{{$subCategory->name}}
+      								</a>
       							</li>
       						@endforeach
       					</ul>
       				@endif
+      				</li>
       			@endoreach
       		</ul>
       	</li>
