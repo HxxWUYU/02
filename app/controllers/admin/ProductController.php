@@ -216,7 +216,7 @@ class ProductController extends BaseController{
 				//process form data
 				
 				Session::add('success','Record Updated');
-				Request::fresh();
+				Request::refresh();
 				Redirect::to("/02/public/admin/product/inventory");
 			}else{
 				throw new \Exception ('Token mismatch');
