@@ -188,7 +188,7 @@ class ProductController extends BaseController{
 					// $product = Product::where('id',$id)->with(['category','subCategory'])->first();
 					// return view("admin/products/edit",compact('product','categories'));
 					// return view('admin/products/edit',['categories'=>$this->categories,'errors'=>$errors]); 
-					$this->showEditProductForm($id);
+					$this->showEditProductForm($request->product_id);
 					
 				}
 
