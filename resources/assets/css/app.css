@@ -5370,6 +5370,35 @@ select {
   background-position: center center;
 }
 
+.navigation .toggle {
+  line-height: 3rem;
+  padding: 0 0.5rem 0.3rem 0.5rem;
+  background-color: #030303;
+}
+
+.navigation .toggle .menu-icon {
+  margin-top: 0.5rem;
+}
+
+.navigation .toggle .menu-icon:focus {
+  outline-style: none;
+}
+
+.navigation .toggle .menu-icon:after {
+  width: 1.8rem;
+}
+
+.navigation .toggle .small-logo {
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  height: 2.6rem;
+  width: 6rem;
+}
+
+.navigation .toggle .small-logo:focus {
+  outline-style: none;
+}
+
 .navigation .top-bar {
   background-color: #1B1920;
 }
@@ -5407,12 +5436,25 @@ select {
   margin-top: 0.7rem;
 }
 
+@media screen and (max-width: 39.9375em) {
+  .navigation .top-bar ul.menu.vertical.sub {
+    margin-top: 2.4rem;
+    width: 100% !important;
+  }
+}
+
 .navigation .top-bar ul.menu.vertical.sub li {
   border-bottom: 1px dotted #ffffff;
 }
 
 .navigation .top-bar ul.menu.vertical.sub li:last-of-type {
   border-bottom: none;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .navigation .top-bar ul.menu.vertical {
+    text-align: left;
+  }
 }
 
 .slide-in-down.mui-enter {

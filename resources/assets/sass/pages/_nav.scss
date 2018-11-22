@@ -18,6 +18,34 @@ $logo-img-folder:'images';
 		background-position: center center
 	}
 
+	.toggle{
+		line-height: 3rem;
+		padding:0 0.5rem 0.3rem 0.5rem;
+		background-color:darken($menu-background,10%);
+
+		.menu-icon{
+			margin-top: 0.5rem;
+			&:focus{
+				outline-style:none;
+			}
+
+			&:after{
+				width:1.8rem;
+			}
+		}
+
+		.small-logo{
+			padding-bottom: 0.5rem;
+			display: inline-block;
+			height:2.6rem;
+			width: 6rem;
+
+			&:focus{
+				outline-style:none;
+			}
+		}
+	}
+
 	.top-bar{
 		background-color: $menu-background;
 
@@ -51,6 +79,11 @@ $logo-img-folder:'images';
 				padding-left:0.5rem;
 				margin-top:0.7rem;
 
+				@include breakpoint(small only){
+					margin-top: 2.4rem;
+				width: 100% !important;
+			}
+
 				li{
 					border-bottom: 1px dotted #ffffff;
 
@@ -58,6 +91,10 @@ $logo-img-folder:'images';
 						border-bottom:none;
 					}
 				}
+			}
+
+			@include breakpoint(small only){
+				text-align: left;
 			}
 		}
 	}
