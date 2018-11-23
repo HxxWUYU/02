@@ -6,6 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hxx Store - @yield('title')</title>
 	<link rel="stylesheet" href="/02/public/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="https://use.fontawesome.com/82337c0b5c.js"></script>
   
 </head>

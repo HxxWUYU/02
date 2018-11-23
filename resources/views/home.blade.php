@@ -17,5 +17,19 @@
 				</div>
 			</div>
 		</section>
+		<section>
+			<div id="root">
+				@{{message}}
+				<!-- If not using blade, remove the @-->
+			</div>
+		</section>
 	</div>
+	<script type="text/javascript">
+		new Vue({
+			el:'#root',
+			data:{
+				message:'Vue JS'
+			}
+		});
+	</script>
 @stop
