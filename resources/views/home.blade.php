@@ -3,7 +3,13 @@
 @section('data-page-id','home')
 
 @section('content')
-	<div class="row column">
-		<h1>Homepage</h1>
+	<div class="home">
+		<section class="hero">
+			<div class="hero-slider">
+				<div img src="02/public/images/sliders/01.jpg alt='Hxx Store' ">
+					
+				</div>
+			</div>
+		</section>
 	</div>
 @stop
