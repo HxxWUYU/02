@@ -24,7 +24,7 @@
 					<a :href="'/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
-						    <img :src="'/02/public/'+featured.image_path" width="100%" height="200">
+						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
 						  </div>
 						  <div class="card-section">
 						    <p>@{{feature.name}}</p>
