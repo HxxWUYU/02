@@ -5457,6 +5457,16 @@ select {
   }
 }
 
+.home {
+  padding-top: 4.6rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .home {
+    padding-top: 3rem;
+  }
+}
+
 .home .hero {
   width: 100%;
   box-sizing: border-box;
