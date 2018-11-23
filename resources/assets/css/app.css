@@ -5478,6 +5478,38 @@ select {
   height: 40% !important;
 }
 
+.home .display-products {
+  padding: 2rem;
+}
+
+.home .display-products include breakpoint(small only) {
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.home a {
+  color: #0a0a0a;
+}
+
+.home a:focus {
+  outline-style: none;
+}
+
+.home .card {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.home .card .card-section {
+  margin-bottom: 0.7rem;
+}
+
+.home .card .card-section img {
+  border-radius: 0.5rem;
+  width: 200px !important;
+  height: 250px !important;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
