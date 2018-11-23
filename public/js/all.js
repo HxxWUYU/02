@@ -12,7 +12,8 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 	window.HXXSTORE ={
 
 		global:{},
-		admin:{}
+		admin:{},
+		homeslider:{}
 
 	}
 })();
@@ -234,6 +235,13 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 })();
 (function(){
 	'use strict';
+
+	HXXSTORE.homeslider.initCarousel=function(){
+		$('.hero-slider').slick();
+	}
+})();
+(function(){
+	'use strict';
 	
 	$(document).foundation();
 	
@@ -241,6 +249,7 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 		//SWITCH PAGES
 		switch($('body').data('page-id')){
 			case 'home':
+				HXXSTORE.homeslider.initCarousel();
 				break;
 			case 'adminProduct':
 				HXXSTORE.admin.changeEvent();

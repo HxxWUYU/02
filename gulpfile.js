@@ -33,6 +33,7 @@ elixir(function (mix){
 
 		'js/hxx.js',
 		'js/admin/*.js',
+		'js/pages/*.js',
 		'js/init.js',
 
 		], 'public/js/all.js','resources/assets'

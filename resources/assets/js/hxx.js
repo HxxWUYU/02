@@ -3,7 +3,8 @@
 	window.HXXSTORE ={
 
 		global:{},
-		admin:{}
+		admin:{},
+		homeslider:{}
 
 	}
 })();

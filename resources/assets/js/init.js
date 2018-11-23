@@ -7,6 +7,7 @@
 		//SWITCH PAGES
 		switch($('body').data('page-id')){
 			case 'home':
+				HXXSTORE.homeslider.initCarousel();
 				break;
 			case 'adminProduct':
 				HXXSTORE.admin.changeEvent();
