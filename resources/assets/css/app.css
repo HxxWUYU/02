@@ -5479,12 +5479,14 @@ select {
 }
 
 .home .display-products {
-  padding: 2rem;
+  padding: 3rem;
 }
 
-.home .display-products include breakpoint(small only) {
-  padding: 0.7rem;
-  text-align: center;
+@media screen and (max-width: 39.9375em) {
+  .home .display-products {
+    text-align: center;
+    padding: 0.7rem;
+  }
 }
 
 .home .display-products a {
@@ -5496,7 +5498,7 @@ select {
 }
 
 .home .display-products .card {
-  padding: 0.8rem;
+  padding: 0.9rem;
   margin-bottom: 1rem;
 }
 
