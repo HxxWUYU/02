@@ -237,7 +237,16 @@ this.inputs.eq(t).attr({id:i,max:this.options.end,min:this.options.start,step:th
 	'use strict';
 
 	HXXSTORE.homeslider.initCarousel=function(){
-		$('.hero-slider').slick();
+		$('.hero-slider').slick({
+			slidesToShow:1,
+			autoplay:true,
+			arrows:false,
+			dots:false,
+			fade:true,
+			autoplayHoverPause:true,
+			slideToScroll:1
+
+		});
 	}
 })();
 (function(){
