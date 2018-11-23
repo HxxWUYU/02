@@ -29,7 +29,11 @@ elixir(function (mix){
 		//foundation js
 		bowerPath + '/foundation-sites/dist/js/foundation.min.js',
 
+		//carousel slick
 		bowerPath + '/slick-carousel/slick/slick.min.js',
+
+		//Axios js
+		bowerPath + '/axios/dist/axios.min.js',
 
 		'js/hxx.js',
 		'js/admin/*.js',
