@@ -5464,6 +5464,7 @@ select {
 
 .home .hero .hero-slider img {
   width: 100% !important;
+  height: 400px;
 }
 
 .slide-in-down.mui-enter {
