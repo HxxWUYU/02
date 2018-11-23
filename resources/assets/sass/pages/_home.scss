@@ -25,27 +25,29 @@
 			padding:0.7rem;
 			text-align: center;
 		}
-	}
 
-	a{
+		a{
 		color:#0a0a0a;
-		&:focus{
-			outline-style:none;
+			&:focus{
+				outline-style:none;
+			}
 		}
-	}
 
-	.card{
-		padding: 0.8rem;
-		margin-bottom: 1rem;
+		.card{
+			padding: 0.8rem;
+			margin-bottom: 1rem;
 
-		.card-section{
-			margin-bottom: 0.7rem;
+			.card-section{
+				margin-bottom: 0.7rem;
 
-			img{
-				border-radius: 0.5rem;
-				width:200px !important;
-				height: 250px !important;
+				img{
+					border-radius: 0.5rem;
+					width:200px !important;
+					height: 250px !important;
+				}
 			}
 		}
 	}
+
+
 }

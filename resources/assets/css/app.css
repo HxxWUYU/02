@@ -5487,24 +5487,24 @@ select {
   text-align: center;
 }
 
-.home a {
+.home .display-products a {
   color: #0a0a0a;
 }
 
-.home a:focus {
+.home .display-products a:focus {
   outline-style: none;
 }
 
-.home .card {
+.home .display-products .card {
   padding: 0.8rem;
   margin-bottom: 1rem;
 }
 
-.home .card .card-section {
+.home .display-products .card .card-section {
   margin-bottom: 0.7rem;
 }
 
-.home .card .card-section img {
+.home .display-products .card .card-section img {
   border-radius: 0.5rem;
   width: 200px !important;
   height: 250px !important;
