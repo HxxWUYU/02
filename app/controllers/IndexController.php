@@ -29,7 +29,7 @@ class IndexController extends BaseController{
 		
 
 
-		$products = Product::where('featured',1)->inRandomOrder()->limt(4)->get();
+		$products = Product::where('featured',1)->inRandomOrder()->limit(4)->get();
 
 		echo json_encode(['featured'=>$products]);
 
