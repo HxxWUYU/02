@@ -7,13 +7,13 @@
 		<section class="hero">
 			<div class="hero-slider">
 				<div >
-					<img src="/02/public/images/sliders/01.jpg" alt='Hxx Store' >
+					<img src="/02/public/images/sliders/slide_1.jpg" alt='Hxx Store' >
 				</div>
 				<div >
-					<img src="/02/public/images/sliders/02.jpg" alt='Hxx Store' >
+					<img src="/02/public/images/sliders/slide_2.jpg" alt='Hxx Store' >
 				</div>
 				<div >
-					<img src="/02/public/images/sliders/03.jpg" alt='Hxx Store' >
+					<img src="/02/public/images/sliders/slide_3.jpg" alt='Hxx Store' >
 				</div>
 			</div>
 		</section>
