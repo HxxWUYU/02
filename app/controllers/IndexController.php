@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Classes\Mail;
+use App\Models\Product;
 
 class IndexController extends BaseController{
 
@@ -22,6 +23,12 @@ class IndexController extends BaseController{
 		// 	echo "Email sending failed!";
 		// }
 
+	}
+
+	public function featuredProducts(){
+		$products = Product::where('featured',1)->inRandomOrder()->limt(4)->get();
+
+		echo json_encode(['featured'=>$products]]);
 	}
 }
 ?>

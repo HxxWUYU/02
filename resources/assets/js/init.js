@@ -8,6 +8,7 @@
 		switch($('body').data('page-id')){
 			case 'home':
 				HXXSTORE.homeslider.initCarousel();
+				HXXSTORE.homeslider.homePageProducts();
 				break;
 			case 'adminProduct':
 				HXXSTORE.admin.changeEvent();
