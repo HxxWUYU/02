@@ -5469,12 +5469,13 @@ select {
 
 .home .hero {
   width: 100%;
+  height: 70%;
   box-sizing: border-box;
 }
 
 .home .hero .hero-slider img {
   width: 100% !important;
-  height: 70%;
+  height: 70% !important;
 }
 
 .slide-in-down.mui-enter {
