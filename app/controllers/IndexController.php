@@ -26,8 +26,9 @@ class IndexController extends BaseController{
 	}
 
 	public function featuredProducts(){
-		 $products = Product::where('featured', 1)->inRandomOrder()->limit(4)->get();
-        echo json_encode(['featured' => $products]);
+		$products = Product::where('featured',1)->inRandomOrder()->limt(4)->get();
+
+		echo json_encode(['featured'=>$products]);
 	}
 }
 ?>
