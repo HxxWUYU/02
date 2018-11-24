@@ -55,12 +55,10 @@
 			},
 			mounted:function(){
 				$(window).scroll(function(){
-					console.log($(window).scrollTop());
-					console.log($(window).height());
-					console.log($(document).height());
+					
 					if($(window).scrollTop()+$(window).height()>=$(document).height()-2){
 						app.loadMoreProducts();
-						$(window).scrollTop($(window).scrollTop()-3);
+						$(window).scrollTop(($(window).scrollTop()-3)+'px');
 					}
 				});
 			}
