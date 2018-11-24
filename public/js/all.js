@@ -304,14 +304,10 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 		});
 
-		$('.feature-slider').slick({
-			slidesToShow:1,
-			autoplay:true,
-			arrows:false,
-			dots:false,
-			fade:false,
-			autoplayHoverPause:true,
-			slideToScroll:1
+		$('.carousel').slick({
+			slidesToShow: 3,
+  dots:true,
+  centerMode: true
 
 		});
 	}

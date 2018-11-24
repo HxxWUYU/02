@@ -18,19 +18,17 @@
 			</div>
 		</section>
 
-		<section class="hero">
-			<div class="feature-slider">
-				<div >
-					<img src="/02/public/images/sliders/slide_1.jpg" alt='Hxx Store' >
-				</div>
-				<div >
-					<img src="/02/public/images/sliders/slide_2.jpg" alt='Hxx Store' >
-				</div>
-				<div >
-					<img src="/02/public/images/sliders/slide_3.jpg" alt='Hxx Store' >
-				</div>
-			</div>
-		</section>
+		<div class="wrapper">
+  <h2>Slick Carousel Example<h2>
+<div class="carousel">
+  <div><img src="http://lorempixel.com/200/200/nature/"></div>
+  <div><img src="http://lorempixel.com/200/200/fashion/"></div>
+  <div><img src="http://lorempixel.com/200/200/sports/"></div>
+  <div><img src="http://lorempixel.com/200/200/animal/"></div>
+  <div><img src="http://lorempixel.com/200/200/abstract/"></div>
+  <div><img src="http://lorempixel.com/200/200/people/"></div>
+</div>
+</div>
 		<section class="display-products" id="root">
 			<!-- <div class="row medium-up-4 feature-slider"> -->
 			<div class="row medium-up-4">
