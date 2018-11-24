@@ -23,7 +23,7 @@
 						app.featured = featuredResponse.data.featured;
 						app.products = productsResponse.data.products;
 						app.count = productsResponse.data.count;
-						app.loading = false;
+						//app.loading = false;
 					}))
 					
 				},
