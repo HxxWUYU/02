@@ -306,9 +306,9 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 		$('.feature-slider').slick({
 			slidesToShow:1,
-			autoplay:false,
-			arrows:true,
-			dots:true,
+			autoplay:true,
+			arrows:false,
+			dots:false,
 			fade:false,
 			autoplayHoverPause:true,
 			slideToScroll:1
