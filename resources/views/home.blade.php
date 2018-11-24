@@ -39,8 +39,8 @@
 						  </div>
 						</div>
 					</a> -->
-					<div>
-					<a :href="'/product/'+feature.id">
+					
+					<!-- <a :href="'/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
 						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
@@ -55,8 +55,17 @@
 						    </a>
 						  </div>
 						</div>
-					</a>
+					</a> -->
+					<div >
+					<img src="/02/public/images/sliders/slide_1.jpg" alt='Hxx Store' >
 				</div>
+				<div >
+					<img src="/02/public/images/sliders/slide_2.jpg" alt='Hxx Store' >
+				</div>
+				<div >
+					<img src="/02/public/images/sliders/slide_3.jpg" alt='Hxx Store' >
+				</div>
+
 					
 				</div>
 				
