@@ -27,11 +27,11 @@
 				<div class="" v-for="feature in featured">
 				<!-- <div class="column" v-for="feature in featured"> -->
 					<a :href="'/product/'+feature.id">
-						<div class="card" data-equalizer-watch>
-						  <div class="card-section">
+						<div class="" >
+						  <div class="">
 						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
 						  </div>
-						  <div class="card-section">
+						  <div class="">
 						    <p>@{{stringLimit(feature.name,18)}}</p>
 						    <a :href="'/product/'+feature.id" class="button more expanded">
 						    	See More
