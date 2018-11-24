@@ -298,7 +298,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 			},
 			mounted:function(){
-				$(windows).scroll(function(){
+				$(window).scroll(function(){
 					if(($(window).scrollTop()+$(window).height())==$(document).height()){
 						app.loadMoreProducts();
 					}
