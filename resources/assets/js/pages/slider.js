@@ -13,6 +13,16 @@
 
 		});
 
-		
+		$('.feature-slider').slick({
+			slidesToShow:4,
+			autoplay:true,
+			arrows:true,
+			dots:true,
+			fade:false,
+			autoplayHoverPause:true,
+			slideToScroll:1,
+			cetnerMode:true
+
+		});
 	}
 })();
