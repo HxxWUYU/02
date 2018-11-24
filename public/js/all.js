@@ -285,6 +285,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 			}
 		});
+
+		
 	}
 })();
 
@@ -334,11 +336,11 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 	
 		
-			$('.feature-slider').slick({
-  slidesToShow: 3,
-  dots:true,
-  centerMode: true,
-  });
+		// 	$('.feature-slider').slick({
+  // slidesToShow: 3,
+  // dots:true,
+  // centerMode: true,
+  // });
 		
 
 	});

@@ -25,11 +25,11 @@
 
 	
 		
-			$('.feature-slider').slick({
-  slidesToShow: 3,
-  dots:true,
-  centerMode: true,
-  });
+		// 	$('.feature-slider').slick({
+  // slidesToShow: 3,
+  // dots:true,
+  // centerMode: true,
+  // });
 		
 
 	});
