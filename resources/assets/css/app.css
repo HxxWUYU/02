@@ -5512,6 +5512,28 @@ select {
   height: 250px !important;
 }
 
+.home .display-products .card .card-section .button {
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.home .display-products .card .card-section .button.more {
+  color: #00d6b2;
+  background-color: white;
+  border: 1px solid #00d6b2;
+}
+
+.home .display-products .card .card-section .button.cart {
+  color: #ffffff;
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.home .display-products .card .card-section .button.cart:hover {
+  background-color: #e30000;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;

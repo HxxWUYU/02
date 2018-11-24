@@ -27,7 +27,7 @@
 						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
 						  </div>
 						  <div class="card-section">
-						    <p>@{{feature.name}}</p>
+						    <p>@{{stringLimit(feature.name,18)}}</p>
 						    <a :href="'/product/'+feature.id" class="button more expanded">
 						    	See More
 						    </a>

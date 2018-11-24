@@ -261,11 +261,21 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 						app.loading=false;
 
 					});
+				},
+
+				stringLimit: function(string,value){
+					if(string.length>value){
+						return string.substring(0,value)+'...';
+					}
+					return string;
 				}
+
+
 			},
 
 			created:function(){
 				this.getFeaturedProducts();
+				
 			}
 		});
 	}
