@@ -267,7 +267,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 						app.featured = featuredResponse.data.featured;
 						app.products = productsResponse.data.products;
 						app.count = productsResponse.data.count;
-						//app.loading = false;
+						app.loading = false;
 					}))
 					
 				},
@@ -298,7 +298,11 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 			},
 			mounted:function(){
-				
+				$(window).scroll(function(){
+					if($(window).scrollTop()+$(window).height==$(document).height){
+						app.loadMoreProducts();
+					}
+				});
 			}
 		});
 
