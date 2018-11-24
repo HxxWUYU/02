@@ -19,10 +19,10 @@
 		</section>
 		<section class="display-products" id="root">
 			<!-- <div class="row medium-up-4 feature-slider"> -->
-				<div class="feature-slider">
+				<div class="row feature-slider">
 				<h2>Featured Products</h2>
 				<!-- <div class="small-12 column " v-for="feature in featured"> -->
-				<div class="" v-for="feature in featured">
+				<div class="column" v-for="feature in featured">
 					<!-- <a :href="'/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
