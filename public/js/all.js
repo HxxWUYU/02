@@ -302,8 +302,9 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					console.log($(window).scrollTop());
 					console.log($(window).height());
 					console.log($(document).height());
-					if($(window).scrollTop()+$(window).height()>=$(document).height()-5){
+					if($(window).scrollTop()+$(window).height()>=$(document).height()-2){
 						app.loadMoreProducts();
+						$(window).scrollTop($(window).scrollTop()-3);
 					}
 				});
 			}
