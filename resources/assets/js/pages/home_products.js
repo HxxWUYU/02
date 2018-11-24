@@ -58,7 +58,7 @@
 					
 					if($(window).scrollTop()+$(window).height()>=$(document).height()-2){
 						app.loadMoreProducts();
-						$(window).scrollTop(($(window).scrollTop()-3)+'px');
+						$(window).scrollTop(($(window).scrollTop()+$(window).height())-3);
 					}
 				});
 			}
