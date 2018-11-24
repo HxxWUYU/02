@@ -13,7 +13,7 @@
 
 		});
 
-		$('.carousel').slick({
+		$('.feature-slider').slick({
 			slidesToShow:4,
 			autoplay:true,
 			arrows:true,
