@@ -337,12 +337,12 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			$('.feature-slider').slick({
 			slidesToShow:4,
 			autoplay:true,
-			arrows:true,
-			dots:true,
+			arrows:false,
+			dots:false,
 			fade:false,
 			autoplayHoverPause:true,
 			slideToScroll:1,
-			cetnerMode:true
+		
 
 		});
 		
