@@ -17,10 +17,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="display-products" id="root">
-			<!-- <div class="row medium-up-4 feature-slider"> -->
-			<div class="row feature-slider">
-				<!-- <h2>Featured Products</h2> -->
+
+		<section class="hero">
+			<div class="feature-slider">
 				<div >
 					<img src="/02/public/images/sliders/slide_1.jpg" alt='Hxx Store' >
 				</div>
@@ -30,9 +29,16 @@
 				<div >
 					<img src="/02/public/images/sliders/slide_3.jpg" alt='Hxx Store' >
 				</div>
-				<!-- <div class="small-12 column " v-for="feature in featured"> -->
+			</div>
+		</section>
+		<section class="display-products" id="root">
+			<!-- <div class="row medium-up-4 feature-slider"> -->
+			<div class="row medium-up-4">
+				<h2>Featured Products</h2>
+				
+				<div class="small-12 column " v-for="feature in featured">
 				<!-- <div class="column" v-for="feature in featured"> -->
-					<!-- <a :href="'/product/'+feature.id">
+					<a :href="'/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
 						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
@@ -47,7 +53,7 @@
 						    </a>
 						  </div>
 						</div>
-					</a> -->
+					</a>
 					
 					<!-- <a :href="'/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
@@ -67,7 +73,7 @@
 					</a> -->
 
 					
-				<!-- </div> -->
+				</div>
 				
 			</div>
 
