@@ -301,8 +301,9 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				$(window).scroll(function(){
 					
 					if($(window).scrollTop()+$(window).height()>=$(document).height()-2){
-						var offset = $(window).scrollTop()+$(window).height()-3;
+						var offset = $(window).scrollTop()+$(window).height()-6;
 						console.log(offset);
+						console.log($(document).height());
 						$(window).scrollTop(offset);
 						app.loadMoreProducts();
 						
