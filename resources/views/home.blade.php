@@ -18,7 +18,7 @@
 			</div>
 		</section>
 		<section class="display-products" id="root">
-			<div class="row ">
+			<div class="row medium-up-4">
 				<h2>Featured Products</h2>
 				<div class="small-12 column feature-slider" v-for="feature in featured">
 					<!-- <a :href="'/product/'+feature.id">
