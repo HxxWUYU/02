@@ -25,17 +25,7 @@
 
 	
 		
-			$('.feature-slider').slick({
-			slidesToShow:4,
-			autoplay:true,
-			arrows:false,
-			dots:false,
-			fade:false,
-			autoplayHoverPause:true,
-			slideToScroll:1,
-		
-
-		});
+			
 		
 
 	});
