@@ -55,7 +55,8 @@
 			},
 			mounted:function(){
 				$(window).scroll(function(){
-					if($(window).scrollTop()+$(window).height()==$(document).height()){
+					var height = window.screen.height;
+					if($(window).scrollTop()+height==$(document).height()){
 						app.loadMoreProducts();
 					}
 				});

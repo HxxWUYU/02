@@ -299,7 +299,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			},
 			mounted:function(){
 				$(window).scroll(function(){
-					if($(window).scrollTop()+$(window).height()==$(document).height()){
+					var height = window.screen.height;
+					if($(window).scrollTop()+height==$(document).height()){
 						app.loadMoreProducts();
 					}
 				});
