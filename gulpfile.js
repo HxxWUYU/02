@@ -12,7 +12,8 @@ elixir(function (mix){
 	mix.styles(
 		[
 			'css/app.css',
-			'bower/vendor/slick-carousel/slick/slick.css'
+			'bower/vendor/slick-carousel/slick/slick.css',
+			'bower/vendor/slick-carousel/slick/slick-theme.css'
 
 		],
 		'public/css/all.css',//Output file
