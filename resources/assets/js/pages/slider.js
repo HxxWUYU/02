@@ -15,10 +15,10 @@
 
 		$('.feature-slider').slick({
 			slidesToShow:1,
-			autoplay:true,
-			arrows:false,
-			dots:false,
-			fade:true,
+			autoplay:false,
+			arrows:true,
+			dots:true,
+			fade:false,
 			autoplayHoverPause:true,
 			slideToScroll:1
 
