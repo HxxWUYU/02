@@ -60,8 +60,9 @@
 						var offset = $(window).scrollTop()+$(window).height()-6;
 						console.log(offset);
 						console.log($(document).height());
-						$(window).scrollTop(offset);
+						
 						app.loadMoreProducts();
+						$(window).scrollTop(offset);
 						
 					}
 				});
