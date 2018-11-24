@@ -27,7 +27,7 @@
 				<div class="" v-for="feature in featured">
 				<!-- <div class="column" v-for="feature in featured"> -->
 					 <div class="">
-						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
+						    <img :src="'/02/public/'+feature.image_path" width="150" height="150">
 						  </div>
 					
 					<!-- <a :href="'/product/'+feature.id">
