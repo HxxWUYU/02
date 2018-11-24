@@ -19,7 +19,7 @@
 		</section>
 		<section class="display-products" id="root">
 			<!-- <div class="row medium-up-4 feature-slider"> -->
-			<div class="feature-slider">
+			<div class="row feature-slider">
 				<h2>Featured Products</h2>
 				<div >
 					<img src="/02/public/images/sliders/slide_1.jpg" alt='Hxx Store' >

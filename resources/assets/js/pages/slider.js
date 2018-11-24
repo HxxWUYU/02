@@ -14,11 +14,11 @@
 		});
 
 		$('.feature-slider').slick({
-			slidesToShow:3,
+			slidesToShow:1,
 			autoplay:true,
-			arrows:true,
-			dots:true,
-			fade:false,
+			arrows:false,
+			dots:false,
+			fade:true,
 			autoplayHoverPause:true,
 			slideToScroll:1
 
