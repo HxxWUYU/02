@@ -305,7 +305,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 		});
 
 		$('.feature-slider').slick({
-			slidesToShow:4,
+			slidesToShow:3,
 			autoplay:true,
 			arrows:true,
 			dots:true,
