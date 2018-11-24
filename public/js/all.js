@@ -301,8 +301,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				$(window).scroll(function(){
 					
 					if($(window).scrollTop()+$(window).height()>=$(document).height()-2){
-						var offset = ($(window).scrollTop()+$(window).height())-3;
-						$(window).scrollTop(offset);
+						var offset = $(window).scrollTop()+$(window).height()-3;
+						$(window).scrollTop(500);
 						app.loadMoreProducts();
 						
 					}
