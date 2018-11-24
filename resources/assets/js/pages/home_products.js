@@ -40,7 +40,7 @@
 					this.loading = true;
 					var data = $.param({next:2,token:token,count:app.count});
 					axios.post('/02/public/load_more',data).then(function(response){
-						app.products = response.data.products；
+						app.products = response.data.products;
 						app.count = response.data.count;
 						app.loading = false;
 					});
