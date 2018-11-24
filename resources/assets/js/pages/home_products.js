@@ -58,7 +58,7 @@
 					console.log($(window).scrollTop());
 					console.log($(window).height());
 					console.log($(document).height());
-					if($(window).scrollTop()+$(window).height()==$(document).height()){
+					if($(window).scrollTop()+$(window).height()>=$(document).height()-5){
 						app.loadMoreProducts();
 					}
 				});
