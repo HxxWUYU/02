@@ -39,7 +39,7 @@
 						  </div>
 						</div>
 					</a> -->
-				
+					<div>
 					<a :href="'/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
@@ -56,6 +56,7 @@
 						  </div>
 						</div>
 					</a>
+				</div>
 					
 				</div>
 				
