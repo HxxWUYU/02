@@ -57,8 +57,10 @@
 				$(window).scroll(function(){
 					
 					if($(window).scrollTop()+$(window).height()>=$(document).height()-2){
+						var offset = ($(window).scrollTop()+$(window).height())-3;
+						$(window).scrollTop(offset);
 						app.loadMoreProducts();
-						$(window).scrollTop(($(window).scrollTop()+$(window).height())-3);
+						
 					}
 				});
 			}
