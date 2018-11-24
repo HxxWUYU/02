@@ -250,17 +250,24 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			el:'#root',
 			data:{
 				featured:[],
+				products:[],
 				loading:false
 			},
 
 			methods:{
 				getFeaturedProducts:function(){
 					this.loading = true;
-					axios.get('/02/public/featured').then(function(response){
-						app.featured = response.data.featured;
-						app.loading=false;
-
-					});
+					axios.all(
+						[
+							axios.get('/02/public/featured'),
+							axios.get('/02/public/get_products')
+						]
+					).then(axios.spread(function(featuredResponse,productsResponse){
+						app.featured = featuredResponse.data.featured;
+						app.products = productsResponse.data.products;
+						app.loading = true;
+					}))
+					
 				},
 
 				stringLimit: function(string,value){
@@ -275,7 +282,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 			created:function(){
 				this.getFeaturedProducts();
-				
+
 			}
 		});
 	}

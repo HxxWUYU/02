@@ -5,6 +5,7 @@ $router = new AltoRouter;
 
 $router->map('GET','/02/public/','App\Controllers\IndexController@show','home'); //@sign can be custom 
 $router->map('GET','/02/public/featured','App\Controllers\IndexController@featuredProducts','feature_product'); //@sign can be custom 
+$router->map('GET','/02/public/get_products','App\Controllers\IndexController@getProducts','get_product'); //@sign can be custom 
 
 require_once __DIR__ . '/admin_route.php';
 
