@@ -19,7 +19,7 @@
 		</section>
 
 		
-		<section class="display-products" id="root">
+		<section class="display-products" data-token="{{$token}}" id="root">
 			<!-- <div class="row medium-up-4 feature-slider"> -->
 			<div class="row medium-up-4 feature-slider">
 				<h2>Featured Products</h2>
@@ -43,22 +43,6 @@
 						</div>
 					</a>
 					
-					<!-- <a :href="'/product/'+feature.id">
-						<div class="card" data-equalizer-watch>
-						  <div class="card-section">
-						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
-						  </div>
-						  <div class="card-section">
-						    <p>@{{stringLimit(feature.name,18)}}</p>
-						    <a :href="'/product/'+feature.id" class="button more expanded">
-						    	See More
-						    </a>
-						    <a :href="'/product/'+feature.id" class="button cart expanded">
-						    	@{{feature.price}} - Add to cart
-						    </a>
-						  </div>
-						</div>
-					</a> -->
 
 					
 				</div>
@@ -88,8 +72,12 @@
 				
 			</div>
 
+			<div class="text-center"> 
+				<i v-show="loading" class="fa fa-spinner fa-spin" style="font-size: 3rem; padding-bottom: 3rem; position: fixed; top:60%;bottom: 20%;
+				color:#0a2b1d;"></i>
+			</div>
 		</section>
 	</div>
-	
+
 	
 @stop
