@@ -311,7 +311,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			dots:true,
 			fade:false,
 			autoplayHoverPause:true,
-			slideToScroll:1
+			slideToScroll:1,
+			cetnerMode:true
 
 		});
 	}

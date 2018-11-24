@@ -20,7 +20,8 @@
 			dots:true,
 			fade:false,
 			autoplayHoverPause:true,
-			slideToScroll:1
+			slideToScroll:1,
+			cetnerMode:true
 
 		});
 	}
