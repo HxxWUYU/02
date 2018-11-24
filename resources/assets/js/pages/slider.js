@@ -14,9 +14,13 @@
 		});
 
 		$('.carousel').slick({
-			slidesToShow: 3,
-  dots:true,
-  centerMode: true
+			slidesToShow:4,
+			autoplay:true,
+			arrows:true,
+			dots:true,
+			fade:false,
+			autoplayHoverPause:true,
+			slideToScroll:1
 
 		});
 	}
