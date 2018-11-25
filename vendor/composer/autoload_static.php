@@ -187,6 +187,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'App\\Classes\\CSRFToken' => __DIR__ . '/../..' . '/app/classes/CSRFToken.php',
+        'App\\Classes\\Cart' => __DIR__ . '/../..' . '/app/classes/Cart.php',
         'App\\Classes\\Database' => __DIR__ . '/../..' . '/app/classes/Database.php',
         'App\\Classes\\ErrorHandler' => __DIR__ . '/../..' . '/app/classes/ErrorHandler.php',
         'App\\Classes\\Mail' => __DIR__ . '/../..' . '/app/classes/Mail.php',
@@ -200,6 +201,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Controllers\\Admin\\ProductController' => __DIR__ . '/../..' . '/app/controllers/admin/ProductController.php',
         'App\\Controllers\\Admin\\SubCategoryController' => __DIR__ . '/../..' . '/app/controllers/admin/SubCategoryController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
+        'App\\Controllers\\CartController' => __DIR__ . '/../..' . '/app/controllers/CartController.php',
         'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/controllers/IndexController.php',
         'App\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/controllers/ProductController.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/models/Category.php',

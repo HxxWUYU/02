@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AltoRouter' => $vendorDir . '/altorouter/altorouter/AltoRouter.php',
     'App\\Classes\\CSRFToken' => $baseDir . '/app/classes/CSRFToken.php',
+    'App\\Classes\\Cart' => $baseDir . '/app/classes/Cart.php',
     'App\\Classes\\Database' => $baseDir . '/app/classes/Database.php',
     'App\\Classes\\ErrorHandler' => $baseDir . '/app/classes/ErrorHandler.php',
     'App\\Classes\\Mail' => $baseDir . '/app/classes/Mail.php',
@@ -21,6 +22,7 @@ return array(
     'App\\Controllers\\Admin\\ProductController' => $baseDir . '/app/controllers/admin/ProductController.php',
     'App\\Controllers\\Admin\\SubCategoryController' => $baseDir . '/app/controllers/admin/SubCategoryController.php',
     'App\\Controllers\\BaseController' => $baseDir . '/app/controllers/BaseController.php',
+    'App\\Controllers\\CartController' => $baseDir . '/app/controllers/CartController.php',
     'App\\Controllers\\IndexController' => $baseDir . '/app/controllers/IndexController.php',
     'App\\Controllers\\ProductController' => $baseDir . '/app/controllers/ProductController.php',
     'App\\Models\\Category' => $baseDir . '/app/models/Category.php',
