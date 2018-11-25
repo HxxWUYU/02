@@ -5297,13 +5297,6 @@ table th, table tr, table td {
   list-style-type: none;
 }
 
-h2 {
-  margin-top: 1.0rem;
-  margin-bottom: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
 hr {
   margin: 0 0 1rem 0;
 }
