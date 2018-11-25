@@ -18,7 +18,7 @@
 
 			var postData=$.param({product_id:id,token:token});
 			axios.post('/02/public/cart',postData).then(function(response){
-				call(response.data.success);
+				alert(response.data.success);
 			});
 		}
 	}

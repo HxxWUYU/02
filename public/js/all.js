@@ -341,7 +341,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 			var postData=$.param({product_id:id,token:token});
 			axios.post('/02/public/cart',postData).then(function(response){
-				call(response.data.success);
+				alert(response.data.success);
 			});
 		}
 	}
@@ -380,7 +380,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 				addToCart:function(id){
 					HXXSTORE.module.addItemToCart(id,function(message){
-						alert(message);
+						
 					});
 				}
 			},
