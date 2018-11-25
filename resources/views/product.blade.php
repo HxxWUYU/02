@@ -3,14 +3,14 @@
 @section('data-page-id','product')
 
 @section('content')
-	<div class="product" id="product" v-cloak data-token="{{$token}}" data-id="{{$product->id}}">
+	<div class="product" id="product" data-token="{{$token}}" data-id="{{$product->id}}">
 
 		<div class="text-center">
 			<i v-show="loading" class="fa fa-spinner fa-spin">
 				
 			</i>
 		</div>
-		<section class="item-container">
+		<section class="item-container" v-if="loading==false">
 			<div class="row column">
 				<nav aria-label="You are here:" role="navigation">
 				  <ul class="breadcrumbs">
