@@ -10,7 +10,7 @@
 				
 			</i>
 		</div>
-		<section class="item-container" v-if="loading==false">
+		<section class="item-container" v-if="loading == false">
 			<div class="row column">
 				<nav aria-label="You are here:" role="navigation">
 				  <ul class="breadcrumbs">
