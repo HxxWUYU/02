@@ -329,7 +329,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				product:[],
 				category:[],
 				subCategory:[],
-				productId:$('#product').data('id');
+				productId:$('#product').data('id'),
 				loading:false
 			},
 

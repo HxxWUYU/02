@@ -8,7 +8,7 @@
 				product:[],
 				category:[],
 				subCategory:[],
-				productId:$('#product').data('id');
+				productId:$('#product').data('id'),
 				loading:false
 			},
 
