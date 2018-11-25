@@ -9,7 +9,7 @@
 					return string;
 				}
 		},
-		addItemToCart:function(id,callback){
+		addItemToCart:function(id,call){
 
 			var token = $(".display-products").data('token');
 			if(!token||token==null){
@@ -18,8 +18,8 @@
 
 			var postData=$.param({product_id:id,token:token});
 			axios.post('/02/public/cart',postData).then(function(response){
-				callback(response.data.success);
-			})
+				call(response.data.success);
+			});
 		}
 	}
 })();
