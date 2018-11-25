@@ -41,9 +41,8 @@ p{
 }
 
 
-[v-cloak] .v-cloak-hidden{
-	display: none;
-}
+[v-cloak] > * { display:none }
+[v-cloak]::before { content: "loading…" }
 
 .site_wrapper{
   min-height: 100%;
