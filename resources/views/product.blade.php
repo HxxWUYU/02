@@ -26,7 +26,7 @@
 			<div class="row collapse">
 				<div class="small-12 medium-5 large-4 column">
 					<div>
-						<
+						
 						<img :src="'/02/public/'+img" width="100%" height="200">
 					</div>
 				</div>

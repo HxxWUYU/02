@@ -5258,18 +5258,18 @@ h2 {
   }
 }
 
-h2 p {
+p {
   font-family: 'Average',serif;
   font-size: 1.2rem;
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  h2 p {
+  p {
     font-size: 1.0rem;
   }
 }
 
-h2 [v-cloak] .v-cloak-hidden {
+[v-cloak] .v-cloak-hidden {
   display: none;
 }
 
