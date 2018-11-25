@@ -26,7 +26,8 @@
 			<div class="row collapse">
 				<div class="small-12 medium-5 large-4 column">
 					<div>
-						<img :src="'/02/public/'+product.image_path" width="100%" height="200">
+						<input data-img="'/02/public/'+product.image_path" hidden="true">
+						<!-- <img :src="'/02/public/'+product.image_path" width="100%" height="200"> -->
 					</div>
 				</div>
 				<div class="small-12 medium-7 large-8 column">
