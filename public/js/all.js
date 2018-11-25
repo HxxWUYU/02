@@ -330,6 +330,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				category:[],
 				subCategory:[],
 				productId:$('#product').data('id'),
+				img:[],
 				loading:false
 			},
 
@@ -341,6 +342,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 						app.product = response.data.product;
 						app.category = response.data.category;
 						app.subCategory = response.data.subCategory;
+						app.img = response.data.product.image_path;
 						app.loading=false;
 					})
 				},

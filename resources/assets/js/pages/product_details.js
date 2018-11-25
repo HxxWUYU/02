@@ -9,6 +9,7 @@
 				category:[],
 				subCategory:[],
 				productId:$('#product').data('id'),
+				img:[],
 				loading:false
 			},
 
@@ -20,6 +21,7 @@
 						app.product = response.data.product;
 						app.category = response.data.category;
 						app.subCategory = response.data.subCategory;
+						app.img = response.data.product.image_path;
 						app.loading=false;
 					})
 				},
