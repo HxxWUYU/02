@@ -38,7 +38,7 @@ class Cart{
 				}
 			}
 		}catch(\Exception $ex){
-			echo "$ex->getMessage();"
+			echo $ex->getMessage();
 		}
 	}
 }
