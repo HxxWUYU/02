@@ -42,7 +42,7 @@ p{
 
 
 [v-cloak] > * { display:none }
-[v-cloak]::before { content: "loading…" }
+
 
 .site_wrapper{
   min-height: 100%;
