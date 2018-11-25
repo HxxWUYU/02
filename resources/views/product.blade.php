@@ -17,9 +17,7 @@
 				    <li><a :href="'/product/category/'+category.slug">@{{category.name}}</a></li>
 				    <li><a :href="'/product/subCategory/'+subCategory.slug">@{{subCategory.name}}</a></li>
 				    <li>@{{product.name}}</li>
-				    <li>
-				      <span class="show-for-sr">Current: </span> Cloning
-				    </li>
+				    
 				  </ul>
 				</nav>
 				
@@ -28,7 +26,7 @@
 			<div class="row collapse">
 				<div class="small-12 medium-5 large-4 column">
 					<div>
-						<img :src="'/'+product.image_path" width="100%" height="200">
+						<img :src="'/02/public/'+product.image_path" width="100%" height="200">
 					</div>
 				</div>
 				<div class="small-12 medium-7 large-8 column">
