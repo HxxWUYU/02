@@ -23,7 +23,7 @@ class ProductController extends BaseController{
 
 
 		if($product){
-	$similar_product = Product::where('sub_category_id',$product->sub_category_id)->where('id','!=',$product->)->inRandomOrder()->limit(8)->get();
+	$similar_product = Product::where('sub_category_id',$product->sub_category_id)->where('id','!=',$product->id)->inRandomOrder()->limit(8)->get();
 
 			echo json_encode([
 				'product'=>$product,
