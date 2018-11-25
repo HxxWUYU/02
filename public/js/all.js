@@ -331,6 +331,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				subCategory:[],
 				productId:$('#product').data('id'),
 				img:[],
+				similarProduct:[],
 				loading:false
 			},
 
@@ -343,6 +344,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 						app.category = response.data.category;
 						app.subCategory = response.data.subCategory;
 						app.img = response.data.product.image_path;
+						app.similarProduct = response.data.product.similarProduct;
 						app.loading=false;
 					})
 				},

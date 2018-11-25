@@ -21,11 +21,15 @@ class ProductController extends BaseController{
 
 		$product = Product::where('id',$id)->with(['category','subCategory'])->first();
 
+
 		if($product){
+					$similar_product = Product::where('category_id',$product->category_id)->where('id','!=',$product->id)->inRandomOrder()->limit(8)->get();
+
 			echo json_encode([
 				'product'=>$product,
 				'category'=>$product->category,
-				'subCategory'=>$product->subCategory
+				'subCategory'=>$product->subCategory,
+				'similarProduct'=>$similar_product
 
 			]);
 			exit;

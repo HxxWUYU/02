@@ -43,6 +43,36 @@
 				</div>
 			</div>
 		</section>
+		<section class="home" v-cloak>
+			<div class="display-products">
+				<div class="row medium-up-2 large-up-4 feature-slider">
+				<h2>Similar Products</h2>
+				
+				<div class="small-12 column " v-cloak v-for="similar in featured">
+				<!-- <div class="column" v-for="feature in featured"> -->
+					<a :href="'/02/public/product/'+similar.id">
+						<div class="card" data-equalizer-watch>
+						  <div class="card-section">
+						    <img :src="'/02/public/'+similar.image_path" width="100%" height="200">
+						  </div>
+						  <div class="card-section">
+						    <p>@{{stringLimit(similar.name,15)}}</p>
+						    <a :href="'/02/public/product/'+similar.id" class="button more expanded">
+						    	See More
+						    </a>
+						    <a :href="'/02/public/product/'+similar.id" class="button cart expanded">
+						    	@{{similar.price}} - Add to cart
+						    </a>
+						  </div>
+						</div>
+					</a>
+					
+
+					
+				</div>
+			</div>
+			
+		</section>
 	</div>
 
 	
