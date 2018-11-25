@@ -21,22 +21,22 @@
 		
 		<section class="display-products" data-token="{{$token}}" id="root">
 			<!-- <div class="row medium-up-4 feature-slider"> -->
-			<div class="row medium-up-4 feature-slider">
+			<div class="row medium-up-2 large-up-4 feature-slider">
 				<h2>Featured Products</h2>
 				
 				<div class="small-12 column " v-cloak v-for="feature in featured">
 				<!-- <div class="column" v-for="feature in featured"> -->
-					<a :href="'/product/'+feature.id">
+					<a :href="'/02/public/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
 						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
 						  </div>
 						  <div class="card-section">
 						    <p>@{{stringLimit(feature.name,18)}}</p>
-						    <a :href="'/product/'+feature.id" class="button more expanded">
+						    <a :href="'/02/public/product/'+feature.id" class="button more expanded">
 						    	See More
 						    </a>
-						    <a :href="'/product/'+feature.id" class="button cart expanded">
+						    <a :href="'/02/public/product/'+feature.id" class="button cart expanded">
 						    	@{{feature.price}} - Add to cart
 						    </a>
 						  </div>
@@ -49,20 +49,20 @@
 				
 			</div>
 
-			<div class="row medium-up-4">
+			<div class="row medium-up-2 large-up-4">
 				<h2>Products</h2>
 				<div class="small-12 column" v-cloak v-for="product in products">
-					<a :href="'/product/'+product.id">
+					<a :href="'/02/public/product/'+product.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
 						    <img :src="'/02/public/'+product.image_path" width="100%" height="200">
 						  </div>
 						  <div class="card-section">
 						    <p>@{{stringLimit(product.name,18)}}</p>
-						    <a :href="'/product/'+product.id" class="button more expanded">
+						    <a :href="'/02/public/product/'+product.id" class="button more expanded">
 						    	See More
 						    </a>
-						    <a :href="'/product/'+product.id" class="button cart expanded">
+						    <a :href="'/02/public/product/'+product.id" class="button cart expanded">
 						    	@{{product.price}} - Add to cart
 						    </a>
 						  </div>

@@ -22,6 +22,7 @@ return array(
     'App\\Controllers\\Admin\\SubCategoryController' => $baseDir . '/app/controllers/admin/SubCategoryController.php',
     'App\\Controllers\\BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'App\\Controllers\\IndexController' => $baseDir . '/app/controllers/IndexController.php',
+    'App\\Controllers\\ProductController' => $baseDir . '/app/controllers/ProductController.php',
     'App\\Models\\Category' => $baseDir . '/app/models/Category.php',
     'App\\Models\\Product' => $baseDir . '/app/models/Product.php',
     'App\\Models\\SubCategory' => $baseDir . '/app/models/SubCategory.php',

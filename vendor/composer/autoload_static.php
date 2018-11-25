@@ -201,6 +201,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Controllers\\Admin\\SubCategoryController' => __DIR__ . '/../..' . '/app/controllers/admin/SubCategoryController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
         'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/controllers/IndexController.php',
+        'App\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/controllers/ProductController.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/models/Category.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/models/Product.php',
         'App\\Models\\SubCategory' => __DIR__ . '/../..' . '/app/models/SubCategory.php',
