@@ -5,7 +5,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 <div class="hide-for-medium">
 	<div class="title-bar toggle" data-responsive-toggle="main-menu" data-hide-for="medium">
 	  <button class="menu-icon float-right" type="button" data-toggle="main-menu"></button>
-	  <a href="/" class="float-left small-logo">Hxx</a>
+	  <a href="/02/public/" class="float-left small-logo">Hxx</a>
 	</div>
 	<div class="top-bar" id="main-menu">
 	 	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false">
