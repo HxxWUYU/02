@@ -43,12 +43,13 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="home" v-cloak>
 			<div class="display-products">
 				<div class="row medium-up-2 large-up-4 feature-slider">
 				<h2>Similar Products</h2>
 				
-				<div class="small-12 column " v-cloak v-for="similar in similarProduct">
+				<div class="small-12 column" v-for="similar in similarProduct">
 				<!-- <div class="column" v-for="feature in featured"> -->
 					<a :href="'/02/public/product/'+similar.id">
 						<div class="card" data-equalizer-watch>

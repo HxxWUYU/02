@@ -344,7 +344,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 						app.category = response.data.category;
 						app.subCategory = response.data.subCategory;
 						app.img = response.data.product.image_path;
-						app.similarProduct = response.data.product.similarProduct;
+						app.similarProduct = response.data.similarProduct;
 						app.loading=false;
 					})
 				},
