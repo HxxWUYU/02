@@ -3,7 +3,7 @@
 @section('data-page-id','product')
 
 @section('content')
-	<div class="product" id="product" data-token="{{$token}}" data-id="{{$product->id}}">
+	<div class="product" id="product" v-cloak data-token="{{$token}}" data-id="{{$product->id}}">
 
 		<div class="text-center">
 			<i v-show="loading" class="fa fa-spinner">
@@ -14,8 +14,8 @@
 			<div class="row column">
 				<nav aria-label="You are here:" role="navigation">
 				  <ul class="breadcrumbs">
-				    <li><a :href="'/product/category/'+category.slug">@{{category.name}}</a></li>
-				    <li><a :href="'/product/subCategory/'+subCategory.slug">@{{subCategory.name}}</a></li>
+				    <li><a :href="'/02/public/product/category/'+category.slug">@{{category.name}}</a></li>
+				    <li><a :href="'/02/public/product/subCategory/'+subCategory.slug">@{{subCategory.name}}</a></li>
 				    <li>@{{product.name}}</li>
 				    
 				  </ul>
