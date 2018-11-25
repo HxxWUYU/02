@@ -6,7 +6,7 @@
 	<div class="product">
 		<section>
 			<div class="row column">
-				<img src="/02/public/{{$product_image_path}}" width="200" height="200"> <br>
+				<img src="/02/public/{{$product->image_path}}" width="200" height="200"> <br>
 				{{$product->name}}
 			</div>
 		</section>
