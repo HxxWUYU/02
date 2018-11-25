@@ -5269,6 +5269,10 @@ h2 p {
   }
 }
 
+h2 [v-cloak] .v-cloak-hidden {
+  display: none;
+}
+
 .site_wrapper {
   min-height: 100%;
   position: relative;
