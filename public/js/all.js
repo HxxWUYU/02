@@ -277,9 +277,9 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					return HXXSTORE.module.truncateString(string,value);
 				},
 				addToCart:function(id){
-					//  HXXSTORE.module.addItemToCart(id,function(message){
+					 HXXSTORE.module.addItemToCart(id,function(message){
 
-					// });
+					});
 				},
 
 				loadMoreProducts:function(){
@@ -338,10 +338,10 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			if(!token||token==null){
 				token = $('.product').data('token');
 			}
-			alert(id);
+
 			var postData=$.param({product_id:id,token:token});
 			axios.post('/02/public/cart',postData).then(function(response){
-				//alert(response.data.success);
+				call(response.data.success);
 			});
 		}
 	}
@@ -380,7 +380,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 				addToCart:function(id){
 					HXXSTORE.module.addItemToCart(id,function(message){
-						
+						alert(message);
 					});
 				}
 			},

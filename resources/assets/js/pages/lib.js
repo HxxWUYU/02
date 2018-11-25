@@ -15,10 +15,10 @@
 			if(!token||token==null){
 				token = $('.product').data('token');
 			}
-			alert(id);
+
 			var postData=$.param({product_id:id,token:token});
 			axios.post('/02/public/cart',postData).then(function(response){
-				//alert(response.data.success);
+				call(response.data.success);
 			});
 		}
 	}

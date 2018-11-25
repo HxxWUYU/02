@@ -16,7 +16,7 @@ class CartController extends BaseController{
 				if(!$request->product_id){
 					throw new \Exception('Malicious Activity');
 				}
-				Cart::add($requst);
+				Cart::add($request);
 				echo json_encode(['success'=>'Product Added To Cart']);
 				exit;
 			}
