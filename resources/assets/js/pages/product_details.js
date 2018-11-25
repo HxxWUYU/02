@@ -31,8 +31,9 @@
 					return HXXSTORE.module.truncateString(string,value);
 				},
 				addToCart:function(id){
-					var message = HXXSTORE.module.addItemToCart(id);
-					alert(message);
+					HXXSTORE.module.addItemToCart(id,function(message){
+						alert(message);
+					});
 				}
 			},
 			created:function(){

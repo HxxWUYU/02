@@ -11,6 +11,9 @@ $router->map('GET','/02/public/product/[i:id]','App\Controllers\ProductControlle
 
 $router->map('GET','/02/public/product_details/[i:id]','App\Controllers\ProductController@get','product_details'); //@sign can be custom 
 
+
+$router->map('POST','/02/public/cart','App\Controllers\CartController@addItem','add_cart_item');
+
 require_once __DIR__ . '/admin_route.php';
 
 

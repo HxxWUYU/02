@@ -32,7 +32,9 @@
 					return HXXSTORE.module.truncateString(string,value);
 				},
 				addToCart:function(id){
-					var message = HXXSTORE.module.addItemToCart(id);
+					 HXXSTORE.module.addItemToCart(id,function(message){
+
+					});
 				},
 
 				loadMoreProducts:function(){

@@ -9,8 +9,17 @@
 					return string;
 				}
 		},
-		addItemToCart:function(id){
-			return id;
+		addItemToCart:function(id,callback){
+
+			var token = $(".display-products").data('token');
+			if(!token||token==null){
+				token = $('.product').data('token');
+			}
+
+			var postData=$.param({product_id:id,token:token});
+			axios.post('/02/public/cart',postData).then(function(response){
+				callback(response.data.success);
+			})
 		}
 	}
 })();
