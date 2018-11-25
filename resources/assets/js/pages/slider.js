@@ -8,7 +8,7 @@
 			arrows:false,
 			dots:false,
 			fade:true,
-			autoplayHoverPause:true,
+			// autoplayHoverPause:true,
 			slideToScroll:1
 
 		});

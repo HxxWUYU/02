@@ -372,7 +372,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			arrows:false,
 			dots:false,
 			fade:true,
-			autoplayHoverPause:true,
+			// autoplayHoverPause:true,
 			slideToScroll:1
 
 		});
