@@ -22,7 +22,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 
 		global:{},
 		admin:{},
-		homeslider:{}
+		homeslider:{},
+		product:{}
 
 	}
 })();
@@ -321,6 +322,44 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 (function(){
 	'use strict';
 
+	HXXSTORE.product.details=function(){
+		var app = new Vue({
+			el:'#product',
+			data:{
+				product:[],
+				category:[],
+				subCategory:[],
+				productId:$('#product').data('id');
+				loading:false
+			},
+
+			methods:{
+				getProductDetails:function(){
+					this.loading=true;
+					axios.get('/02/public/product_details/'+this.productId)
+					.then(function(response){
+						app.product = response.data.product;
+						app.category = response.data.category;
+						app.subCategory = response.data.subCategory;
+						app.loading=false;
+					})
+				},
+				stringLimit: function(string,value){
+					if(string.length>value){
+						return string.substring(0,value)+'...';
+					}
+					return string;
+				}
+			},
+			created:function(){
+				this.getProductDetails();
+			}
+		});
+	}
+})();
+(function(){
+	'use strict';
+
 	HXXSTORE.homeslider.initCarousel=function(){
 		$('.hero-slider').slick({
 			slidesToShow:1,
@@ -344,6 +383,9 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 	$(document).ready(function(){
 		//SWITCH PAGES
 		switch($('body').data('page-id')){
+			case 'product':
+				HXXSTORE.product.details();
+				break;
 			case 'home':
 				HXXSTORE.homeslider.initCarousel();
 				HXXSTORE.homeslider.homePageProducts();

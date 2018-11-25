@@ -4,7 +4,8 @@
 
 		global:{},
 		admin:{},
-		homeslider:{}
+		homeslider:{},
+		product:{}
 
 	}
 })();

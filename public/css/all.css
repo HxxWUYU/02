@@ -5569,6 +5569,32 @@ select {
   background-color: #e30000;
 }
 
+.product {
+  padding: 6rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .product {
+    text-align: center;
+    padding: 0.7rem;
+  }
+}
+
+.product p {
+  padding: 1rem;
+}
+
+.product .button {
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: 1px solid #ff0000;
+  margin-left: 1rem;
+}
+
+.product .button:hover {
+  background-color: #e30000;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;

@@ -13,21 +13,26 @@ class ProductController extends BaseController{
 		$token = CSRFToken::_token();
 		$product = Product::where('id',$id)->first();
 		return view('product',compact('token','product'));
-		// $mail = new Mail();
-		// $data = [
-		// 	'to' => 'derrickhuang2333@gmail.com',
-		// 	'subject'=> 'Welcome to Hxx Store',
-		// 	'view' => 'welcome',
-		// 	'name' => 'Hxx',
-		// 	'body' => "Testing email template"
-		// 	];
+		
 
-		// if($mail->send($datas)){
-		// 	echo "Email sent!";
-		// }else{
-		// 	echo "Email sending failed!";
-		// }
+	}
 
+	public function get($id){
+
+		$product = Product::where('id',$id)->with(['category','subCategory'])->first();
+
+		if($product){
+			echo json_encode([
+				'product'=>$product,
+				'category'=>$product->category,
+				'subCategory'=>$product->sbuCategory
+
+			]);
+			exit;
+		}
+		header("HTTP/1.1 422 Unprocessable Entity",true,422);
+		echo "Product not found";
+		exit;
 	}
 
 
