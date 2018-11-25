@@ -9,21 +9,21 @@
 				category:[],
 				subCategory:[],
 				productId:$('#product').data('id'),
+				img:[],
 				loading:false
 			},
 
 			methods:{
 				getProductDetails:function(){
 					this.loading=true;
-					setTimeout(function(){
-						axios.get('/02/public/product_details/'+app.productId)
-						.then(function(response){
-							app.product = response.data.product;
-							app.category = response.data.category;
-							app.subCategory = response.data.subCategory;
-							app.loading=false;
-						})	
-					},4000);
+					axios.get('/02/public/product_details/'+this.productId)
+					.then(function(response){
+						app.product = response.data.product;
+						app.category = response.data.category;
+						app.subCategory = response.data.subCategory;
+						app.img = response.data.product.image_path;
+						app.loading=false;
+					})
 				},
 				stringLimit: function(string,value){
 					if(string.length>value){

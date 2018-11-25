@@ -6,7 +6,7 @@
 	<div class="product" id="product" v-cloak data-token="{{$token}}" data-id="{{$product->id}}">
 
 		<div class="text-center">
-			<i v-show="loading" class="fa fa-spinner">
+			<i v-show="loading" class="fa fa-spinner fa-spin">
 				
 			</i>
 		</div>
