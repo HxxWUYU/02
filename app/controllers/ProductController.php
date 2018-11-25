@@ -25,7 +25,7 @@ class ProductController extends BaseController{
 			echo json_encode([
 				'product'=>$product,
 				'category'=>$product->category,
-				'subCategory'=>$product->sbuCategory
+				'subCategory'=>$product->subCategory
 
 			]);
 			exit;
