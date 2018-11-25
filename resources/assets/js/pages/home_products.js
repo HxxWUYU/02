@@ -29,10 +29,10 @@
 				},
 
 				stringLimit: function(string,value){
-					if(string.length>value){
-						return string.substring(0,value)+'...';
-					}
-					return string;
+					return HXXSTORE.module.truncateString(string,value);
+				},
+				addToCart:function(id){
+					var message = HXXSTORE.module.addItemToCart(id);
 				},
 
 				loadMoreProducts:function(){

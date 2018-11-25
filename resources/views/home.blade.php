@@ -36,9 +36,9 @@
 						    <a :href="'/02/public/product/'+feature.id" class="button more expanded">
 						    	See More
 						    </a>
-						    <a :href="'/02/public/product/'+feature.id" class="button cart expanded">
-						    	@{{feature.price}} - Add to cart
-						    </a>
+						    <button @click.prevent="addToCart(feature.id)" class="button cart expanded">
+						    	$@{{feature.price}} - Add to cart
+						    </button>
 						  </div>
 						</div>
 					</a>
@@ -62,9 +62,9 @@
 						    <a :href="'/02/public/product/'+product.id" class="button more expanded">
 						    	See More
 						    </a>
-						    <a :href="'/02/public/product/'+product.id" class="button cart expanded">
+						    <button  @click.prevent="addToCart(product.id)" class="button cart expanded">
 						    	@{{product.price}} - Add to cart
-						    </a>
+						    </button>
 						  </div>
 						</div>
 					</a>

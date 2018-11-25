@@ -274,10 +274,10 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 
 				stringLimit: function(string,value){
-					if(string.length>value){
-						return string.substring(0,value)+'...';
-					}
-					return string;
+					return HXXSTORE.module.truncateString(string,value);
+				},
+				addToCart:function(id){
+					var message = HXXSTORE.module.addItemToCart(id);
 				},
 
 				loadMoreProducts:function(){
@@ -322,6 +322,22 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 (function(){
 	'use strict';
 
+	HXXSTORE.module={
+		truncateString:function limit(string,value){
+			if(string.length>value){
+						return string.substring(0,value)+'...';
+					}else{
+					return string;
+				}
+		},
+		addItemToCart:function(id){
+			return id;
+		}
+	}
+})();
+(function(){
+	'use strict';
+
 	HXXSTORE.product.details=function(){
 		var app = new Vue({
 			el:'#product',
@@ -349,10 +365,10 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					})
 				},
 				stringLimit: function(string,value){
-					if(string.length>value){
-						return string.substring(0,value)+'...';
-					}
-					return string;
+					return HXXSTORE.module.truncateString(string,value);
+				},
+				addToCart:function(id){
+					var message = HXXSTORE.module.addItemToCart(id);
 				}
 			},
 			created:function(){
