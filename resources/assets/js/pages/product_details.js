@@ -23,7 +23,7 @@
 							app.subCategory = response.data.subCategory;
 							app.loading=false;
 						})	
-					},1000);
+					},4000);
 				},
 				stringLimit: function(string,value){
 					if(string.length>value){

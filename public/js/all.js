@@ -344,7 +344,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 							app.subCategory = response.data.subCategory;
 							app.loading=false;
 						})	
-					},1000);
+					},4000);
 				},
 				stringLimit: function(string,value){
 					if(string.length>value){
