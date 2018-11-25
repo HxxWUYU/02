@@ -369,6 +369,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 				addToCart:function(id){
 					var message = HXXSTORE.module.addItemToCart(id);
+					alert(message);
 				}
 			},
 			created:function(){
