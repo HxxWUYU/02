@@ -297,7 +297,11 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					// });
 				},
 				clearChart:function(){
-					alert(1);
+					axios.get('/02/public/cart/clear').then(function(response){
+						$('.notify').css('display','block').delay(4000).slideUp(300).
+						html(response.data.success);
+						app.displayItems(100);
+					});
 				}
 
 			},
