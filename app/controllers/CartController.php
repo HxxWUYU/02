@@ -31,7 +31,7 @@ class CartController extends BaseController{
 	public function getCartItems(){
 
 		try{
-			$result = [];
+			$result = array();
 
 		$cartTotal = 0;
 
@@ -42,7 +42,7 @@ class CartController extends BaseController{
 			$index = 0;
 			foreach($_SESSION['user_cart'] as $cart_items){
 				$productId = $cart_items['product_id'];
-				$quantity = $cart_ietms['quantity'];
+				$quantity = $cart_items['quantity'];
 				$item = Product::where('id',$productId)->first();
 				if(!$item){
 					continue;
