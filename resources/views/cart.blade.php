@@ -105,7 +105,7 @@
 
 						
 							
-							<div>
+							<div class="clearfix">
 								
 								<button type="submit" class="button alert left">EmptyChart &nbsp<i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
 							
