@@ -63,6 +63,39 @@
 								
 							</thead>
 						</table>
+
+						<table>
+							<tr>
+								<td>
+									<div class="input-group">
+										<input type="text" name="coupon" class="input-group-field" placeholder="coupon code">
+										<div class="input-group-button">
+											<button class="button">Apply</button>
+										</div>
+									</div>
+								</td>
+								<td>
+									<table class="unstriped">
+										<tr>
+											<td><h6>Subtotal:</h6></td>
+											<td class="text-right"><h6>$@{{cartTotal}}</h6></td>
+										</tr>
+										<tr>
+											<td><h6>Discount Amount</h6></td>
+											<td class="text-right"><h6>$0.00</h6></td>
+										</tr>
+										<tr>
+											<td><h6>Tax:</h6></td>
+											<td class="text-right"><h6>$0.00</h6></td>
+										</tr>
+										<tr>
+											<td><h6>Subtotal:</h6></td>
+											<td class="text-right"><h6>$@{{cartTotal}}</h6></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
 					</div>
 				</div>
 			</div>
