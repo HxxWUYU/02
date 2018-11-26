@@ -23,9 +23,9 @@ class Cart{
 						if($key=='product_id' && $value==$request->product_id){
 
 							array_splice($_SESSION['user_cart'],$index-1,1,
-							['product_id'=>$request->product_id,
+							array(['product_id'=>$request->product_id,
 							'quantity'=>($cart_items['quantity']+1)
-							]);
+							]));
 
 							$isInCart = true;
 						}
