@@ -47,6 +47,8 @@ class Cart{
 			//empty cart
 			self::clear();
 		}else{
+			echo json_encode("here");
+			exit;
 			unset($_SESSION['user_cart'][$index]);
 			sort($_SESSION['user_cart']);
 		}
