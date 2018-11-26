@@ -53,7 +53,7 @@
 											@{{item.quantity}}
 										</td>
 										<td>
-											@{{item.total}}
+											@{{item.totalPrice}}
 										</td>
 										<td>
 											<button>
