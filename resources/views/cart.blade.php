@@ -34,7 +34,7 @@
 										</td>
 										<td>
 											
-												<h5><a :href="'/02/public/product'+item.id">@{{item.name}}</a></h5>
+												<h5><a :href="'/02/public/product/'+item.id">@{{item.name}}</a></h5>
 												Status:
 												<span v-if="item.stock>1" style="color:#00AA00;">
 													In Stock
