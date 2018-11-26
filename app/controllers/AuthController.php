@@ -6,7 +6,7 @@ use App\Classes\Mail;
 use App\Classes\Request;
 use App\Models\Product;
 
-class Authontroller extends BaseController{
+class AuthController extends BaseController{
 
 	public function showRegisterForm(){
 		return view('register');
