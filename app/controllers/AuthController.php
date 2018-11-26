@@ -27,7 +27,7 @@ class AuthController extends BaseController{
 					'fullname'=>['required'=>true,'minLength'=>6,'maxLength'=>40,'string'=>true],
 					'address'=>['required'=>true,'minLength'=>6,'maxLength'=>500,'mixed'=>true]
 
-				]
+				];
 
 				$validate = new ValidateRequest;
 				$validate->abide($_POST,$rules);
