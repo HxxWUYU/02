@@ -25,7 +25,7 @@ class CartController extends BaseController{
 	}
 
 	public function show(){
-		return view('/02/public/cart');
+		return view('cart');
 	}
 
 	public function getCartItems(){
