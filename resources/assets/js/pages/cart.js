@@ -13,7 +13,7 @@
 				messgage:''
 			},
 			methods:{
-				displayItems:function(){
+				displayItems:function(time){
 
 					this.loading=true;
 					setTimeout(function(){
@@ -29,19 +29,19 @@
 
 							}
 						});
-					},1000);
+					},time);
 				},
 				updateQty:function(id,operator){
 
 					var postData = $.param({product_id:id,operator:operator});
 					axios.post('/02/public/cart/update_qty',postData).then(function(response){
-						app.displayItems();
+						app.displayItems(100);
 					});
 				}
 
 			},
 			created:function(){
-				this.displayItems();
+				this.displayItems(2000);
 			}
 		});
 	}
