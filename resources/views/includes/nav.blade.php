@@ -45,7 +45,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 			    	<li><a href="#">Username</a></li>
 			    	<li><a href="#">Sign In</a></li>
 			    	<li><a href="#">Register</a></li>
-			    	<li><a href="#">Cart</a></li>  
+			    	<li><a href="/02/public/cart">Cart</a></li>  
 			    </ul>
 			  </div>
 	 	</div>
@@ -94,7 +94,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		    	<li><a href="#">Username</a></li>
 		    	<li><a href="#">Sign In</a></li>
 		    	<li><a href="#">Register</a></li>
-		    	<li><a href="#">Cart</a></li>  
+		    	<li><a href="/02/public/cart">Cart</a></li>  
 		    </ul>
 		  </div>
  	</div>

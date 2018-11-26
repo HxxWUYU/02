@@ -63,7 +63,7 @@
 						    	See More
 						    </a>
 						    <button  @click.prevent="addToCart(product.id)" class="button cart expanded">
-						    	@{{product.price}} - Add to cart
+						    	$@{{product.price}} - Add to cart
 						    </button>
 						  </div>
 						</div>
