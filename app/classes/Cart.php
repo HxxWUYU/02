@@ -19,7 +19,7 @@ class Cart{
 					0=>['product_id'=>$request->product_id,'quantity'=>1]
 				]);
 			}else{
-				foreach($_SESSION['user_cart'] as $cart_items){
+				foreach($_SESSION['user_cart'] as $k=>$cart_items){
 					$index++;
 					foreach($cart_items as $key=>$value){
 						if($key=='product_id' && $value==$request->product_id){
