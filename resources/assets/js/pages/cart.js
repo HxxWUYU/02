@@ -2,6 +2,7 @@
 	'use strict';
 
 	HXXSTORE.product.cart=function(){
+		alert(1);
 		var app = new Vue({
 			el:'#shopping_cart',
 			data:{
@@ -13,7 +14,7 @@
 			},
 			methods:{
 				displayItems:function(){
-					alert(1);
+
 					this.loading=true;
 					setTimeout(function(){
 						axios.get('/02/public/cart/items').then(function(response){
