@@ -245,7 +245,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 })();
 (function(){
 	'use strict';
-
+	alert(1);
 	HXXSTORE.product.cart=function(){
 		var app = new Vue({
 			el:'#shopping_cart',

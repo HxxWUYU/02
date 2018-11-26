@@ -1,6 +1,6 @@
 (function(){
 	'use strict';
-
+	alert(1);
 	HXXSTORE.product.cart=function(){
 		var app = new Vue({
 			el:'#shopping_cart',
