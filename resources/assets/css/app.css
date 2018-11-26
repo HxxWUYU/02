@@ -5600,6 +5600,20 @@ select {
   background-color: #e30000;
 }
 
+.auth {
+  padding: 6rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .auth {
+    padding: 4rem 1rem;
+  }
+}
+
+.auth h2 {
+  margin-bottom: 0.5rem !important;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;

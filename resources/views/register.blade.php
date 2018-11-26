@@ -3,7 +3,7 @@
 @section('data-page-id','auth')
 
 @section('content')
-	<div class="auth" id="auth" style="padding:6rem;">
+	<div class="auth" id="auth">
 
 		<section class="register_form">
 			<div class="row">
@@ -22,9 +22,9 @@
 						<textarea name="address" placeholder="Your Address">{{\App\Classes\Request::old('post','address')}}</textarea>
 
 						<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
-						<button class="button float-right">Register</button>
+						<button type="submit" class="button float-right">Register</button>
 					</form>
-					<p>Already Registered?<a href="/02/public/login">Login Here</a></p>
+					<p>Already Registered?<a href="/02/public/login"> Login Here</a></p>
 				</div>
 			</div>
 		</section>
