@@ -1,4 +1,4 @@
-var Slick = require("vue-slick");
+
 (function(){
 	'use strict';
 

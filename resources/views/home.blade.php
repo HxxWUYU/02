@@ -24,30 +24,7 @@
 			<div class="row medium-up-2 large-up-4 feature-slider">
 				<h2>Featured Products</h2>
 				
-				<!-- <div class="small-12 column " v-cloak v-for="feature in featured">
-					<a :href="'/02/public/product/'+feature.id">
-						<div class="card" data-equalizer-watch>
-						  <div class="card-section">
-						    <img :src="'/02/public/'+feature.image_path" width="100%" height="200">
-						  </div>
-						  <div class="card-section">
-						    <p>@{{stringLimit(feature.name,18)}}</p>
-						    <a :href="'/02/public/product/'+feature.id" class="button more expanded">
-						    	See More
-						    </a>
-						    <button @click.prevent="addToCart(feature.id)" class="button cart expanded">
-						    	$@{{feature.price}} - Add to cart
-						    </button>
-						  </div>
-						</div>
-					</a>
-					
-
-					
-				</div> -->
-				<slick ref="slick" :options="slickOptions">
-					
-				 <div class="small-12 column " v-cloak v-for="feature in featured">
+				<div class="small-12 column " v-cloak v-for="feature in featured">
 					<a :href="'/02/public/product/'+feature.id">
 						<div class="card" data-equalizer-watch>
 						  <div class="card-section">
@@ -68,8 +45,6 @@
 
 					
 				</div>
-					
-				</slick>
 				
 			</div>
 

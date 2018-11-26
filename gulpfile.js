@@ -1,5 +1,5 @@
 var elixir = require("laravel-elixir");
-
+var Slick = require("vue-slick");
 elixir.config.sourcemaps = false;
 
 var gulp = require('gulp');
