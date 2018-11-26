@@ -26,11 +26,19 @@
 								app.items = response.data.items;
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
-								
+
 							}
 						});
 					},1000);
+				},
+				updateQty:function(id,operator){
+
+					var postData = $.param({product_id:id,operator:operator});
+					axios.post('/02/public/cart/update_qty',postData).then(function(response){
+						app.displayItems();
+					});
 				}
+
 			},
 			created:function(){
 				this.displayItems();
