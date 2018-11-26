@@ -111,6 +111,8 @@ class CartController extends BaseController{
 	}
 
 	public function removeItem(){
+		var_dump(Request::get('post'));
+		exit;
 		if(Request::has('post')){
 			$request = Request::get('post');
 
