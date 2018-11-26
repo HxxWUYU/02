@@ -15,7 +15,7 @@ class Cart{
 		try{
 			$index =0;
 			if(!Session::has('user_cart')||count(Session::get('user_cart'))<1){
-				Session::add('user_cart',[0 => ['product_id'=>$request->product_id,'quantity'=>1]] );
+				Session::add('user_cart',[['product_id'=>$request->product_id,'quantity'=>1]] );
 			}else{
 				foreach ($_SESSION['user_cart'] as $cart_items){
 					$index++;
