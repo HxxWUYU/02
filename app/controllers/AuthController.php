@@ -5,6 +5,7 @@ use App\Classes\CSRFToken;
 use App\Classes\Mail;
 use App\Classes\Request;
 use App\Classes\ValidateRequest;
+use App\Models\User;
 
 class AuthController extends BaseController{
 
