@@ -18,8 +18,8 @@
 						<table class="hover unstriped">
 							<thead class="text-left">
 								<tr>
-									<th>#</th>
-								<th class="text-center">Product Name</th>
+									<th class="text-center">#</th>
+								<th>Product Name</th>
 								<th class="text-center">($)Price</th>
 								<th class="text-center">Qty</th>
 								<th class="text-center">($)Total</th>
