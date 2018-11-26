@@ -11,7 +11,7 @@
 			</i>
 		</div>
 
-		<section class="items" v-cloak>
+		<section class="items" v-if="loading==false">
 			<div class="row">
 				<div class="small-12">
 					<h2 v-if='fail' v-text="message"></h2>
