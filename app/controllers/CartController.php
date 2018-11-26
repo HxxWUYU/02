@@ -120,6 +120,7 @@ class CartController extends BaseController{
 				//remove item
 				Cart::removeItem($request->item_index);
 				echo json_encode(['success'=>'Product Removed From Cart!']);
+			
 				exit;
 			}
 		}
