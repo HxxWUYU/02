@@ -50,6 +50,9 @@
 
 					
 					// });
+				},
+				clearChart:function(){
+					alert(1);
 				}
 
 			},
