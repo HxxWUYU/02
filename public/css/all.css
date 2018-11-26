@@ -5623,6 +5623,10 @@ select {
   margin-bottom: 0.3rem;
 }
 
+.auth span {
+  margin-top: 0.3rem;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
