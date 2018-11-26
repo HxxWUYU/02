@@ -21,7 +21,7 @@ return array(
     'App\\Controllers\\Admin\\ProductCategoryController' => $baseDir . '/app/controllers/admin/ProductCategoryController.php',
     'App\\Controllers\\Admin\\ProductController' => $baseDir . '/app/controllers/admin/ProductController.php',
     'App\\Controllers\\Admin\\SubCategoryController' => $baseDir . '/app/controllers/admin/SubCategoryController.php',
-    'App\\Controllers\\Authontroller' => $baseDir . '/app/controllers/AuthController.php',
+    'App\\Controllers\\AuthController' => $baseDir . '/app/controllers/AuthController.php',
     'App\\Controllers\\BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'App\\Controllers\\CartController' => $baseDir . '/app/controllers/CartController.php',
     'App\\Controllers\\IndexController' => $baseDir . '/app/controllers/IndexController.php',

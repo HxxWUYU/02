@@ -200,7 +200,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Controllers\\Admin\\ProductCategoryController' => __DIR__ . '/../..' . '/app/controllers/admin/ProductCategoryController.php',
         'App\\Controllers\\Admin\\ProductController' => __DIR__ . '/../..' . '/app/controllers/admin/ProductController.php',
         'App\\Controllers\\Admin\\SubCategoryController' => __DIR__ . '/../..' . '/app/controllers/admin/SubCategoryController.php',
-        'App\\Controllers\\Authontroller' => __DIR__ . '/../..' . '/app/controllers/AuthController.php',
+        'App\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/controllers/AuthController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
         'App\\Controllers\\CartController' => __DIR__ . '/../..' . '/app/controllers/CartController.php',
         'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/controllers/IndexController.php',
