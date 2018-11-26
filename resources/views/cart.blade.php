@@ -49,7 +49,7 @@
 										</td > 
 										<td class="text-center">
 											@{{item.quantity}}
-											<button v-if="item.stock>item.quantity" click="updateQty(item.id,'+')" class="success" style="cursor:pointer;color:#00AA00;">
+											<button v-if="item.stock>item.quantity" @click="updateQty(item.id,'+')" class="success" style="cursor:pointer;color:#00AA00;">
 												<i class="fa fa-plus-square" aria-hidden="true"></i>
 											</button>
 											<button v-if="item.quantity>1" @click="updateQty(item.id,'-')" class="warning" style="cursor:pointer; color:#ff8000;">
