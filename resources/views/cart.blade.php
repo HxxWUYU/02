@@ -103,15 +103,16 @@
 							</tr>
 						</table>
 
-						<div>
-							<div class="text-left">
-								<button type="submit" class="button alert">EmptyChart &nbsp<i class="fa exclamation-triangle" aria-hidden="true"></i></button>
-							</div>
+						
+							
 							<div class="text-right">
+								<div class="text-left">
+								<button type="submit" class="button alert">EmptyChart &nbsp<i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
+							</div>
 							<a href="/02/public/" class="button secondary">Continue Shopping &nbsp<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 							<button type="submit" class="button success">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
 							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>
