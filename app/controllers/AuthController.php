@@ -43,10 +43,11 @@ class AuthController extends BaseController{
 						'password'=>password_hash($request->password,PASSWORD_BCRYPT),
 						'fullname'=>$request->fullname,
 						'address'=>$request->address,
+						'role'=>'user'
 					]);
 
 					Request::refresh();
-					return view('register',['success'=>'Account created,please login.']);
+					return view('register',['message'=>'Account created,please login.']);
 				}
 			}else{
 				throw new \Exception('Token Mismatch');
