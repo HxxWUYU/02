@@ -31,7 +31,7 @@ class CartController extends BaseController{
 	public function getCartItems(){
 
 		try{
-			$result = array();
+			$result = [];
 
 		$cartTotal = 0;
 
