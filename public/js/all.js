@@ -245,7 +245,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 })();
 (function(){
 	'use strict';
-	alert(1);
+
 	HXXSTORE.product.cart=function(){
 		var app = new Vue({
 			el:'#shopping_cart',
@@ -258,6 +258,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			},
 			methods:{
 				displayItems:function(){
+					alert(1);
 					this.loading=true;
 					setTimeout(function(){
 						axios.get('/02/public/cart/items').then(function(response){
