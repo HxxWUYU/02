@@ -1,4 +1,4 @@
-import Slick from 'vue-slick';
+var Slick = require("vue-slick");
 (function(){
 	'use strict';
 

@@ -431,7 +431,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 	}
 })();
 
-import Slick from 'vue-slick';
+var Slick = require("vue-slick");
 (function(){
 	'use strict';
 
