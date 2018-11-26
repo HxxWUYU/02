@@ -36,6 +36,8 @@ elixir(function (mix){
 		//Axios js
 		bowerPath + '/axios/dist/axios.min.js',
 
+		bowerPath + '/jquery-validation/dist/jquery.validate.min.js',
+
 		'js/hxx.js',
 		'js/admin/*.js',
 		'js/pages/*.js',

@@ -6,6 +6,8 @@
 	$(document).ready(function(){
 		//SWITCH PAGES
 		switch($('body').data('page-id')){
+			case 'auth':
+				HXXSTORE.auth.validate();
 			case 'cart':
 				HXXSTORE.product.cart();
 				break;

@@ -10,7 +10,7 @@
 				<div class="small-12 meidum-7 meidum-centered">
 					<h2 class="text-center">Login</h2>
 					@include('includes.message')
-					<form action="/02/public/login" method="post">
+					<form id="loginForm" action="/02/public/login" method="post">
 						
 
 						<input type="text" name="username" placeholder="Your User Name" value="{{\App\Classes\Request::old('post','username')}}">

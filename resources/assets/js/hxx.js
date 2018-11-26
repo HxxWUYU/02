@@ -5,7 +5,8 @@
 		global:{},
 		admin:{},
 		homeslider:{},
-		product:{}
+		product:{},
+		auth:{}
 
 	}
 })();

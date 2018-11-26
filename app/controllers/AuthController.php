@@ -21,7 +21,7 @@ class AuthController extends BaseController{
 			$request = Request::get('post');
 			if(CSRFToken::verifyCSRFToken($request->token)){
 				$rules=[
-					'username'=>['required'=>true,'maxLength'=>20,'mixed'=>true,'unique'=>'users'],
+					'username'=>['required'=>true,'maxLength'=>20,'mixed'=>true,'unique'=>'users','minLength'=>2 ],
 					'email'=>['required'=>true,'email'=>true,'unique'=>'users'],
 					'password'=>['required'=>true,'minLength'=>6],
 					'fullname'=>['required'=>true,'minLength'=>6,'maxLength'=>40,'string'=>true],
