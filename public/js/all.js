@@ -271,7 +271,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 								app.items = response.data.items;
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
-								alert(items);
+								alert(app.items);
 							}
 						});
 					},1000);

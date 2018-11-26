@@ -26,7 +26,7 @@
 								app.items = response.data.items;
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
-								alert(items);
+								alert(app.items);
 							}
 						});
 					},1000);
