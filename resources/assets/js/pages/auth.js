@@ -4,7 +4,7 @@
 		$("#registerForm").validate({
 			rules:{
 				password_again:{
-					equalTo:password
+					equalTo:"#password"
 				}
 			}
 		});

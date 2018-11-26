@@ -11,13 +11,14 @@
 					<h2 class="text-center">Create Account</h2>
 					@include('includes.message')
 					<form id="registerForm" action="/02/public/register" method="post">
+						<span>Full Name:</span>
 						<input type="text" name="fullname" placeholder="Your name" value="{{\App\Classes\Request::old('post','fullname')}}" minlength="6" maxlength="40" required>
 
 						<input type="email" name="email" placeholder="Your Email Address" value="{{\App\Classes\Request::old('post','email')}}" required>
 
 						<input type="text" name="username" placeholder="Your User Name" value="{{\App\Classes\Request::old('post','username')}}" minlength="2" maxlength="20" required>
 
-						<input type="password" name="password" placeholder="Your Password" minlength="6" required>
+						<input type="password" name="password" id="password" placeholder="Your Password" minlength="6" required>
 
 						<input type="password" name="password_again" placeholder="Re-Enter Your Password" minlength="6" required>
 
