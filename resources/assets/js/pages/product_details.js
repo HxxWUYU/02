@@ -32,7 +32,7 @@
 				},
 				addToCart:function(id){
 					HXXSTORE.module.addItemToCart(id,function(message){
-						alert(message);
+						
 					});
 				}
 			},
