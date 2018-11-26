@@ -114,7 +114,7 @@ class CartController extends BaseController{
 		if(Request::has('post')){
 			$request = Request::get('post');
 
-			if(!$request->item_index){
+			if(!$request->item_index===''){
 				throw new \Exception('Malicious Activity');
 			}else{
 				//remove item
