@@ -6,9 +6,7 @@
 	<div class="product" id="product" data-token="{{$token}}" data-id="{{$product->id}}">
 
 		<div class="text-center">
-			<i v-show="loading" class="fa fa-spinner fa-spin">
-				
-			</i>
+			<img src="/02/public/images/uploads/loading.gif">
 		</div>
 		<section class="item-container" v-cloak>
 			<div class="row column">
