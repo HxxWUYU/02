@@ -41,7 +41,7 @@
 				removeItem:function(index){
 					var postData = $.param({item_index:index});
 					axios.post('/02/public/cart/remove',postData).then(function(response){
-							$('.notify').slideDown(500).delay(3000).slideUp(300).
+							$('.notify').slideDown(400).delay(3000).slideUp(300).
 						html(response.data.success);
 						app.displayItems(100);
 					});
@@ -53,7 +53,7 @@
 				},
 				clearChart:function(){
 					axios.get('/02/public/cart/clear').then(function(response){
-						$('.notify').css('display','block').delay(4000).slideUp(300).
+						$('.notify').slideDown(400).delay(3000).slideUp(300).
 						html(response.data.success);
 						app.displayItems(100);
 					});
