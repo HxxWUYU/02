@@ -33,7 +33,7 @@
 				},
 				addToCart:function(id){
 					 HXXSTORE.module.addItemToCart(id,function(message){
-					 	$('.notify').css('display','none').stop(true);
+					 	$('.notify').css('display','none').stop(true,true);
 					 	$('.notify').slideDown(400).delay(4000).slideUp(300).html(message);
 					});
 				},
