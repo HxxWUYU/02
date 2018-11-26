@@ -5614,6 +5614,10 @@ select {
   margin-bottom: 0.5rem !important;
 }
 
+.auth .error {
+  color: #ff0000;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
