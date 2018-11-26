@@ -19,6 +19,8 @@
 
 						<input type="password" name="password" placeholder="Your Password" minlength="6" required>
 
+						<input type="password" name="password_again" placeholder="Re-Enter Your Password" minlength="6" required>
+
 						<textarea name="address" placeholder="Your Address" minlength="6" required>{{\App\Classes\Request::old('post','address')}}</textarea>
 
 						<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">

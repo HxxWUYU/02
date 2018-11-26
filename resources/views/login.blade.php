@@ -13,9 +13,9 @@
 					<form id="loginForm" action="/02/public/login" method="post">
 						
 
-						<input type="text" name="username" placeholder="Your User Name" value="{{\App\Classes\Request::old('post','username')}}">
+						<input type="text" name="username" placeholder="Your User Name" value="{{\App\Classes\Request::old('post','username')}}" required>
 
-						<input type="password" name="password" placeholder="Your Password">
+						<input type="password" name="password" placeholder="Your Password" required>
 
 						
 						<button type="submit" class="button float-right">Register</button>
