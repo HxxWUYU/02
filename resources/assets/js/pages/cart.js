@@ -41,9 +41,10 @@
 				removeItem:function(index){
 					var postData = $.param({item_index:index});
 					axios.post('/02/public/cart/remove').then(function(response){
-						$('.notify').css('display','block').delay(4000).slideUp(300).
-						html(response.data.success);
-						app.displayItems(100);
+						alert(response.data.success);
+						// $('.notify').css('display','block').delay(4000).slideUp(300).
+						// html(response.data.success);
+						// app.displayItems(100);
 					});
 				}
 
