@@ -33,8 +33,7 @@
 											<a :href="'/02/public/product'+item.id">
 												<img :src="'/02/public/'+item.image" height="60px" width="60px" alt="item.name">
 											</a>
-										</td>
-										<td>
+											<td>
 											<h5>
 												<a :href="'/02/public/product'+item.id">@{{item.name}}</a>
 												Status:
@@ -46,6 +45,8 @@
 												</span>
 											</h5>
 										</td>
+										</td>
+										
 										<td>
 											@{{item.price}}
 										</td>
