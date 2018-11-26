@@ -2,7 +2,7 @@
 	'use strict';
 
 	HXXSTORE.product.cart=function(){
-		var app = new Vuew({
+		var app = new Vue({
 			el:'#shopping_cart',
 			data:{
 				items:[],
