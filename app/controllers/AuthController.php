@@ -35,8 +35,23 @@ class AuthController extends BaseController{
 				if($validate->hasError()){
 					$errors = $validate->getErrorMessages();
 					return view('register',['errors'=>$errors]);
+				}else{
+					User::create([
+						'username'=>$request->username,
+						'email'=>$request->email,
+						'password'=>password_hash($request->password,PASSWORD_BCRYPT),
+						'fullname'=>$request->fullname,
+						'address'=>$request->address,
+					]);
+
+					Request::refresh();
+					return view('register',['success'=>'Account created,please login.']);
 				}
+			}else{
+				throw new \Exception('Token Mismatch');
 			}
+		}else{
+			return null;
 		}
 	}
 

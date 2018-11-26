@@ -18,7 +18,7 @@
 						<input type="password" name="password" placeholder="Your Password" required>
 
 						
-						<button type="submit" class="button float-right">Register</button>
+						<button type="submit" class="button float-right">Login</button>
 					</form>
 					<p>Not yet register?<a href="/02/public/regitser"> Register Here</a></p>
 				</div>
