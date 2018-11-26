@@ -83,7 +83,7 @@ class CartController extends BaseController{
 
 			$index=0;
 			$quantity='';
-			foreach ($_SESSION['user_cart'] as $key => $cart_items) {
+			foreach ($_SESSION['user_cart'] as $cart_items) {
 					$index++;
 					foreach ($cart_items as $key => $value) {
 						if($key=='product_id' && $value=$request->product_id){
