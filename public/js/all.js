@@ -254,7 +254,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 		$("#registerForm").validate({
 			rules:{
 				password_again:{
-					equalTo:"#password"
+					equalTo:password
 				}
 			}
 		});
