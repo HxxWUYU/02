@@ -19,10 +19,10 @@
 							<thead class="text-left">
 								<tr>
 									<th>#</th>
-								<th>Product Name</th>
-								<th>($)Price</th>
-								<th>Qty</th>
-								<th>($)Total</th>
+								<th class="text-center">Product Name</th>
+								<th class="text-center">($)Price</th>
+								<th class="text-center">Qty</th>
+								<th class="text-center">($)Total</th>
 								<th class="text-center">Action</th>	
 								</tr>
 								<tbody>
@@ -44,13 +44,13 @@
 												</span>
 											
 										</td>
-										<td>
+										<td class="text-center">
 											@{{item.price}}
-										</td>
-										<td>
+										</td > 
+										<td class="text-center">
 											@{{item.quantity}}
 										</td>
-										<td>
+										<td class="text-center">
 											@{{item.totalPrice}}
 										</td>
 										<td class="text-center">
