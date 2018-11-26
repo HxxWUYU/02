@@ -49,6 +49,12 @@
 										</td > 
 										<td class="text-center">
 											@{{item.quantity}}
+											<button class="success" style="cursor:pointer;color:#00AA00;">
+												<i class="fa fa-plus-square" aria-hidden="true"></i>
+											</button>
+											<button class="warning" style="cursor:pointer; color:#ff8000;">
+												<i class="fa fa-minus-square" aria-hidden="true"></i>
+											</button>
 										</td>
 										<td class="text-center">
 											@{{item.totalPrice}}
