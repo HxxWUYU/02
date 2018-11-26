@@ -43,8 +43,8 @@ $categories = \App\Models\Category::with('subCategories')->get();
 			  <div class="top-bar-right">
 			    <ul class="dropdown menu vertical medium-horizontal">
 			    	<li><a href="#">Username</a></li>
-			    	<li><a href="#">Sign In</a></li>
-			    	<li><a href="#">Register</a></li>
+			    	<li><a href="/02/public/login">Sign In</a></li>
+			    	<li><a href="/02/public/register">Register</a></li>
 			    	<li><a href="/02/public/cart">Cart</a></li>  
 			    </ul>
 			  </div>
@@ -92,8 +92,8 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		  <div class="top-bar-right">
 		    <ul class="dropdown menu vertical medium-horizontal">
 		    	<li><a href="#">Username</a></li>
-		    	<li><a href="#">Sign In</a></li>
-		    	<li><a href="#">Register</a></li>
+		    	<li><a href="/02/public/login">Sign In</a></li>
+		    	<li><a href="/02/public/register">Register</a></li>
 		    	<li><a href="/02/public/cart">Cart</a></li>  
 		    </ul>
 		  </div>
