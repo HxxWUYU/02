@@ -47,10 +47,16 @@ class Cart{
 			//empty cart
 			self::clear();
 		}else{
-			echo json_encode("here");
-			exit;
-			unset($_SESSION['user_cart'][$index]);
+			try{
+				unset($_SESSION['user_cart'][$index]);
 			sort($_SESSION['user_cart']);
+			echo json_encode($_SESSION['user_cart']);
+			exit;
+			}catch(\Exception $ex){
+				echo json_encode($ex->getMessage());
+				exit;
+				
+			}
 		}
 	}
 

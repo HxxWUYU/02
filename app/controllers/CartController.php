@@ -119,8 +119,9 @@ class CartController extends BaseController{
 				throw new \Exception('Malicious Activity');
 			}else{
 				//remove item
-				
+
 				Cart::removeItem($request->item_index);
+				
 				echo json_encode(['success'=>'Product Removed From Cart!']);
 				exit;
 			}
