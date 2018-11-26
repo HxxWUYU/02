@@ -33,7 +33,7 @@ class AuthController extends BaseController{
 				$validate->abide($_POST,$rules);
 
 				if($validate->hasError()){
-					$errors = $validate->getErrorMessages():
+					$errors = $validate->getErrorMessages();
 					return view('register',['errors'=>$errors]);
 				}
 			}
