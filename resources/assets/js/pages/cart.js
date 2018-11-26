@@ -2,7 +2,7 @@
 	'use strict';
 
 	HXXSTORE.product.cart=function(){
-		alert(1);
+		// alert(1);
 		var app = new Vue({
 			el:'#shopping_cart',
 			data:{
