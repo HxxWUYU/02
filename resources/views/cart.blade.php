@@ -22,8 +22,8 @@
 								<th>Product Name</th>
 								<th>($)Price</th>
 								<th>Qty</th>
-								<th>Total</th>
-								<th>Action</th>	
+								<th>($)Total</th>
+								<th class="text-center">Action</th>	
 								</tr>
 								<tbody>
 									<tr v-for="item in items">
