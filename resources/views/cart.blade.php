@@ -6,7 +6,7 @@
 	<div class="shopping_cart" id="shopping_cart" style="padding:6rem;">
 
 		<div class="text-center">
-			<img src="/02/public/images/uploads/loading.gif">
+			<img v-show="loading" src="/02/public/images/uploads/loading.gif">
 		</div>
 
 		<section class="items" v-if="loading==false">

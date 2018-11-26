@@ -73,7 +73,7 @@
 			</div>
 
 			<div class="text-center"> 
-				<img src="/02/public/images/uploads/loading.gif" style="padding-bottom: 3rem; position: fixed; top:60%;bottom: 20%;">
+				<img v-show="loading" src="/02/public/images/uploads/loading.gif" style="padding-bottom: 3rem; position: fixed; top:60%;bottom: 20%;">
 				
 			</div>
 		</section>
