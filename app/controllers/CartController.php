@@ -111,8 +111,7 @@ class CartController extends BaseController{
 	}
 
 	public function removeItem(){
-		var_dump($_SESSION['user_cart']);
-		exit;
+		
 		if(Request::has('post')){
 			$request = Request::get('post');
 
@@ -120,6 +119,8 @@ class CartController extends BaseController{
 				throw new \Exception('Malicious Activity');
 			}else{
 				//remove item
+				var_dump($request->item_index);
+				exit;
 				Cart::removeItem($request->item_index);
 				echo json_encode(['success'=>'Product Removed From Cart!']);
 				exit;
