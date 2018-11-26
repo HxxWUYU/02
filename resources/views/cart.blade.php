@@ -22,7 +22,7 @@
 								<tr>
 									<th>#</th>
 								<th>Product Name</th>
-								<th>Price</th>
+								<th>($)Price</th>
 								<th>Qty</th>
 								<th>Total</th>
 								<th>Action</th>	
@@ -55,7 +55,7 @@
 										<td>
 											@{{item.totalPrice}}
 										</td>
-										<td>
+										<td class="text-center">
 											<button>
 												<i class="fa fa-times" aria-hidden="true"></i>
 											</button>
