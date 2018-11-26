@@ -105,12 +105,12 @@
 
 						
 							
-							<div class="text-right">
+							<div>
 								
-								<button type="submit" class="button alert text-left">EmptyChart &nbsp<i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
+								<button type="submit" class="button alert left">EmptyChart &nbsp<i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
 							
-							<a href="/02/public/" class="button secondary">Continue Shopping &nbsp<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-							<button type="submit" class="button success">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
+							<a href="/02/public/" class="button secondary right">Continue Shopping &nbsp<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+							<button type="submit" class="button success right">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
 							</div>
 						
 					</div>
