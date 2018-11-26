@@ -278,7 +278,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 				addToCart:function(id){
 					 HXXSTORE.module.addItemToCart(id,function(message){
-					 	$('.notify').css('display','block').dealy(4000).slideUp(300).html(message);
+					 	$('.notify').css('display','block').delay(4000).slideUp(300).html(message);
 					});
 				},
 
@@ -379,8 +379,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					return HXXSTORE.module.truncateString(string,value);
 				},
 				addToCart:function(id){
-					HXXSTORE.module.addItemToCart(id,function(message){
-											 	$('.notify').css('display','block').dealy(4000).slideUp(300).html(message);
+					HXXSTORE.module.addItemToCart(id,function(message){			
+											 $('.notify').css('display','block').delay(4000).slideUp(300).html(message);
 					});
 				}
 			},
