@@ -5618,6 +5618,10 @@ select {
   color: #ff0000;
 }
 
+.auth input {
+  margin-top: 0.3rem;
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
