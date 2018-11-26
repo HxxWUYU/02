@@ -33,9 +33,10 @@
 											<a :href="'/02/public/product'+item.id">
 												<img :src="'/02/public/'+item.image" height="60px" width="60px" alt="item.name">
 											</a>
-											<td>
-											<h5>
-												<a :href="'/02/public/product'+item.id">@{{item.name}}</a>
+										</td>
+										<td>
+											
+												<h5><a :href="'/02/public/product'+item.id">@{{item.name}}</a></h5>
 												Status:
 												<span v-if="item.stock>1" style="color:#00AA00;">
 													In Stock
@@ -43,10 +44,8 @@
 												<span v-else style="color:#ff0000;">
 													Out of Stock
 												</span>
-											</h5>
+											
 										</td>
-										</td>
-										
 										<td>
 											@{{item.price}}
 										</td>
