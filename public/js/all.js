@@ -286,9 +286,9 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				removeItem:function(index){
 					var postData = $.param({item_index:index});
 					axios.post('/02/public/cart/remove',postData).then(function(response){
-							// $('.notify').css('display','block').delay(4000).slideUp(300).
-						// html(response.data.success);
-						// app.displayItems(100);
+							$('.notify').css('display','block').delay(4000).slideUp(300).
+						html(response.data.success);
+						app.displayItems(100);
 					});
 					// var postData = $.param({item_index:index});
 					// axios.post('/02/public/cart/remove').then(function(response){
