@@ -60,7 +60,7 @@
 											@{{item.totalPrice}}
 										</td>
 										<td class="text-center">
-											<button>
+											<button @click="removeItem(item.index)">
 												<i class="fa fa-times" aria-hidden="true"></i>
 											</button>
 										</td>
