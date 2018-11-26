@@ -31,7 +31,7 @@
 									<tr v-for="item in items">
 										<td class="medium-text-center">
 											<a :href="'/02/public/product'+item.id">
-												<img src="'/02/public/'+item.image" height="60px" width="60px" alt="item.name">
+												<img :src="'/02/public/'+item.image" height="60px" width="60px" alt="item.name">
 											</a>
 										</td>
 										<td>
