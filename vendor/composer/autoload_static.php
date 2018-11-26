@@ -208,6 +208,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/models/Category.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/models/Product.php',
         'App\\Models\\SubCategory' => __DIR__ . '/../..' . '/app/models/SubCategory.php',
+        'App\\Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
         'App\\RouteDispatcher' => __DIR__ . '/../..' . '/app/routing/RouteDispatcher.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',

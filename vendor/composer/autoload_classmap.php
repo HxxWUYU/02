@@ -29,6 +29,7 @@ return array(
     'App\\Models\\Category' => $baseDir . '/app/models/Category.php',
     'App\\Models\\Product' => $baseDir . '/app/models/Product.php',
     'App\\Models\\SubCategory' => $baseDir . '/app/models/SubCategory.php',
+    'App\\Models\\User' => $baseDir . '/app/models/User.php',
     'App\\RouteDispatcher' => $baseDir . '/app/routing/RouteDispatcher.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
