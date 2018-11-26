@@ -102,7 +102,7 @@ class CartController extends BaseController{
 							array_splice($_SESSION['user_cart'],$index-1,1,array(
 								[
 									'product_id'=>$request->product_id,
-									'quantity'=>$quantity;
+									'quantity'=>$quantity
 								]
 							));
 						}
