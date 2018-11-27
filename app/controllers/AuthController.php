@@ -94,7 +94,7 @@ class AuthController extends BaseController{
 						}
 					}else{
 						//Session::add('error','User not found, please try again');
-						$errors = 'User not found, please try again';
+						$errors = ['User not found, please try again'];
 						return view('login',['errors'=>$errors]);
 						//return view('login');
 					}
