@@ -3,7 +3,9 @@ namespace App\Controllers;
 
 use App\Classes\CSRFToken;
 use App\Classes\Mail;
+use App\Classes\Redirect;
 use App\Classes\Request;
+use App\Classes\Session;
 use App\Classes\ValidateRequest;
 use App\Models\User;
 
@@ -58,6 +60,52 @@ class AuthController extends BaseController{
 	}
 
 	public function login(){
+			if(Request::has('post')){
+			$request = Request::get('post');
+			if(CSRFToken::verifyCSRFToken($request->token)){
+				$rules=[
+					'username'=>['required'=>true],
+					
+					'password'=>['required'=>true]
+					
+				];
+
+				$validate = new ValidateRequest;
+				$validate->abide($_POST,$rules);
+
+				if($validate->hasError()){
+
+					$errors = $validate->getErrorMessages();
+					return view('login',['errors'=>$errors]);
+				}else{
+					
+					//Check
+					$user = User::where('username',$request->username)->orWhere('email',$request->username)->first();
+
+					if($user){
+						if(!password_verify($request->password,$user->password)){
+							Session::add('error',"Whoops!We can't find a match!");
+							$errors = "Whoops!We can't find a match!";
+							return view('login');
+						}else{
+							Session::add('SESSION_USER_ID',$user->id);
+							Session::add('SESSION_USER_name',$user->username);
+							Redirect::to('/02/public/');
+						}
+					}else{
+						Session::add('error','User not found, please try again');
+						$errors = 'User not found, please try again';
+						return view('login');
+					}
+
+				}
+			}else{
+				throw new \Exception('Token Mismatch');
+			}
+		}else{
+			return null;
+		}
+	}
 	}
 }
 ?>
