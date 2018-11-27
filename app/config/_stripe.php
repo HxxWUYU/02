@@ -3,7 +3,7 @@ use Stripe\Stripe;
 use \App\Classes\Session;
 
 $stripe = array(
-	'secret_key' =>getenve('STRIPE_SECRET'),
+	'secret_key' =>getenv('STRIPE_SECRET'),
 	'publishable_key'=>getenv('STRIPE_PUBLISHER_KEY')
 );
 
