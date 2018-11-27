@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Classes\Session;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Philo\Blade\Blade;
 use voku\helper\Paginator;
@@ -72,6 +73,18 @@ function paginate($num_of_records,$total_record,$table_name,$object){
 
 	return [$categories,$pages->page_links()];
 
+}
+
+function isAuthenticated(){
+	return Session::has('SESSION_USER_NAME')?true:false;
+}
+
+function user(){
+	if(isAuthenticated()){
+		return User::findOrFail(Session::get('SESSION_USER_ID'));
+	}
+
+	return false;
 }
 
 ?>

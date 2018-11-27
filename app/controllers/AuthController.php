@@ -89,7 +89,7 @@ class AuthController extends BaseController{
 							return view('login');
 						}else{
 							Session::add('SESSION_USER_ID',$user->id);
-							Session::add('SESSION_USER_name',$user->username);
+							Session::add('SESSION_USER_NAME',$user->username);
 							Redirect::to('/02/public/');
 						}
 					}else{
