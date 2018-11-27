@@ -60,7 +60,7 @@ class AuthController extends BaseController{
 	}
 
 	public function login(){
-			if(Request::has('post')){
+		if(Request::has('post')){
 			$request = Request::get('post');
 			if(CSRFToken::verifyCSRFToken($request->token)){
 				$rules=[
