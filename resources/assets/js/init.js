@@ -8,6 +8,7 @@
 		switch($('body').data('page-id')){
 			case 'auth':
 				HXXSTORE.auth.validate();
+				break;
 			case 'cart':
 				HXXSTORE.product.cart();
 				break;

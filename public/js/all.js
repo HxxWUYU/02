@@ -507,6 +507,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 		switch($('body').data('page-id')){
 			case 'auth':
 				HXXSTORE.auth.validate();
+				break;
 			case 'cart':
 				HXXSTORE.product.cart();
 				break;
