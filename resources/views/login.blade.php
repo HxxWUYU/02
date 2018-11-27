@@ -16,7 +16,7 @@
 						<input type="text" name="username" placeholder="Your User Name Or Email Address" value="{{\App\Classes\Request::old('post','username')}}" required>
 						<span>Password:</span>
 						<input type="password" name="password" placeholder="Your Password" required>
-
+											<input type="hidden" name="token" value="{{\App\Classes\CSRFToken::_token()}}">
 						
 						<button type="submit" class="button float-right">Login</button>
 					</form>
