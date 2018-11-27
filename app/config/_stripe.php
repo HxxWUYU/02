@@ -1,6 +1,8 @@
 <?php 
+
+use App\Classes\Session;
 use Stripe\Stripe;
-use \App\Classes\Session;
+
 
 $stripe = array(
 	'secret_key' =>getenv('STRIPE_SECRET'),
