@@ -46,13 +46,13 @@ $categories = \App\Models\Category::with('subCategories')->get();
 
 
 		    	<li>{{user()->username}}</li>
-		    	<li><a href="/02/public/cart">Cart</a></li>  
+		    	<li><a href="/02/public/cart">Cart&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 		    	<li><a href="/02/public/logout">Logout</a></li>  
 		    	
 		    	@else
 		    	<li><a href="/02/public/login">Sign In</a></li>
 		    	<li><a href="/02/public/register">Register</a></li>
-		    	<li><a href="/02/public/cart">Cart</a></li>  
+		    	<li><a href="/02/public/cart">Cart&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 		    	@endif 
 			    </ul>
 			  </div>
@@ -103,13 +103,13 @@ $categories = \App\Models\Category::with('subCategories')->get();
 
 
 		    	<li>{{user()->username}}</li>
-		    	<li><a href="/02/public/cart">Cart</a></li>  
+		    	<li><a href="/02/public/cart">Cart&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 		    	<li><a href="/02/public/logout">Logout</a></li>  
 		    	
 		    	@else
 		    	<li><a href="/02/public/login">Sign In</a></li>
 		    	<li><a href="/02/public/register">Register</a></li>
-		    	<li><a href="/02/public/cart">Cart</a></li>  
+		    	<li><a href="/02/public/cart">Cart&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>  
 		    	@endif
 		    </ul>
 		  </div>
