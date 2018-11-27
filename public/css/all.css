@@ -5627,6 +5627,16 @@ select {
   margin-top: 0.3rem;
 }
 
+.shopping_cart {
+  padding: 6rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .shopping_cart {
+    padding: 4rem 0.3rem;
+  }
+}
+
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
   transition-timing-function: linear;
