@@ -1,7 +1,7 @@
 <div class="row expanded">
-	<!-- @if((isset($errors)&&count($errors))||\App\Classes\Session::has('error'))) -->
+	@if((isset($errors)&&count($errors)||\App\Classes\Session::has('error')))
 		<div class="callout alert" data-closable>
-			<!-- @if(\App\Classes\Session::has('error'))
+			@if(\App\Classes\Session::has('error'))
 				{{\App\Classes\Session::flash('error')}}
 			@else
 				@foreach($errors as $error_array)
@@ -9,12 +9,12 @@
 						{{$error_item}} <br>
 					@endforeach
 				@endforeach
-			@endif	 -->
+			@endif	
 			<button class="close-button" arial-label="Dismiss Message" type="button" data-close>
 				<span arial-hidden="true">&times;</span>
 			</button>
 		</div>
-	<!-- @endif -->
+	@endif
 
 	@if(isset($message) ||\App\Classes\Session::has('success'))
 		<div class="callout success" data-closable>
