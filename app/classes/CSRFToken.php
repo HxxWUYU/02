@@ -19,6 +19,7 @@ class CSRFToken{
 		if(Session::has('token')&&(Session::get('token')==$requestToken)){
 			
 			if($regenerate){
+				//unset($_SESSION['token']);
 				Session::remove('token');
 			}
 			
