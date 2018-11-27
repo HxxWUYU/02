@@ -114,7 +114,7 @@ class AuthController extends BaseController{
 		}
 	}
 
-	public logout(){
+	public function logout(){
 		if(isAuthenticated()){
 			Session::remove('SESSION_USER_ID');
 			Session::remove('SESSION_USER_NAME');
