@@ -93,9 +93,10 @@ class AuthController extends BaseController{
 							Redirect::to('/02/public/');
 						}
 					}else{
-						Session::add('error','User not found, please try again');
+						//Session::add('error','User not found, please try again');
 						$errors = 'User not found, please try again';
-						return view('login');
+						return view('login',['errors'=>$errors]);
+						//return view('login');
 					}
 
 				}
