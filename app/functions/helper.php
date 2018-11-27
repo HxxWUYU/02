@@ -76,7 +76,7 @@ function paginate($num_of_records,$total_record,$table_name,$object){
 }
 
 function isAuthenticated(){
-	return Session::has('SESSION_USER_NAME')?true:false;
+	return Session::has('SESSION_USER_NAME') ? true:false;
 }
 
 function user(){
