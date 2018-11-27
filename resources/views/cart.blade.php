@@ -110,7 +110,12 @@
 								<button type="submit" @click="clearChart" class="button alert float-left">EmptyChart &nbsp<i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
 							
 							<a href="/02/public/" class="button secondary float-right" >Continue Shopping &nbsp<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-							<button type="submit" class="button success float-right" style="margin-right: 0.5rem;">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
+							<button v-if="authenticated" class="button success float-right" style="margin-right: 0.5rem;">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
+							<span v-else>
+								<a href="/02/public/login" class="button success">
+									Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+								</a>
+							</span>
 							</div>
 						
 					</div>

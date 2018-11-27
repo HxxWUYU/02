@@ -13,7 +13,8 @@
         "phpmailer/phpmailer": "^6.0",
         "league/oauth2-google": "^2.2",
         "voku/pagination": "^3.0",
-        "nesbot/carbon": "1.35.1"
+        "nesbot/carbon": "1.35.1",
+        "stripe/stripe-php": "^6.22"
     },
     "config":{
         "optimize-autoloader":true

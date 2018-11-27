@@ -10,7 +10,8 @@
 				cartTotal:[],
 				loading:false,
 				fail:false,
-				messgage:''
+				messgage:'',
+				authenticated:false
 			},
 			methods:{
 				displayItems:function(time){
@@ -26,6 +27,7 @@
 								app.items = response.data.items;
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
+								app.authenticated = response.data.authenticated;
 
 							}
 						});

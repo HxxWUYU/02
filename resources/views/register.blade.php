@@ -19,8 +19,8 @@
 						<input type="text" name="username" placeholder="Your User Name" value="{{\App\Classes\Request::old('post','username')}}" minlength="2" maxlength="20" required>
 						<span>Password:</span>
 						<input type="password" name="password" id="password" placeholder="Your Password" minlength="6" required>
-						<span>Re-Enter Password:</span>
-						<input type="password" name="password_again" placeholder="Re-Enter Your Password" minlength="6" required>
+						<span>Confirm Password:</span>
+						<input type="password" name="password_again" placeholder="Confirm Password" minlength="6" required>
 						<span>Address:</span>
 						<textarea name="address" placeholder="Your Address" minlength="6" required>{{\App\Classes\Request::old('post','address')}}</textarea>
 

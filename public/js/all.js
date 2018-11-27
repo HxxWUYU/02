@@ -273,7 +273,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				cartTotal:[],
 				loading:false,
 				fail:false,
-				messgage:''
+				messgage:'',
+				authenticated:false
 			},
 			methods:{
 				displayItems:function(time){
@@ -289,6 +290,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 								app.items = response.data.items;
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
+								app.authenticated = response.data.authenticated;
 
 							}
 						});
