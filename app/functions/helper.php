@@ -2,6 +2,7 @@
 
 
 use App\Classes\Session;
+use App\Models\User;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Philo\Blade\Blade;
 use voku\helper\Paginator;
