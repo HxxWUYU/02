@@ -11,7 +11,14 @@ use App\Models\User;
 
 class AuthController extends BaseController{
 
+	public function __construct(){
+		if(isAuthenticated()){
+			Redirect::to('/02/public/');
+		}
+	}
+
 	public function showRegisterForm(){
+
 		return view('register');
 	}
 
@@ -105,6 +112,15 @@ class AuthController extends BaseController{
 		}else{
 			return null;
 		}
+	}
+
+	public logout(){
+		if(isAuthenticated()){
+			Session::remove('SESSION_USER_ID');
+			Session::remove('SESSION_USER_NAME');
+
+		}
+		Redirect::to('/02/public/');
 	}
 	
 }

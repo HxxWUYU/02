@@ -42,10 +42,18 @@ $categories = \App\Models\Category::with('subCategories')->get();
 			  </div>
 			  <div class="top-bar-right">
 			    <ul class="dropdown menu vertical medium-horizontal">
-			    	<li><a href="#">Username</a></li>
-			    	<li><a href="/02/public/login">Sign In</a></li>
-			    	<li><a href="/02/public/register">Register</a></li>
-			    	<li><a href="/02/public/cart">Cart</a></li>  
+			    @if(isAuthenticated())
+
+
+		    	<li>{{user()->username}}</li>
+		    	<li><a href="/02/public/cart">Cart</a></li>  
+		    	<li><a href="/02/public/logout">Logout</a></li>  
+		    	
+		    	@else
+		    	<li><a href="/02/public/login">Sign In</a></li>
+		    	<li><a href="/02/public/register">Register</a></li>
+		    	<li><a href="/02/public/cart">Cart</a></li>  
+		    	@endif 
 			    </ul>
 			  </div>
 	 	</div>
