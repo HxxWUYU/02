@@ -106,6 +106,6 @@ class AuthController extends BaseController{
 			return null;
 		}
 	}
-	}
+	
 }
 ?>
