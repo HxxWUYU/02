@@ -45,7 +45,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 			    @if(isAuthenticated())
 
 
-		    	<li>{{user()->username}}</li>
+		    	<li><a href="#">{{user()->username}}</a></li>
 		    	<li><a href="/02/public/cart">Cart&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 		    	<li><a href="/02/public/logout">Logout</a></li>  
 		    	
@@ -102,7 +102,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		    	@if(isAuthenticated())
 
 
-		    	<li>{{user()->username}}</li>
+		    	<li><a href="#" >{{user()->username}}</a></li>
 		    	<li><a href="/02/public/cart">Cart&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
 		    	<li><a href="/02/public/logout">Logout</a></li>  
 		    	
