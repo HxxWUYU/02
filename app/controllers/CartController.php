@@ -225,12 +225,12 @@ $data = [
 			}
 
 			Cart::clear();
-			
-			echo json_encode(['success'=>'Thank you for you purchase!']);
 			ob_end_flush();
 			while (@ob_end_clean()) {  
     			// do nothing   
-	}
+			}
+			echo json_encode(['success'=>'Thank you for you purchase!']);
+			
 			exit;
 		}
 		// echo json_encode(['success'=>'Yes!!!']);
