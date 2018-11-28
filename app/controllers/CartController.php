@@ -213,7 +213,7 @@ class CartController extends BaseController{
 			}
 
 			Cart::clear();
-			echo json_encode(['success'=>'Thank you for you purchase!']]);
+			echo json_encode(['success'=>'Thank you for you purchase!']);
 		}
 		// echo json_encode(['success'=>'Yes!!!']);
 	}
