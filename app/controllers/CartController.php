@@ -144,7 +144,7 @@ class CartController extends BaseController{
 			$result['product']=array();
 			$result['order_no']=array();
 			$result['total']=array();
-			
+
 			$request = Request::get('post');
 			$token = $request->stripeToken;
 			$mail = $request->stripeEmail;
@@ -225,6 +225,7 @@ $data = [
 			}
 
 			Cart::clear();
+			ob_end_clean();
 			echo json_encode(['success'=>'Thank you for you purchase!']);
 		}
 		// echo json_encode(['success'=>'Yes!!!']);

@@ -39,6 +39,7 @@ function make($filename,$data){
 	$content = ob_get_contents();
 
 	//erase the output and turn off output buffering
+	
 	ob_end_clean();
 
 	return $content;

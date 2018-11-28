@@ -10,7 +10,7 @@
 		
 	</div>
 
-	<h2 style='color:#d23600'>Hello <?php user()->fullname?>,</h2>
+	<h2 style='color:#d23600'>Hello <?php echo user()->fullname ?>,</h2>
 	<p>Your order confirmation details: <span>#<?php echo $data['order_no']?></span></p>
 	<table cellpadding="5" cellspacing="5" border="0" width="600" style="border:1px solid #0a0a0a;">
 		<tr style="background-color: black; color:white;">
