@@ -2,14 +2,14 @@
 	'use strict';
 
 	HXXSTORE.product.cart=function(){
-		
+
 		// var stripe = StripeCheckout.configure({
 		// 	key:$('#properties').data('stripe-key'),
 		// 	locale:'auto',
 		// 	token:function(token){
 		// 		var data = $.param({stripeToken:token.id,stripeEmail:token,email});
 		// 		axios.post('/02/public/cart/payment',data).then(function(response){
-		// 			 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+		// 			 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
 		// 			 	app.displayItems(100);
 		// 		}).catch(function(error){
 		// 			console.log(error);
@@ -59,7 +59,7 @@
 				removeItem:function(index){
 					var postData = $.param({item_index:index});
 					axios.post('/02/public/cart/remove',postData).then(function(response){
-					$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+					$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
 
 						app.displayItems(100);
 					});
@@ -71,7 +71,7 @@
 				},
 				clearChart:function(){
 					axios.get('/02/public/cart/clear').then(function(response){
-					$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+					$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
 
 						app.displayItems(100);
 					});
