@@ -1,0 +1,49 @@
+.dashboard{
+	padding:2rem 1rem;
+
+	.summary{
+
+		.card{
+			width:95%;
+			margin: 0 auto;
+
+			.card-section{
+
+				.fa{
+					font-size: 2.5rem;
+
+					&.fa-shopping-cart{
+						color:#ff4500;
+					}
+
+					&.fa-thermometer-empty{
+						color:#da8301;
+					}
+
+					&.fa-users{
+						color:#00BFFF;
+					}
+
+					&.fa-money{
+						color:#00AA00;
+					}
+				}
+
+				p,h4{
+					margin: 0;
+					padding: 0;
+					text-align: right;
+
+				}
+			}
+
+			.card-divider{
+				border-top: 1px solid #6c9a9d;
+				background-color: white;
+				a{
+					color:#337ab7;
+				}
+			}
+		}
+	}
+}
