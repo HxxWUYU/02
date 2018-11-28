@@ -133,5 +133,9 @@ class CartController extends BaseController{
 		echo json_encode(['success'=>'Cart Cleared Successfuly!']);
 		exit;
 	}
+
+	public function checkout(){
+		echo json_encode(['success'=>'Yes!!!']);
+	}
 }
 ?>

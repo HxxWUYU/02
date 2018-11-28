@@ -8,7 +8,7 @@
 			locale:'auto',
 			token:function(token){
 				var data = $.param({stripeToken:token.id,stripeEmail:token,email});
-				axios.post('/02/public/cart/payment',data).then(function(response){
+				axios.post('/02/public/cart/checkout',data).then(function(response){
 					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
 					 	app.displayItems(100);
 				}).catch(function(error){
