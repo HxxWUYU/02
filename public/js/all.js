@@ -269,10 +269,11 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 		var stripe = StripeCheckout.configure({
 			key:$('#properties').data('stripe-key'),
 			locale:'auto',
+			app.loading=true;
+			app.displayItems();
 			token:function(token){
 				var data = $.param({stripeToken:token.id,stripeEmail:token.email});
-				app.loading=true;
-				app.displayItems();
+				
 				axios.post('/02/public/cart/checkout',data).then(function(response){
 						app.loading=false;
 					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
