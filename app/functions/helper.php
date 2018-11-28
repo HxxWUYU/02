@@ -38,7 +38,7 @@ function make($filename,$data){
 	//get content of the file
 	$content = ob_get_contents();
 	
-
+	ob_end_flush();
 	//erase the output and turn off output buffering
 
 	while (@ob_end_clean()) {  

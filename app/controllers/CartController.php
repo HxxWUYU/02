@@ -215,7 +215,7 @@ $data = [
 				'body' => $result
 			];
 
-			(new Mail())->send($data);
+			//(new Mail())->send($data);
 
 			// echo json_encode(['customer'=>$customer]);
 			// exit;
@@ -225,7 +225,7 @@ $data = [
 			}
 
 			Cart::clear();
-			ob_end_flush();
+			
 			while (@ob_end_clean()) {  
     			// do nothing   
 			}
