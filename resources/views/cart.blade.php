@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('title',"Your shopping cart") 
 @section('data-page-id','cart')
+@section('stripe-checkout')
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+@endsection
 
 @section('content')
 	<div class="shopping_cart" id="shopping_cart" >
@@ -110,12 +114,14 @@
 								<button type="submit" @click="clearChart" class="button alert float-left">EmptyChart &nbsp<i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
 							
 							<a href="/02/public/" class="button secondary float-right" >Continue Shopping &nbsp<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-							<button v-if="authenticated" class="button success float-right" style="margin-right: 0.5rem;">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
+							<button v-if="authenticated" @click.prevent="checkout" class="button success float-right" style="margin-right: 0.5rem;">Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i></button>
 							<span v-else>
 								<a href="/02/public/login" class="button success float-right" style="margin-right: 0.5rem;">
 									Checkout &nbsp<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
 								</a>
 							</span>
+
+							<span id="properties" class="hide" data-customer-email="{{user()->email}}" data-stripe-key="{{\App\Classes\Session::get('publishable_key')}}"></span>
 							</div>
 						
 					</div>

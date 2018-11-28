@@ -265,16 +265,30 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 	'use strict';
 
 	HXXSTORE.product.cart=function(){
+		var stripe = StripeCheckout.configure({
+			key:$('#properties').data('stripe-key'),
+			locale:'auto',
+			token:function(token){
+				var data = $.param({stripeToken:token.id,stripeEmail:token,email});
+				axios.post('/02/public/cart/payment',data).then(function(response){
+					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+					 	app.displayItems(100);
+				}).catch(function(error){
+					console.log(error);
+				});
+			}
+		});
 		// alert(1);
 		var app = new Vue({
 			el:'#shopping_cart',
 			data:{
 				items:[],
-				cartTotal:[],
+				cartTotal:0,
 				loading:false,
 				fail:false,
 				messgage:'',
-				authenticated:false
+				authenticated:false,
+				amount:0
 			},
 			methods:{
 				displayItems:function(time){
@@ -291,6 +305,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
 								app.authenticated = response.data.authenticated;
+								app.amount = response.data.amount;
 
 							}
 						});
@@ -306,8 +321,8 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				removeItem:function(index){
 					var postData = $.param({item_index:index});
 					axios.post('/02/public/cart/remove',postData).then(function(response){
-							$('.notify').slideDown(400).delay(3000).slideUp(300).
-						html(response.data.success);
+					$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+
 						app.displayItems(100);
 					});
 					// var postData = $.param({item_index:index});
@@ -318,10 +333,19 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 				clearChart:function(){
 					axios.get('/02/public/cart/clear').then(function(response){
-						$('.notify').slideDown(400).delay(3000).slideUp(300).
-						html(response.data.success);
+											 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+
 						app.displayItems(100);
 					});
+				},
+				checkout:function(){
+					Stripe.open({
+						name:"Hxx Store",
+						description:"Shopping Cart Items",
+						email:$("#properties").data("customer-email"),
+						price:app.amount,
+						zipCode:true
+					})
 				}
 
 			},
