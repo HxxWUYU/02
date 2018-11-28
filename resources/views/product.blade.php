@@ -40,7 +40,7 @@
 						    	Add to cart
 						    </button>
 
-						     <button v-else class="button cart " style="color:grey;">
+						     <button v-else class="button cart" disabled style="color:grey;">
 						    	Out of Stock
 						    </button>
 						</h2>
@@ -69,11 +69,11 @@
 						    </a>
 						   
 
-							 <button  v-if="similar.quantity>0" @click.prevent="addToCart(similar.id)" class="button cart ">
+							 <button  v-if="similar.quantity>0" @click.prevent="addToCart(similar.id)" class="button cart expanded ">
 						    	@{{similar.price}} - Add to cart
 						    </button>
 
-						     <button v-else class="button cart " style="color:grey;">
+						     <button v-else class="button cart expanded" disabled style="color:grey;">
 						    	Out of Stock
 						    </button>
 						  </div>
