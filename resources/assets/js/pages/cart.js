@@ -21,7 +21,7 @@
 				});
 
 				app.loading=true;
-				app.displayItems();
+				app.displayItems(200);
 			}
 		});
 		
