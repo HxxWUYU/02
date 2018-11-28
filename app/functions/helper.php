@@ -91,7 +91,7 @@ function user(){
 function convertToCents($value){
 	//remove commas
 	$value = preg_replace("/\,i", "", $value);
-	$value = preg_replace("/([^0-9\.\-])i", "", $value);
+	$value = preg_replace("/([^0-9\.\-])/i", "", $value);
 
 	if(!is_numeric($value)){
 		return 0.00;

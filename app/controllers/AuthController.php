@@ -119,10 +119,10 @@ class AuthController extends BaseController{
 			Session::remove('SESSION_USER_ID');
 			Session::remove('SESSION_USER_NAME');
 
-			// if(!Session::has('user_cart')){
-			// 	session_destroy();
-			// 	session_regenerate_id(true);
-			// }
+			if(!Session::has('user_cart')){
+				session_destroy();
+				session_regenerate_id(true);
+			}
 
 		}
 		Redirect::to('/02/public/');
