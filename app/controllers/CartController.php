@@ -6,7 +6,11 @@ use App\Classes\Cart;
 use App\Classes\Mail;
 use App\Classes\Request;
 use App\Classes\Session;
+use App\Models\Order;
+use App\Models\Payment;
 use App\Models\Product;
+use Stripe\Charge;
+use Stripe\Customer;
 
 class CartController extends BaseController{
 
@@ -66,6 +70,7 @@ class CartController extends BaseController{
 			}
 
 			$cartTotal = number_format($cartTotal,2);
+			Session::add('cartTotal',$cartTotal);
 			echo json_encode(['items'=>$result,'cartTotal'=>$cartTotal,'authenticated'=>isAuthenticated(),'amount'=>convertToCents($cartTotal)]);
 			exit;
 		}
@@ -135,7 +140,82 @@ class CartController extends BaseController{
 	}
 
 	public function checkout(){
-		echo json_encode(['success'=>'Yes!!!']);
+		if(Reuest::has('post')){
+			$result=array();
+			$request = Request::get('post');
+			$token = $request->stripeToken;
+			$mail = $request->stripeEmail;
+			try{
+				$customer = Customer::create([
+					'email'=>$email,
+					'source'=>$token
+				]);
+				$amount = convertToCents(Session::get('cartTotal'));
+				$charge = Charge::create([
+					'customer'=>$customer->id,
+					'amount'=>$amount,
+					'description'=>user()->fullname.' purchase'
+					'currency'=>'usd'
+				]);
+
+				$order_id = strtoupper(uniqid());
+				
+			foreach($_SESSION['user_cart'] as $cart_items){
+				$productId = $cart_items['product_id'];
+				$quantity = $cart_items['quantity'];
+				$item = Product::where('id',$productId)->first();
+				if(!$item){
+					continue;
+				}else{
+					$totalPrice = $item->price*$quantity;
+					$totalPrice = number_format($totalPrice,2);
+
+					Order::create([
+						'user_id'=>user()->id,
+						'product_id'=>$productId,
+						'unit_price'=>$item->price,
+						'status'=>'Pending',
+						'quantity'=>$quantity,
+						'total'=>$totalPrice,
+						'order_no'=>$order_id
+					]);
+
+					$item->quantity = $item->quantity-$quantity;
+					$item->save();
+
+					array_push($result,[
+						'id'=>$item->id,
+						'name'=>$item->name,
+						'image'=>$item->image_path,
+						'description'=>$item->description,
+						'price'=>$item->price,
+						'totalPrice'=>$totalPrice,
+						'quantity'=>$quantity,
+						'stock'=>$item->quantity,
+						
+					]);
+					
+				}
+			}
+
+			Payment::create([
+				'user_id'=>user()->id,
+				'amount'=>$charge->amount,
+				'status'=>$charge->status,
+				'order_no'=>$order_id
+			]);
+
+			// echo json_encode(['customer'=>$customer]);
+			// exit;
+
+			}catch(\Exception $ex){
+				echo $ex->getMessage();
+			}
+
+			Cart::clear();
+			echo json_encode(['success'=>'Thank you for you purchase!']]);
+		}
+		// echo json_encode(['success'=>'Yes!!!']);
 	}
 }
 ?>
