@@ -35,8 +35,11 @@
 						    <a :href="'/02/public/product/'+feature.id" class="button more expanded">
 						    	See More
 						    </a>
-						    <button @click.prevent="addToCart(feature.id)" class="button cart expanded">
+						    <button v-if="feature.quantity>0" @click.prevent="addToCart(feature.id)" class="button cart expanded">
 						    	$@{{feature.price}} - Add to cart
+						    </button>
+						     <button v-else class="button cart expanded" style="color:grey;">
+						    	Out of Stock
 						    </button>
 						  </div>
 						</div>
@@ -61,8 +64,12 @@
 						    <a :href="'/02/public/product/'+product.id" class="button more expanded">
 						    	See More
 						    </a>
-						    <button  @click.prevent="addToCart(product.id)" class="button cart expanded">
+						    <button  v-if="product.quantity>0" @click.prevent="addToCart(product.id)" class="button cart expanded">
 						    	$@{{product.price}} - Add to cart
+						    </button>
+
+						     <button v-else class="button cart expanded" style="color:grey;">
+						    	Out of Stock
 						    </button>
 						  </div>
 						</div>
