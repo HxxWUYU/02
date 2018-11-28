@@ -340,7 +340,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					});
 				},
 				checkout:function(){
-					Stripe.open({
+					stripe.open({
 						name:"Hxx Store",
 						description:"Shopping Cart Items",
 						email:$("#properties").data("customer-email"),
