@@ -144,7 +144,7 @@ class CartController extends BaseController{
 			$result['product']=array();
 			$result['order_no']=array();
 			$result['total']=array();
-			$request = Request::get('post');
+		//	$request = Request::get('post');
 			$token = $request->stripeToken;
 			$mail = $request->stripeEmail;
 			try{
@@ -206,7 +206,7 @@ class CartController extends BaseController{
 			$result["order_no"] = $order_id;
 
 			$result['total']=Session::get('cartTotal');
-$data = [
+			$data = [
 				'to' => user()->email,
 				'subject'=> 'Order Confirmation',
 				'view' => 'purchase',

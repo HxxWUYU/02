@@ -27,7 +27,7 @@
 				<td width="400"><?= $item['name']?></td>
 				<td width="100"><?= $item['price']?></td>
 				<td width="50"><?= $item['quantity']?></td>
-				<td width="50">$<?= $item['total']?></td>
+				<td width="50">$<?= $item['totalPrice']?></td>
 			</tr>
 		<?php endforeach;?>
 	</table>
