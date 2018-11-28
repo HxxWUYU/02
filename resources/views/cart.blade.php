@@ -3,7 +3,7 @@
 @section('data-page-id','cart')
 @section('stripe-checkout')
 
-<script src="https://checkout.stripe.com/checkout.js"></script>
+<!-- <script src="https://checkout.stripe.com/checkout.js"></script> -->
 @endsection
 
 @section('content')
