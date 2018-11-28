@@ -141,7 +141,9 @@ class CartController extends BaseController{
 
 	public function checkout(){
 		if(Request::has('post')){
-			$result=array();
+			$result['product']=array();
+			$result['order_no']=array();
+			$result['total']=array();
 			$request = Request::get('post');
 			$token = $request->stripeToken;
 			$mail = $request->stripeEmail;
@@ -183,15 +185,11 @@ class CartController extends BaseController{
 					$item->quantity = $item->quantity-$quantity;
 					$item->save();
 
-					array_push($result,[
-						'id'=>$item->id,
-						'name'=>$item->name,
-						'image'=>$item->image_path,
-						'description'=>$item->description,
+					array_push($result['product'],[
+						'name'=>$item->name,	
 						'price'=>$item->price,
 						'totalPrice'=>$totalPrice,
-						'quantity'=>$quantity,
-						'stock'=>$item->quantity,
+						'quantity'=>$quantity
 						
 					]);
 					
@@ -204,6 +202,19 @@ class CartController extends BaseController{
 				'status'=>$charge->status,
 				'order_no'=>$order_id
 			]);
+
+			$result["order_no"] = $order_id;
+
+			$result['total']=Session::get('cartTotal');
+$data = [
+				'to' => user()->email,
+				'subject'=> 'Order Confirmation',
+				'view' => 'purchase',
+				'name' => user()->fullname,
+				'body' => $result
+			];
+
+			(new Mail())->send($data);
 
 			// echo json_encode(['customer'=>$customer]);
 			// exit;

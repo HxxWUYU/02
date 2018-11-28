@@ -53,6 +53,13 @@ class Mail{
 		$environment = getenv('APP_ENV'); //local or production
 
 		if($environment === 'local'){
+			$this->mail->SMTPOptions=[
+				'SSL'=array(
+					'verify_peer'=>false,
+					'verify_peer_name'=>false,
+					'allow_self_signed'=>true
+				)
+			];
 			$this->mail->SMTPDebug = '';
 		}
 
