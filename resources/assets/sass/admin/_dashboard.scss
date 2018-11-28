@@ -9,7 +9,7 @@
 
 		.card{
 			width:95%;
-			include breakpoint(medium only){
+			@include breakpoint(medium only){
 						width:98%;
 
 			}
@@ -22,7 +22,7 @@
 				.fa{
 					font-size: 2.5rem;
 
-					include breakpoint(medium only){
+					@include breakpoint(medium only){
 						font-size: 1rem;
 					}
 
@@ -44,7 +44,7 @@
 				}
 
 				p,h4{
-					include breakpoint(medium only){
+					@include breakpoint(medium only){
 						font-size: 0.8rem;
 					}
 					margin: 0;
@@ -60,6 +60,24 @@
 				a{
 					color:#337ab7;
 				}
+			}
+		}
+	}
+
+	.graph{
+		margin: 2rem 0.5rem;
+		@include breakpoint(small only){
+			margin-top: 1rem;
+		}
+
+		.card{
+			width: 98%;
+		}
+
+		canvas{
+			height:300px !important;
+			@include breakpoint(small only){
+				height: auto !important;
 			}
 		}
 	}

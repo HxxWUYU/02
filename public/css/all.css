@@ -5396,16 +5396,20 @@ select {
   margin: 0 auto;
 }
 
-.dashboard .summary .card include breakpoint(medium only) {
-  width: 98%;
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .dashboard .summary .card {
+    width: 98%;
+  }
 }
 
 .dashboard .summary .card .card-section .fa {
   font-size: 2.5rem;
 }
 
-.dashboard .summary .card .card-section .fa include breakpoint(medium only) {
-  font-size: 1rem;
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .dashboard .summary .card .card-section .fa {
+    font-size: 1rem;
+  }
 }
 
 .dashboard .summary .card .card-section .fa.fa-shopping-cart {
@@ -5430,8 +5434,10 @@ select {
   text-align: right;
 }
 
-.dashboard .summary .card .card-section p include breakpoint(medium only), .dashboard .summary .card .card-section h4 include breakpoint(medium only) {
-  font-size: 0.8rem;
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .dashboard .summary .card .card-section p, .dashboard .summary .card .card-section h4 {
+    font-size: 0.8rem;
+  }
 }
 
 .dashboard .summary .card .card-divider {
@@ -5441,6 +5447,30 @@ select {
 
 .dashboard .summary .card .card-divider a {
   color: #337ab7;
+}
+
+.dashboard .graph {
+  margin: 2rem 0.5rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .dashboard .graph {
+    margin-top: 1rem;
+  }
+}
+
+.dashboard .graph .card {
+  width: 98%;
+}
+
+.dashboard .graph canvas {
+  height: 300px !important;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .dashboard .graph canvas {
+    height: auto !important;
+  }
 }
 
 .navigation {
