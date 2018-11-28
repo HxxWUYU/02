@@ -88,7 +88,7 @@ function user(){
 	return false;
 }
 
-function covertToCents($value){
+function convertToCents($value){
 	//remove commas
 	$value = preg_replace("/\,i", "", $value);
 	$value = preg_replace("/([^0-9\.\-])i", "", $value);
