@@ -227,6 +227,10 @@ $data = [
 			Cart::clear();
 			
 			echo json_encode(['success'=>'Thank you for you purchase!']);
+			ob_end_flush();
+			while (@ob_end_clean()) {  
+    			// do nothing   
+	}
 			exit;
 		}
 		// echo json_encode(['success'=>'Yes!!!']);
