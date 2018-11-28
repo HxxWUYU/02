@@ -2,19 +2,20 @@
 	'use strict';
 
 	HXXSTORE.product.cart=function(){
-		var stripe = StripeCheckout.configure({
-			key:$('#properties').data('stripe-key'),
-			locale:'auto',
-			token:function(token){
-				var data = $.param({stripeToken:token.id,stripeEmail:token,email});
-				axios.post('/02/public/cart/payment',data).then(function(response){
-					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
-					 	app.displayItems(100);
-				}).catch(function(error){
-					console.log(error);
-				});
-			}
-		});
+		
+		// var stripe = StripeCheckout.configure({
+		// 	key:$('#properties').data('stripe-key'),
+		// 	locale:'auto',
+		// 	token:function(token){
+		// 		var data = $.param({stripeToken:token.id,stripeEmail:token,email});
+		// 		axios.post('/02/public/cart/payment',data).then(function(response){
+		// 			 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+		// 			 	app.displayItems(100);
+		// 		}).catch(function(error){
+		// 			console.log(error);
+		// 		});
+		// 	}
+		// });
 		// alert(1);
 		var app = new Vue({
 			el:'#shopping_cart',
@@ -42,7 +43,7 @@
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
 								app.authenticated = response.data.authenticated;
-								// app.amount = response.data.amount;
+								app.amount = response.data.amount;
 
 							}
 						});
