@@ -8,6 +8,8 @@
 			locale:'auto',
 			token:function(token){
 				var data = $.param({stripeToken:token.id,stripeEmail:token.email});
+				app.loading=true;
+				app.displayItems();
 				axios.post('/02/public/cart/checkout',data).then(function(response){
 						app.loading=false;
 					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
@@ -78,8 +80,7 @@
 					});
 				},
 				checkout:function(){
-					this.loading=true;
-					app.displayItems();
+					
 					stripe.open({
 						name:"Hxx Store",
 						description:"Shopping Cart Items",
