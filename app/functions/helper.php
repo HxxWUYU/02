@@ -94,7 +94,7 @@ function covertToCents($value){
 	$value = preg_replace("/([^0-9\.\-])i", "", $value);
 
 	if(!is_numeric($value)){
-		return 0.00
+		return 0.00;
 	}else{
 		$value = (float)$value;
 		return round($value,2)*100;
