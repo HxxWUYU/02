@@ -12,24 +12,7 @@ html,body{
   font-family: 'Average', sans-serif;
 }
 
-h2{
-	font-family: 'Fjalla One',sans-serif;
-	font-size: 1.5rem;
-	margin-bottom: 1.6rem;
-	padding: 1rem;
-	font-weight: 500;
 
-	@include breakpoint(medium only){
-		font-size: 1.8rem;
-	}
-
-	@include breakpoint(large only){
-		font-size: 2rem;
-	}
-
-
-	
-}
 
 .notify{
 	display: none;
@@ -83,8 +66,21 @@ table{
 
 
 
-hr{
+.admin_shared{
+	hr{
 	margin:0 0 1rem 0;
+	}
+
+	h2{
+	font-family: 'Fjalla One',sans-serif;
+	font-size: 1.5rem;
+	margin-bottom: 0;
+	margin-top: 1rem;
+	padding-left:0;
+	font-weight: 500;
+
+
+	}
 }
 
 .reveal{

@@ -5238,26 +5238,6 @@ html, body {
   font-family: 'Average', sans-serif;
 }
 
-h2 {
-  font-family: 'Fjalla One',sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 1.6rem;
-  padding: 1rem;
-  font-weight: 500;
-}
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  h2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {
-  h2 {
-    font-size: 2rem;
-  }
-}
-
 .notify {
   display: none;
   position: fixed;
@@ -5309,8 +5289,17 @@ table th, table tr, table td {
   list-style-type: none;
 }
 
-hr {
+.admin_shared hr {
   margin: 0 0 1rem 0;
+}
+
+.admin_shared h2 {
+  font-family: 'Fjalla One',sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  padding-left: 0;
+  font-weight: 500;
 }
 
 .reveal {

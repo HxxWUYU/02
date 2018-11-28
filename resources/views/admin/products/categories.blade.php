@@ -4,7 +4,7 @@
 
 @section('content')
 
- <div class="category">
+ <div class="category admin_shared">
  	<div class="row expanded">
  		<div class="column medium-11">
  			<h2>Product Categories</h2><hr>
@@ -130,7 +130,7 @@
  </div>
 
 
- <div class="subcategory">
+ <div class="subcategory admin_shared">
  	<div class="row expanded">
  		<div class="column medium-11">
  			<h2>Subcategories</h2><hr>

@@ -4,7 +4,7 @@
 
 @section('content')
 
- <div class="products">
+ <div class="products admin_shared">
  	<div class="row expanded">
  		<div class="column medium-11">
  			<h2>Mange Inventory Item</h2><hr>
