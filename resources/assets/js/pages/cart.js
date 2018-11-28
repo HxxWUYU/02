@@ -76,15 +76,15 @@
 						app.displayItems(100);
 					});
 				},
-				// checkout:function(){
-				// 	Stripe.open({
-				// 		name:"Hxx Store",
-				// 		description:"Shopping Cart Items",
-				// 		email:$("#properties").data("customer-email"),
-				// 		price:app.amount,
-				// 		zipCode:true
-				// 	})
-				// }
+				checkout:function(){
+					Stripe.open({
+						name:"Hxx Store",
+						description:"Shopping Cart Items",
+						email:$("#properties").data("customer-email"),
+						price:app.amount,
+						zipCode:true
+					})
+				}
 
 			},
 			created:function(){
