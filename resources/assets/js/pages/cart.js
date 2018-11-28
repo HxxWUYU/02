@@ -81,7 +81,7 @@
 						name:"Hxx Store",
 						description:"Shopping Cart Items",
 						email:$("#properties").data("customer-email"),
-						price:app.amount,
+						amount:app.amount,
 						zipCode:true
 					})
 				}
