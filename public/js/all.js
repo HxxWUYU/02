@@ -305,7 +305,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 								app.cartTotal = response.data.cartTotal;
 								app.loading=false;
 								app.authenticated = response.data.authenticated;
-								app.amount = response.data.amount;
+								// app.amount = response.data.amount;
 
 							}
 						});
@@ -333,7 +333,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				},
 				clearChart:function(){
 					axios.get('/02/public/cart/clear').then(function(response){
-											 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
+					$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(message);
 
 						app.displayItems(100);
 					});
