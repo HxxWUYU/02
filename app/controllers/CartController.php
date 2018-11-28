@@ -229,7 +229,7 @@ $data = [
 			while (@ob_end_clean()) {  
     			// do nothing   
 			}
-			echo json_encode(['success'=>'Thank you for you purchase!']);
+			echo json_encode(['success'=>'Thank you for you purchase! A confimation email has been sent to your email address']);
 			
 			exit;
 		}

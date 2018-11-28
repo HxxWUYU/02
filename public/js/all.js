@@ -277,7 +277,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 				
 				axios.post('/02/public/cart/checkout',data).then(function(response){
 						app.loading=false;
-					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
+					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(400).html(response.data.success);
 					 	app.displayItems(100);
 				}).catch(function(error){
 					console.log(error);
