@@ -147,9 +147,9 @@ class CartController extends BaseController{
 			$mail = $request->stripeEmail;
 			try{
 				$customer = Customer::create([
-					'email'=>$email,
-					'source'=>$token
-				]);
+                  'email' => $email,
+                  'source' => $token
+              ]);
 				$amount = convertToCents(Session::get('cartTotal'));
 				$charge = Charge::create([
 					'customer'=>$customer->id,
