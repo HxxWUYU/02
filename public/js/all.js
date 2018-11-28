@@ -270,7 +270,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			key:$('#properties').data('stripe-key'),
 			locale:'auto',
 			token:function(token){
-				var data = $.param({stripeToken:token.id,stripeEmail:token,email});
+				var data = $.param({stripeToken:token.id,stripeEmail:token.email});
 				axios.post('/02/public/cart/checkout',data).then(function(response){
 					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
 					 	app.displayItems(100);
@@ -343,7 +343,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					stripe.open({
 						name:"Hxx Store",
 						description:"Shopping Cart Items",
-						email:$("#properties").data("customer-email"),
+						email: $('#properties').data('customer-email'),
 						amount:app.amount,
 						zipCode:true
 					})
