@@ -5385,13 +5385,27 @@ select {
   padding: 2rem 1rem;
 }
 
+@media screen and (max-width: 39.9375em) {
+  .dashboard .summary {
+    padding-bottom: 1rem;
+  }
+}
+
 .dashboard .summary .card {
   width: 95%;
   margin: 0 auto;
 }
 
+.dashboard .summary .card include breakpoint(medium only) {
+  width: 98%;
+}
+
 .dashboard .summary .card .card-section .fa {
   font-size: 2.5rem;
+}
+
+.dashboard .summary .card .card-section .fa include breakpoint(medium only) {
+  font-size: 1rem;
 }
 
 .dashboard .summary .card .card-section .fa.fa-shopping-cart {
@@ -5414,6 +5428,10 @@ select {
   margin: 0;
   padding: 0;
   text-align: right;
+}
+
+.dashboard .summary .card .card-section p include breakpoint(medium only), .dashboard .summary .card .card-section h4 include breakpoint(medium only) {
+  font-size: 0.8rem;
 }
 
 .dashboard .summary .card .card-divider {

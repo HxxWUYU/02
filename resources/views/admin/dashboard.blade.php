@@ -104,6 +104,34 @@
 
  		
  	</div>
+
+ 	<div class="row collapse expanded graph">
+ 		<div class="small-12 medium-6 column monthly-sales">
+ 			<div class="card">
+ 				<div class="card-section">
+ 					<h4>
+ 						Monthly Orders
+ 					</h4>
+ 					<canvas id="order">
+ 						
+ 					</canvas>
+ 				</div>
+ 			</div>
+ 		</div>
+
+ 		<div class="small-12 medium-6 column monthly-revenue">
+ 			<div class="card">
+ 				<div class="card-section">
+ 					<h4>
+ 						Monthly Revenue
+ 					</h4>
+ 					<canvas id="revenue">
+ 						
+ 					</canvas>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
  </div>
 
 @endsection

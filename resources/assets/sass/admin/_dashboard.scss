@@ -3,14 +3,28 @@
 
 	.summary{
 
+		@include breakpoint(small only){
+			padding-bottom: 1rem;
+		}
+
 		.card{
 			width:95%;
+			include breakpoint(medium only){
+						width:98%;
+
+			}
 			margin: 0 auto;
 
 			.card-section{
 
+				
+
 				.fa{
 					font-size: 2.5rem;
+
+					include breakpoint(medium only){
+						font-size: 1rem;
+					}
 
 					&.fa-shopping-cart{
 						color:#ff4500;
@@ -30,6 +44,9 @@
 				}
 
 				p,h4{
+					include breakpoint(medium only){
+						font-size: 0.8rem;
+					}
 					margin: 0;
 					padding: 0;
 					text-align: right;
