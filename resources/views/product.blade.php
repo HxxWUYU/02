@@ -40,7 +40,7 @@
 						    	Add to cart
 						    </button>
 
-						     <button v-else class="button cart" disabled style="color:grey;">
+						     <button v-else class="button cart" disabled>
 						    	Out of Stock
 						    </button>
 						</h2>
@@ -73,7 +73,7 @@
 						    	@{{similar.price}} - Add to cart
 						    </button>
 
-						     <button v-else class="button cart expanded" disabled style="color:grey;">
+						     <button v-else class="button cart expanded" disabled>
 						    	Out of Stock
 						    </button>
 						  </div>

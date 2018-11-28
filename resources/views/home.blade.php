@@ -68,7 +68,7 @@
 						    	$@{{product.price}} - Add to cart
 						    </button>
 
-						     <button v-else class="button cart expanded" disabled style="color:grey;">
+						     <button v-else class="button cart expanded" disabled>
 						    	Out of Stock
 						    </button>
 						  </div>
