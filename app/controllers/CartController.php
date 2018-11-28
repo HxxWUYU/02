@@ -154,7 +154,7 @@ class CartController extends BaseController{
 				$charge = Charge::create([
 					'customer'=>$customer->id,
 					'amount'=>$amount,
-					'description'=>user()->fullname.' purchase'
+					'description'=>user()->fullname.' purchase',
 					'currency'=>'usd'
 				]);
 
