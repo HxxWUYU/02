@@ -140,7 +140,7 @@ class CartController extends BaseController{
 	}
 
 	public function checkout(){
-		if(Reuest::has('post')){
+		if(Request::has('post')){
 			$result=array();
 			$request = Request::get('post');
 			$token = $request->stripeToken;

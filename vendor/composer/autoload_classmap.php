@@ -27,6 +27,8 @@ return array(
     'App\\Controllers\\IndexController' => $baseDir . '/app/controllers/IndexController.php',
     'App\\Controllers\\ProductController' => $baseDir . '/app/controllers/ProductController.php',
     'App\\Models\\Category' => $baseDir . '/app/models/Category.php',
+    'App\\Models\\Order' => $baseDir . '/app/models/Order.php',
+    'App\\Models\\Payment' => $baseDir . '/app/models/Payment.php',
     'App\\Models\\Product' => $baseDir . '/app/models/Product.php',
     'App\\Models\\SubCategory' => $baseDir . '/app/models/SubCategory.php',
     'App\\Models\\User' => $baseDir . '/app/models/User.php',

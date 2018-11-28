@@ -211,6 +211,8 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/controllers/IndexController.php',
         'App\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/controllers/ProductController.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/models/Category.php',
+        'App\\Models\\Order' => __DIR__ . '/../..' . '/app/models/Order.php',
+        'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/models/Payment.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/models/Product.php',
         'App\\Models\\SubCategory' => __DIR__ . '/../..' . '/app/models/SubCategory.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
