@@ -66,7 +66,7 @@ class CartController extends BaseController{
 			}
 
 			$cartTotal = number_format($cartTotal,2);
-			echo json_encode(['items'=>$result,'cartTotal'=>$cartTotal,'authenticated'=>isAuthenticated()],'amount'=>converToCents($cartTotal));
+			echo json_encode(['items'=>$result,'cartTotal'=>$cartTotal,'authenticated'=>isAuthenticated(),'amount'=>converToCents($cartTotal)]);
 			exit;
 		}
 		}catch(\Exception $ex){
