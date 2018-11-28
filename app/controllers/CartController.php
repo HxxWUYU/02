@@ -215,7 +215,7 @@ $data = [
 				'body' => $result
 			];
 
-			//(new Mail())->send($data);
+			(new Mail())->send($data);
 
 			// echo json_encode(['customer'=>$customer]);
 			// exit;
