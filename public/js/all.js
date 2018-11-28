@@ -274,7 +274,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 			token:function(token){
 				var data = $.param({stripeToken:token.id,stripeEmail:token.email});
 				
-				axios.post('/02/public/cart/checkout',data).alert(1).then(function(response){
+				axios.post('/02/public/cart/checkout',data).then(function(response){
 						app.loading=false;
 					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
 					 	app.displayItems(100);
@@ -344,7 +344,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 					});
 				},
 				checkout:function(){
-					
+					alert(1);
 					stripe.open({
 						name:"Hxx Store",
 						description:"Shopping Cart Items",
@@ -352,6 +352,7 @@ e.exports=function(e){return null!=e&&(n(e)||r(e)||!!e._isBuffer)}},function(e,t
 						amount:app.amount,
 						zipCode:true
 					})
+					alert(2);
 				}
 
 			},
