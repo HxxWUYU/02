@@ -38,7 +38,7 @@
 						    <button v-if="feature.quantity>0" @click.prevent="addToCart(feature.id)" class="button cart expanded">
 						    	$@{{feature.price}} - Add to cart
 						    </button>
-						     <button v-else class="button cart expanded" style="color:grey;">
+						     <button v-else class="button cart expanded" disabled style="color:grey;">
 						    	Out of Stock
 						    </button>
 						  </div>
