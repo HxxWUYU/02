@@ -3,20 +3,20 @@
 
 	HXXSTORE.product.cart=function(){
 
-		// var stripe = StripeCheckout.configure({
-		// 	key:$('#properties').data('stripe-key'),
-		// 	locale:'auto',
-		// 	token:function(token){
-		// 		var data = $.param({stripeToken:token.id,stripeEmail:token,email});
-		// 		axios.post('/02/public/cart/payment',data).then(function(response){
-		// 			 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
-		// 			 	app.displayItems(100);
-		// 		}).catch(function(error){
-		// 			console.log(error);
-		// 		});
-		// 	}
-		// });
-		// alert(1);
+		var stripe = StripeCheckout.configure({
+			key:$('#properties').data('stripe-key'),
+			locale:'auto',
+			token:function(token){
+				var data = $.param({stripeToken:token.id,stripeEmail:token,email});
+				axios.post('/02/public/cart/payment',data).then(function(response){
+					 	$('.notify').css('display','none').stop(true,true).clearQueue().slideDown(400).delay(4000).slideUp(300).html(response.data.success);
+					 	app.displayItems(100);
+				}).catch(function(error){
+					console.log(error);
+				});
+			}
+		});
+		
 		var app = new Vue({
 			el:'#shopping_cart',
 			data:{
