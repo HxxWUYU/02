@@ -2,6 +2,7 @@
 namespace App\Controllers\Admin;
 
 use App\Classes\Request;
+use App\Classes\Role;
 use App\Classes\Session;
 use App\Controllers\BaseController;
 use App\Models\Order;
