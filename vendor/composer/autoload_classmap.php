@@ -14,6 +14,7 @@ return array(
     'App\\Classes\\Mail' => $baseDir . '/app/classes/Mail.php',
     'App\\Classes\\Redirect' => $baseDir . '/app/classes/Redirect.php',
     'App\\Classes\\Request' => $baseDir . '/app/classes/Request.php',
+    'App\\Classes\\Role' => $baseDir . '/app/classes/Role.php',
     'App\\Classes\\Session' => $baseDir . '/app/classes/Session.php',
     'App\\Classes\\UploadFile' => $baseDir . '/app/classes/UploadFile.php',
     'App\\Classes\\ValidateRequest' => $baseDir . '/app/classes/ValidateRequest.php',

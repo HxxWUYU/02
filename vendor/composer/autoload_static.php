@@ -198,6 +198,7 @@ class ComposerStaticInitf204e376e5b12b74af553d152fe257b9
         'App\\Classes\\Mail' => __DIR__ . '/../..' . '/app/classes/Mail.php',
         'App\\Classes\\Redirect' => __DIR__ . '/../..' . '/app/classes/Redirect.php',
         'App\\Classes\\Request' => __DIR__ . '/../..' . '/app/classes/Request.php',
+        'App\\Classes\\Role' => __DIR__ . '/../..' . '/app/classes/Role.php',
         'App\\Classes\\Session' => __DIR__ . '/../..' . '/app/classes/Session.php',
         'App\\Classes\\UploadFile' => __DIR__ . '/../..' . '/app/classes/UploadFile.php',
         'App\\Classes\\ValidateRequest' => __DIR__ . '/../..' . '/app/classes/ValidateRequest.php',

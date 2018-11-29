@@ -12,6 +12,13 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class DashboardController extends BaseController{
 
+
+	public function __construct(){
+		if(!Role::middleware('admin')){
+			Redirect::to('/02/public/login')
+		}
+	}
+
 	 public function show()
     {
         $orders = Order::all()->count();
