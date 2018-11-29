@@ -8,6 +8,7 @@ use App\Models\Order;
 use App\Models\Payment;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Database\Capsule\Manager;
 
 class DashboardController extends BaseController{
 
@@ -26,17 +27,26 @@ class DashboardController extends BaseController{
 		
 	}
 
-	public function get(){
+	public function getChartData(){
 
-		Request::refresh();
-		$data = Request::old('post','product');
-		var_dump($data);
-		// if(Request::has('post')){
-		// 	$request = Request::get('post');
-		// 	var_dump($request->product);
-		// }else{
-		// 	var_dump("posting does not exist");
-		// }
+		$revenue = Manager::table('payments')->select(
+			Manger::raw('sum(amount) as `amount`'),
+			Manger::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
+			Manger::raw('YEAR(created_at) year, Month(created_at) month')
+
+		)->groupby('year','month')->get();
+
+		$orders = Manager::table('orders')->select(
+			Manger::raw('count(id) as `count`'),
+			Manger::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
+			Manger::raw('YEAR(created_at) year, Month(created_at) month')
+
+		)->groupby('year','month')->get();
+
+		echo json_encode([
+			'revenues'=>$revenue,
+			'orders'=>$orders
+		]);
 		
 	}
 }

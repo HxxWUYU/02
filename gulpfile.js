@@ -38,6 +38,8 @@ elixir(function (mix){
 
 		bowerPath + '/jquery-validation/dist/jquery.validate.min.js',
 
+		bowerPath + '/chart.js/dist/Chart.bundle.js',
+
 		'js/hxx.js',
 		'js/admin/*.js',
 		'js/pages/*.js',

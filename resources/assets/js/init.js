@@ -28,6 +28,9 @@
 				HXXSTORE.admin.delete();
 				HXXSTORE.admin.create();
 				break;
+			case 'adminDashboard':
+				HXXSTORE.admin.dashboard();
+				break;
 			default:
 			//do nothing
 		}

@@ -2,6 +2,7 @@
 
 
 $router->map('GET','/02/public/admin','App\Controllers\Admin\DashboardController@show','admin_dashboard'); //@sign can be custom 
+$router->map('GET','/02/public/admin/charts','App\Controllers\Admin\DashboardController@getChartData','admin_dashboard_charts'); //@sign can be custom 
 
 $router->map('POST','/02/public/admin','App\Controllers\Admin\DashboardController@get','admin_form'); //@sign can be custom 
 
