@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 use App\Classes\CSRFToken;
 use App\Classes\Redirect;
 use App\Classes\Request;
+use App\Classes\Role;
 use App\Classes\Session;
 use App\Classes\ValidateRequest;
 use App\Controllers\BaseController;
@@ -13,7 +14,11 @@ use App\Models\SubCategory;
 class SubCategoryController extends BaseController{
 
 	
-
+	public function __construct(){
+		if(!Role::middleware('admin')){
+			Redirect::to('/02/public/login');
+		}
+	}
 	public function store(){
 		if(Request::has('post')){
 			$request = Request::get('post');//data in post
