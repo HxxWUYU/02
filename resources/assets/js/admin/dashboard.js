@@ -26,7 +26,7 @@
 				orderLabels.push(monthly.new_date);
 			});
 
-			response.data.revenuee.forEach(function(monthly){
+			response.data.revenues.forEach(function(monthly){
 
 				revenueData.push(monthly.amount);
 				revenueLabels.push(monthly.new_date);
