@@ -5330,7 +5330,7 @@ select {
 }
 
 .nav {
-  background-color: #2A3F54;
+  background-image: url("/02/public/images/sidebar.jpg");
 }
 
 .nav .menu > li > a {
