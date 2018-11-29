@@ -30,7 +30,7 @@ class DashboardController extends BaseController{
 	public function getChartData(){
 
 		$revenue = Manager::table('payments')->select(
-			Manager::raw('sum(amount)as `amount`'),
+			Manager::raw('sum(amount) as `amount`'),
 			Manager::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
 			Manager::raw('YEAR(created_at) year, Month(created_at) month')
 
