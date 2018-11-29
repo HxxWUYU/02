@@ -23,7 +23,8 @@ class DashboardController extends BaseController{
 
 	 public function show()
     {
-        $orders = Order::all()->count();
+        $orders = Capsule::table('orders')->count(Capsule::raw('DISTINCT order_no'));
+        // $orders = Order::all()->count();
         $products = Product::all()->count();
         $users = User::all()->count();
         $payments = Payment::all()->sum('amount') / 100;
@@ -39,7 +40,7 @@ class DashboardController extends BaseController{
         )->groupby('year', 'month')->get();
         //04-2017
         $orders = Capsule::table('orders')->select(
-            Capsule::raw('count(id) as `count`'),
+            Capsule::raw('count(DISTINCT order_no) as `count`'),
             Capsule::raw("DATE_FORMAT(created_at, '%m-%Y') new_date"),
             Capsule::raw('YEAR(created_at) year, Month(created_at) month')
         )->groupby('year', 'month')->get();
