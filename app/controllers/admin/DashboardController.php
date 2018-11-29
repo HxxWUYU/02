@@ -8,7 +8,7 @@ use App\Models\Order;
 use App\Models\Payment;
 use App\Models\Product;
 use App\Models\User;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Capsule\Manager;
 
 class DashboardController extends BaseController{
 
@@ -18,7 +18,7 @@ class DashboardController extends BaseController{
         $products = Product::all()->count();
         $users = User::all()->count();
         $payments = Payment::all()->sum('amount') / 100;
-        return view('02/public/admin/', compact('orders', 'products', 'payments', 'users'));
+        return view('/admin/dashboard', compact('orders', 'products', 'payments', 'users'));
     }
     
     public function getChartData()
