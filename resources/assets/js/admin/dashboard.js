@@ -40,7 +40,21 @@
 				datasets:[
 					{
 						label:'# Revenue',
-						data:revenueData
+						data:revenueData,
+						backgroundColor:[
+							   '#0d47a1',
+                                "#FF6384",
+                                "#4BC0C0",
+                                "#FFCE56",
+                                "#1b5e20",
+                                "#36A2EB",
+                                '#311b92',
+                                '#dd2c00',
+                                '#263238',
+                                '#81c784',
+                                '#b9f6ca',
+                                '#f57c00'
+						]
 					}
 				]
 			}
@@ -53,7 +67,8 @@
 				datasets:[
 					{
 						label:'# Order',
-						data:orderData
+						data:orderData,
+						backgroundColor:['#81c784']
 					}
 				]
 			}
