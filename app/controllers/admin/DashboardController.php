@@ -12,24 +12,18 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class DashboardController extends BaseController{
 
-	public function show(){
-
-		
-		$orders = Order::all()->count();
-
-		$products = Product::all()->count();
-
-		$users = User::all()->count();
-
-		$payments = (Payment::all()->sum('amount'))/100;
-
-		return view("/admin/dashboard",compact('orders','products','users','payments'));
-		
-	}
-
-	public function getChartData(){
-
-		$revenue = Capsule::table('payments')->select(
+	 public function show()
+    {
+        $orders = Order::all()->count();
+        $products = Product::all()->count();
+        $users = User::all()->count();
+        $payments = Payment::all()->sum('amount') / 100;
+        return view('02/public/admin/', compact('orders', 'products', 'payments', 'users'));
+    }
+    
+    public function getChartData()
+    {
+        $revenue = Capsule::table('payments')->select(
             Capsule::raw('sum(amount) / 100 as `amount`'),
             Capsule::raw("DATE_FORMAT(created_at, '%m-%Y') new_date"),
             Capsule::raw('YEAR(created_at) year, Month(created_at) month')
@@ -40,12 +34,10 @@ class DashboardController extends BaseController{
             Capsule::raw("DATE_FORMAT(created_at, '%m-%Y') new_date"),
             Capsule::raw('YEAR(created_at) year, Month(created_at) month')
         )->groupby('year', 'month')->get();
-
-		echo json_encode([
-			'revenues'=>$revenue,
-			'orders'=>$orders
-		]);
-		
-	}
+        
+        echo json_encode([
+            'revenues' => $revenue, 'orders' => $orders
+        ]);
+    }
 }
 ?>
