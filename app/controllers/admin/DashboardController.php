@@ -29,19 +29,17 @@ class DashboardController extends BaseController{
 
 	public function getChartData(){
 
-		$revenue = Manager::table('payments')->select(
-			Manager::raw('sum(amount) as `amount`'),
-			Manager::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
-			Manager::raw('YEAR(created_at) year, Month(created_at) month')
-
-		)->groupby('year','month')->get();
-
-		$orders = Manager::table('orders')->select(
-			Manager::raw('count(id) as `count`'),
-			Manager::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
-			Manager::raw('YEAR(created_at) year, Month(created_at) month')
-
-		)->groupby('year','month')->get();
+		$revenue = Capsule::table('payments')->select(
+            Capsule::raw('sum(amount) / 100 as `amount`'),
+            Capsule::raw("DATE_FORMAT(created_at, '%m-%Y') new_date"),
+            Capsule::raw('YEAR(created_at) year, Month(created_at) month')
+        )->groupby('year', 'month')->get();
+        //04-2017
+        $orders = Capsule::table('orders')->select(
+            Capsule::raw('count(id) as `count`'),
+            Capsule::raw("DATE_FORMAT(created_at, '%m-%Y') new_date"),
+            Capsule::raw('YEAR(created_at) year, Month(created_at) month')
+        )->groupby('year', 'month')->get();
 
 		echo json_encode([
 			'revenues'=>$revenue,
