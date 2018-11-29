@@ -30,16 +30,16 @@ class DashboardController extends BaseController{
 	public function getChartData(){
 
 		$revenue = Manager::table('payments')->select(
-			Manger::raw('(sum(amount))/100 as `amount`'),
-			Manger::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
-			Manger::raw('YEAR(created_at) year, Month(created_at) month')
+			Manager::raw('(sum(amount))/100 as `amount`'),
+			Manager::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
+			Manager::raw('YEAR(created_at) year, Month(created_at) month')
 
 		)->groupby('year','month')->get();
 
 		$orders = Manager::table('orders')->select(
-			Manger::raw('count(id) as `count`'),
-			Manger::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
-			Manger::raw('YEAR(created_at) year, Month(created_at) month')
+			Manager::raw('count(id) as `count`'),
+			Manager::raw('DATE_FORMAT(created_at,"%m-%Y") new_date'),
+			Manager::raw('YEAR(created_at) year, Month(created_at) month')
 
 		)->groupby('year','month')->get();
 
