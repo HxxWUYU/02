@@ -97,7 +97,15 @@ class AuthController extends BaseController{
 						}else{
 							Session::add('SESSION_USER_ID',$user->id);
 							Session::add('SESSION_USER_NAME',$user->username);
-							Redirect::to('/02/public/');
+
+							if($user->role=='admin'){
+								Redirect::to('/02/public/admin');
+							}else if($user->role=='user' && Session::has('user_cart')){
+								Redirect::to('/02/public/cart');
+							}else{
+								Redirect::to('/02/public/');
+							}
+							
 						}
 					}else{
 						Session::add('error','User not found, please try again');

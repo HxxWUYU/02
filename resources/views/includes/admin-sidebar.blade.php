@@ -18,7 +18,7 @@
       <li><a href="/02/public/admin/product/categories"><i class="fa fa-compress" aria-hidden="true"></i>&nbsp; Categories</a></li>
       <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; View Orders</a></li>
       <li><a href="#"><i class="fa fa-money fa-fw" aria-hidden="true"></i>&nbsp; Payments</a></li>
-      <li><a href="#"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp; Logout</a></li>
+      <li><a href="/02/public/logout"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp; Logout</a></li>
     </ul>
     <!-- End Side bar-->
 
