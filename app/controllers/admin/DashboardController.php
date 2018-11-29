@@ -1,23 +1,28 @@
 <?php 
 namespace App\Controllers\Admin;
 
-use App\Controllers\BaseController;
-use App\Classes\Session;
 use App\Classes\Request;
+use App\Classes\Session;
+use App\Controllers\BaseController;
+use App\Models\Order;
+use App\Models\Payment;
+use App\Models\Product;
+use App\Models\User;
 
 class DashboardController extends BaseController{
 
 	public function show(){
 
-		Session::add("admin","You are welcome");
-		Session::remove('admin');
+		
+		$orders = Order::all()->count();
 
-		if(Session::has('admin')){
-			$msg = Session::get('admin');
-		}else{
-			$msg = 'Not defined';
-		}
-		return view("/admin/dashboard",['admin'=>$msg]);
+		$products = Product::all()->count();
+
+		$users = User::all()->count();
+
+		$payments = (Payment::all()->sum('amount'))/100;
+
+		return view("/admin/dashboard",compact('orders','products','users','payments'));
 		
 	}
 
