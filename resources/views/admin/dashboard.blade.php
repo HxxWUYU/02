@@ -17,7 +17,7 @@
  						</div>
  						<div class="small-9 column text-left">
  							<p>Total Orders</p>
- 							<h4>{{$orders}}}</h4>
+ 							<h4>{{$orders}}</h4>
  						</div>
  					</div>
  				</div>
@@ -89,7 +89,7 @@
  						</div>
  						<div class="small-9 column text-left">
  							<p>Signup</p>
- 							<h4>{{$users}}}</h4>
+ 							<h4>{{$users}}</h4>
  						</div>
  					</div>
  				</div>
