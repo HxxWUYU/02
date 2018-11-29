@@ -3,7 +3,7 @@
 
 	HXXSTORE.admin.dashboard=function(){
 		charts();
-		setInterval(charts,5000);
+		setInterval(charts, 5000);
 	}
 
 	function charts(){
@@ -32,7 +32,7 @@
 				revenueData.push(monthly.amount);
 				revenueLabels.push(monthly.new_date);
 			});
-		});
+		
 
 		new Chart(revenue,{
 			type:'bar',
@@ -74,6 +74,7 @@
 				]
 			}
 		});
+	});
 
 	}
 })();
