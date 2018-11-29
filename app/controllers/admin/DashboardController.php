@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controllers\Admin;
 
+use App\Classes\Redirect;
 use App\Classes\Request;
 use App\Classes\Role;
 use App\Classes\Session;
