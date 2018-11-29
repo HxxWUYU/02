@@ -3,6 +3,7 @@
 
 	HXXSTORE.admin.dashboard=function(){
 		charts();
+		setInterval(charts,5000);
 	}
 
 	function charts(){
