@@ -5,13 +5,13 @@
 @section('content')
 
  <div class="products admin_shared">
- 	<div class="grid-x grid-padding-x">
+ 	<div class="grid-x">
  		<div class="cell medium-11">
  			<h2>Mange Inventory Item</h2><hr>
  		</div>		
  	</div>
  	@include('includes.message')
- 	<div class="grid-x grid-padding-x">
+ 	<div class="grid-x">
  		<div class="small-12 medium-11 cell">
  			<a href="/02/public/admin/product/create" class="button float-right">
  				<i class="fa fa-plus"></i>Add New Product
