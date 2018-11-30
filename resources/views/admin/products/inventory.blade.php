@@ -17,7 +17,7 @@
  				<i class="fa fa-plus"></i>Add New Product
  			</a>
  	</div>
- 	<div class="grid-x grid-padding-x">
+ 	<div class="grid-x">
  		<div class="small-12 medium-11 cell">
 
  			@if(count($products))
