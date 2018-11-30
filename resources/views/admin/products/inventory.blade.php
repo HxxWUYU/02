@@ -16,6 +16,7 @@
  			<a href="/02/public/admin/product/create" class="button float-right">
  				<i class="fa fa-plus"></i>Add New Product
  			</a>
+ 		</div>
  	</div>
  	<div class="grid-x">
  		<div class="small-12 medium-11 cell">
@@ -67,8 +68,5 @@
  </div>
 
 
-
- 	</div>
- </div>
 
 @endsection
