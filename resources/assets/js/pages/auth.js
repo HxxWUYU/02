@@ -8,6 +8,7 @@
 				}
 			}
 		});
+		//test
 		$("#loginForm").validate();
 	}
 })();

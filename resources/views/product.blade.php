@@ -9,7 +9,7 @@
 			<img v-show="loading" src="/02/public/images/uploads/loading.gif">
 		</div>
 		<section class="item-container" v-cloak>
-			<div class="row column">
+			<div class="grid-x cell">
 				<nav aria-label="You are here:" role="navigation">
 				  <ul class="breadcrumbs">
 				    <li><a :href="'/02/public/product/category/'+category.slug">@{{category.name}}</a></li>
@@ -21,14 +21,14 @@
 				
 			</div>
 
-			<div class="row collapse">
-				<div class="small-12 medium-5 large-4 column">
+			<div class="grid-x">
+				<div class="small-12 medium-5 large-4 cell">
 					<div>
 						
 						<img :src="'/02/public/'+img" width="100%" height="200">
 					</div>
 				</div>
-				<div class="small-12 medium-7 large-8 column">
+				<div class="small-12 medium-7 large-8 cell">
 					<div class="product-details">
 						<h2>
 							@{{product.name}}
@@ -52,10 +52,11 @@
 
 		<section class="home" v-cloak>
 			<div class="display-products">
-				<div class="row medium-up-2 large-up-4 feature-slider">
 				<h2>Similar Products</h2>
+				<div class="grid-x grid-paading-x medium-up-2 large-up-4 feature-slider">
 				
-				<div class="small-12 column" v-for="similar in similarProduct">
+				
+				<div class="small-12 cell" v-for="similar in similarProduct">
 				<!-- <div class="column" v-for="feature in featured"> -->
 					<a :href="'/02/public/product/'+similar.id">
 						<div class="card" data-equalizer-watch>

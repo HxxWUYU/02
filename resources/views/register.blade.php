@@ -6,7 +6,7 @@
 	<div class="auth" id="auth">
 
 		<section class="register_form">
-			<div class="row">
+			<div class="grid-x grid-padding-x">
 				<div class="small-12 meidum-7 meidum-centered">
 					<h2 class="text-center">Create Account</h2>
 					@include('includes.message')
