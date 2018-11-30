@@ -64,8 +64,9 @@ $categories = \App\Models\Category::with('subCategories')->get();
 
 <div class="show-for-medium">
 	
+
 <div class="top-bar" id="main-menu">
- 	<div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false">
+ 	<!-- <div class="menu medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium=dropdown" data-click-open="true" data-disable-hover="true" data-dropdown-menu data-close-on-click-inside="false"> -->
  		<div class="top-bar-title show-for-medium">
  			<a href="/02/public/" class="logo"></a>
  		</div>
@@ -96,7 +97,8 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		      @endif
 		      
 		    </ul>
-		  </div>
+		 </div>
+
 		  <div class="top-bar-right">
 		    <ul class="dropdown menu vertical medium-horizontal">
 		    	@if(isAuthenticated())
@@ -113,7 +115,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		    	@endif
 		    </ul>
 		  </div>
- 	</div>
+ 	<!-- </div> -->
 </div>
 </div>
 </header>
