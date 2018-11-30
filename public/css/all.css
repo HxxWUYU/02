@@ -8645,9 +8645,11 @@ select {
 
 .navigation .top-bar .menu li {
   color: #def0fc;
+  background-color: #1B1920;
 }
 
 .navigation .top-bar .menu li a {
+  background-color: #1B1920;
   color: #def0fc;
   text-decoration: none;
 }

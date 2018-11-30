@@ -53,8 +53,10 @@ $logo-img-folder:'images';
 			background-color: $menu-background;
 			li{
 				color:#def0fc;
+				background-color: $menu-background;
 
 				a{
+					background-color: $menu-background;
 					color:#def0fc;
 					text-decoration: none;
 					@include breakpoint(medium only){
@@ -64,6 +66,8 @@ $logo-img-folder:'images';
 					&:hover{
 						color:#ffffff;
 					}
+
+					
 
 					&:focus{
 						outline-style:none;
