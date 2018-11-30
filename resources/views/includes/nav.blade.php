@@ -71,17 +71,17 @@ $categories = \App\Models\Category::with('subCategories')->get();
  			<a href="/02/public/" class="logo"></a>
  		</div>
 		 <div class="top-bar-left">
-		    <ul class="dropdown menu data-dropdown-menu">
+		    <ul class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown">
 		      <li><a href="#">Hxx Products</a></li>
 		      @if(count($categories))
-		      	<li class="has-submenu">
+		      	<li>
 		      		<a href="#">Categories</a>
-		      		<ul class="submenu menu vertical">
+		      		<ul class="menu vertical">
 		      			@foreach($categories as $category)
-		      				<li class="has-submenu">
+		      				<li>
 		      				<a href="#">{{$category->name}}</a>
 		      				@if(count($category->subCategories))
-		      					<ul class="submenu menu horizontal">
+		      					<ul class="vertical menu">
 		      						@foreach($category->subCategories as $subCategory)
 		      							<li>
 		      								<a href="#">{{$subCategory->name}}
