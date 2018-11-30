@@ -2,7 +2,7 @@
 $categories = \App\Models\Category::with('subCategories')->get();
 ?>
 <header class="navigation">
-<div class="hide-for-medium">
+<!-- <div class="hide-for-medium">
 	<div class="title-bar toggle" data-responsive-toggle="main-menu" data-hide-for="medium">
 	  <button class="menu-icon float-right" type="button" data-toggle="main-menu"></button>
 	  <a href="/02/public/" class="float-left small-logo">Hxx</a>
@@ -58,11 +58,11 @@ $categories = \App\Models\Category::with('subCategories')->get();
 			  </div>
 	 	</div>
 	</div>
-</div>
+</div> -->
 
 
 
-<div class="show-for-medium">
+
 	
 
 <div class="top-bar" id="main-menu">
@@ -117,5 +117,5 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		  </div>
  	<!-- </div> -->
 </div>
-</div>
+
 </header>
