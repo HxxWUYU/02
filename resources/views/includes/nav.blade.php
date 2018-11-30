@@ -71,17 +71,17 @@ $categories = \App\Models\Category::with('subCategories')->get();
  			<a href="/02/public/" class="logo"></a>
  		</div>
 		 <div class="top-bar-left">
-		    <ul class="dropdown menu vertical medium-horizontal">
+		    <ul class="dropdown menu data-dropdown-menu">
 		      <li><a href="#">Hxx Products</a></li>
 		      @if(count($categories))
-		      	<li>
+		      	<li class="has-submenu">
 		      		<a href="#">Categories</a>
-		      		<ul class="menu vertical sub dropdown">
+		      		<ul class="submenu menu vertical">
 		      			@foreach($categories as $category)
-		      				<li>
+		      				<li class="has-submenu">
 		      				<a href="#">{{$category->name}}</a>
 		      				@if(count($category->subCategories))
-		      					<ul class="menu sub vertical dropdown">
+		      					<ul class="submenu menu horizontal">
 		      						@foreach($category->subCategories as $subCategory)
 		      							<li>
 		      								<a href="#">{{$subCategory->name}}
@@ -100,7 +100,7 @@ $categories = \App\Models\Category::with('subCategories')->get();
 		 </div>
 
 		  <div class="top-bar-right">
-		    <ul class="dropdown menu vertical medium-horizontal">
+		    <ul class="menu medium-horizontal">
 		    	@if(isAuthenticated())
 
 
